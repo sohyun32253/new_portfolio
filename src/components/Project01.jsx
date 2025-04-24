@@ -1,7 +1,7 @@
 import React from 'react';
-function Project() {
+function Project01() {
     return(
         <div className='content'></div>
     )
 }
-export default Project;
+export default Project01;

@@ -1,2 +1,31 @@
+body,html{
+    font-family: "Prompt", "Noto Sans KR";
+    margin: 0;
+    padding: 0;
+    background: #EBF2FF;
+    color: #2E2C39;
+  }
 
+ul,li,dl,dt,dd{
+    list-style: none;
+}
 
+img{
+    border: none;
+}
+
+address{
+    font-style: normal;
+}
+
+h2{
+    font-size: 28px;
+}
+
+p{
+    font-size: 18px;
+}
+
+/* .content{
+    padding: 40px;
+} */
