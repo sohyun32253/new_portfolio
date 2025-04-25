@@ -3,6 +3,12 @@ export default {
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
   ],
+  safelist: [
+    'border-primary',
+    'text-primary',
+    'hover:bg-primary',
+    'hover:text-white',
+  ],
   theme: {
     extend: {
       colors: {
@@ -12,6 +18,7 @@ export default {
         subText: "#919FBA",
         background: "#EBF2FF",
         subBackground: "#919FBA",
+        CardButton: "#344A73",
         skill01: '#F7C59F',
         skill02: '#A1C6EA',
         skill03: '#B4D4EE',

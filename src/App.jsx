@@ -7,8 +7,7 @@ import Cover from './components/Cover';
 import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project'
-import Project01 from './components/Project01'
-import Project02 from './components/Project02'
+import ProjectDetail from './components/ProjectDetail'
 import Contact from './components/Contact';
 
 function App() {
@@ -18,12 +17,11 @@ function App() {
         <Header />
           <Routes>
             <Route path="/" element={<Cover />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Skills" element={<Skills />} />
-            <Route path="/Project" element={<Project />} />
-            <Route path="/Project01" element={<Project01 />} />
-            <Route path="/Project02" element={<Project02 />} />
-            <Route path="/Contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/projectDetail/:id" element={<ProjectDetail />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
       </Router>
     </div>
