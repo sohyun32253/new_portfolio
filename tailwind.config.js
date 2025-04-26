@@ -18,6 +18,7 @@ export default {
         subText: "#919FBA",
         background: "#EBF2FF",
         subBackground: "#919FBA",
+        gnbHover: "#2A4069", 
         CardButton: "#344A73",
         skill01: '#F7C59F',
         skill02: '#A1C6EA',
@@ -35,14 +36,7 @@ export default {
         skill14: '#B8DCF2',
         skill15: '#FFD1A9',
       },
-    },
-    screens: {
-      ss: "480px",
-      sm: "620px",
-      sl: "768px",
-      md: "1060px",
-      lg: "1280px",
-    },
+    }
   },
   plugins: [],
 }

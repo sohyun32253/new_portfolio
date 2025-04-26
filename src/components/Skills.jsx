@@ -48,12 +48,12 @@ function Skills() {
     ] 
 
     return(
-        <div className='py-20'>
-        <div className='content py-5 px-7 bg-white rounded-xl shadow w-[1280px] mx-auto'>
+        <div className='py-20 p-10 md:px-0'>
+        <div className='content py-5 px-7 bg-white rounded-xl shadow md:w-[1280px] mx-auto'>
             { Skills.map((skill, index) =>(
-                <div key={index} className='flex items-center gap-10'>
+                <div key={index} className='gap-10 mb-5 md:flex md:items-center last:mb-0'>
                     <h3 className='text-2xl font-bold text-subText w-[200px]'><img src={skill.icon} className='inline' /> {skill.title}</h3>
-                    <ul className='flex py-5 gap-5'>
+                    <ul className='flex py-5 gap-5 flex-wrap'>
                         {skill.items.map((i, index)=> (
                              <li key={index} className={`px-4 py-1 border rounded-full text-xl text-white ${i.color}`}>{i.name}</li>
                         ))}
