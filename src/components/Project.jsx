@@ -15,15 +15,15 @@ function Project() {
 
     const buttonClass = clsx(
            'px-3 py-1 rounded-xl border transition-all',
-           'border-primary text-primary hover:bg-CardButton hover:text-white text-xl'
+           'border-primary text-primary bg-buttonBg hover:bg-orange-500 hover:text-white hover:border-none text-xl'
          );
 
     return(
-        <section className='content w-full'>
-            <div className='md:flex justify-between max-w-[1280px] mx-auto p-10'>
+        <section className='content w-full pt-20 md:pt-0'>
+            <div className='md:flex md:justify-between max-w-[1280px] mx-auto p-10'>
                 {projects.map((project, index)=> (
-                <div key={index} className='mb-20 relative bg-slate-400 text-white transition-colors duration-300 shadow-lg hover:scale-[1.02]'>
-                    <img src={project.src} alt="" className='w-[500px] h-[250px] bg-slate-400 border-none cursor-pointer' onClick={() => navigate(`/projectDetail/${project.id}`)}/>
+                <div key={index} className='mb-20 relative bg-primary text-white md:w-[500px] transition-colors duration-300 shadow-lg hover:bg-cardUiHover hover:text-primary hover:scale-[1.02]'>
+                    <img src={project.src} alt="" className='h-[250px] bg-slate-400 border-none cursor-pointer' onClick={() => navigate(`/projectDetail/${project.id}`)}/>
                     <dl className='px-5 pt-5 pb-20 border-gnb'>
                         <dt className='text-2xl font-bold mb-2'>{project.name}</dt>
                         <dd className='text-xl'>{project.intro}</dd>

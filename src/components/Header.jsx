@@ -16,14 +16,14 @@ function Header() {
       
     return(
         <div>
-            <div className='p-3'>
+            <div className=' w-full  bg-subText'>
                 {!isMd && (
-                    <div>
-                        <button onClick={menuOpenToggle} className='z-20 absolute'><img src={menuVisible ? closeIcon : menuIcon} 
+                    <div className=''>
+                        <button onClick={menuOpenToggle} className='z-20 absolute top-8 left-8'><img src={menuVisible ? closeIcon : menuIcon} 
                        alt="메뉴" /></button>
-                       <div className=' absolute z-10 left-0 top-0  w-full h-full '>
+                       <div className=''>
                         <ul className={clsx(
-                            'text-center transition-all bg-subText py-20 h-full', 
+                            'text-center transition-all  py-20 h-full', 
                             menuVisible ? 'block' : 'hidden'
                             )}>
                                 <li className='p-7 '>

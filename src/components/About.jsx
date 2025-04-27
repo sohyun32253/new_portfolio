@@ -5,8 +5,9 @@ import Lightning from '../images/about_icon.png'
 
 function About() {
     const buttonClass = clsx(
-        'px-4 py-2 rounded-full border transition-all',
-        'border-primary text-primary hover:bg-primary hover:text-white'
+        'px-4 py-2 rounded-full border border-primary transition-all',
+        'text-white bg-primary',
+        'hover:bg-white hover:text-primary'
       );
       
     return(
@@ -23,7 +24,7 @@ function About() {
                     <p className='text-xl md:text-2xl mb-10'>계원예술대학교 화훼디자인과</p>
 
                     <div className='text-xl md:flex'>
-                        <Link to="" className={`${buttonClass} mb-10 md:mr-5 block`} target="_blank">Git hub</Link>
+                        <Link to="" className={`${buttonClass} mb-10 md:mb-0 md:mr-5 block`} target="_blank">Git hub</Link>
                         <Link to="" className={`${buttonClass} block`} target="_blank">이력서 바로가기</Link>
                     </div>
                 </div>

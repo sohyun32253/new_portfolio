@@ -20,7 +20,7 @@ function Project01() {
 
     const data = projects[id];
     return(
-        <section className='content w-full text-center md:text-left'>
+        <section className='content w-full text-center md:text-left pt-20 md:p-0'>
             <div className='p-10 md:w-[1280px] mx-auto pt-5 pb-24 relative'>
                 <button className='mb-5 absolute top-5 left-8 md:static' onClick={goBackBtn}><img src={backIcon} alt="뒤로가기" /></button>
                 <h1 className='text-3xl font-bold mb-8'>{data.title}</h1>

@@ -12,7 +12,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#496CAD",
+        primary: "#3F547C",
         gnb: "#B4C0D7",
         mainText: "#6D6775",
         subText: "#919FBA",
@@ -20,6 +20,9 @@ export default {
         subBackground: "#919FBA",
         gnbHover: "#2A4069", 
         CardButton: "#344A73",
+        buttonBg: "#fff5ec",
+        cardUi: "#676D77",
+        cardUiHover: "#F6F9FF",
         skill01: '#F7C59F',
         skill02: '#A1C6EA',
         skill03: '#B4D4EE',
