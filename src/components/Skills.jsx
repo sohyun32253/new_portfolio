@@ -48,7 +48,7 @@ function Skills() {
     ] 
 
     return(
-        <div className='py-20 p-10 md:px-0'>
+        <section id='skills' className='py-20 p-10 md:px-0'>
         <div className='content py-5 px-7 bg-white rounded-xl shadow md:w-[1280px] mx-auto'>
             { Skills.map((skill, index) =>(
                 <div key={index} className='gap-10 mb-5 md:flex md:items-center last:mb-0'>
@@ -61,7 +61,7 @@ function Skills() {
                 </div>
             ))}
         </div>
-        </div>
+        </section>
     )
 }
 export default Skills;

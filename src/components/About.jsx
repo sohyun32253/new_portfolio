@@ -11,9 +11,9 @@ function About() {
       );
       
     return(
-        <section className='content w-full '>
-            <div className=''>
-            <section className='max-w-[1280px] mx-auto px-4 p-10 
+        <section id='about' className='content w-full'>
+            <div className='border-none'>
+            <div className='max-w-[1280px] mx-auto px-4 p-10 
             flex flex-col justify-center items-center gap-5 text-center 
             md:flex-row md:justify-normal md:gap-28 md:text-left '>
                 <img src={null} alt="프로필이미지" className='w-[260px] h-[260px] bg-gray-400 shadow'/>
@@ -28,9 +28,9 @@ function About() {
                         <Link to="" className={`${buttonClass} block`} target="_blank">이력서 바로가기</Link>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <section className='intro text-center p-10 text-white bg-subBackground w-full h-full'>
+            <section className='intro text-center p-11 text-white bg-subBackground w-full'>
                 <div>
                     <h2 className='mb-5 font-bold text-2xl'><span><img src={Lightning} alt=""  className='inline'/></span> 포텐이 많은 사람</h2>
                     <p>저는 어릴 때부터 호기심이 많아 다양한 경험을 즐겼고, 새로운 것을 배우는 것에 큰 흥미를 느껴왔습니다.</p>

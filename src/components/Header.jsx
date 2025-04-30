@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import menuIcon from '../images/menu_icon.png';
 import closeIcon from '../images/close_icon.png';
@@ -15,8 +14,8 @@ function Header() {
     }
       
     return(
-        <div>
-            <div className=' w-full  bg-subText'>
+        <div className='header fixed bg-background w-full z-[100]'>
+            <div className=' w-full bg-subText'>
                 {!isMd && (
                     <div className=''>
                         <button onClick={menuOpenToggle} className='z-20 absolute top-8 left-8'><img src={menuVisible ? closeIcon : menuIcon} 
@@ -27,16 +26,16 @@ function Header() {
                             menuVisible ? 'block' : 'hidden'
                             )}>
                                 <li className='p-7 '>
-                                    <Link to="/" className={gnbClass}>Home</Link>
+                                    <a href="#cover" className={gnbClass}>Home</a>
                                 </li>
                                 <li className='p-7'>
-                                    <Link to="/About" className={gnbClass}>About</Link>
+                                    <a href="#about" className={gnbClass}>About</a>
                                 </li>
                                 <li className='p-7'>
-                                    <Link to="/Skills" className={gnbClass}>Skills</Link>
+                                    <a href="#skills" className={gnbClass}>Skills</a>
                                 </li>
                                 <li className='p-7'>
-                                    <Link to="/Project" className={gnbClass}>Project</Link>
+                                    <a href="#project" className={gnbClass}>Project</a>
                                 </li>
                             </ul>
                        </div>
@@ -47,16 +46,16 @@ function Header() {
                 <div className='w-full'>
                     <ul className='flex justify-center items-center gap-10 p-8 text-2xl'>
                         <li>
-                            <Link to="/" className="cover text-gnb">〈 Home 〉</Link>
+                            <a href='#cover' className="cover text-gnb">〈 Home 〉</a>
                         </li>
                         <li>
-                            <Link to="/About" className="about text-gnb">〈 About 〉</Link>
+                            <a href='#about' className="about text-gnb">〈 About 〉</a>
                         </li>
                         <li>
-                            <Link to="/Skills" className="skills text-gnb">〈 Skills 〉</Link>
+                            <a href='#skills' className="skills text-gnb">〈 Skills 〉</a>
                         </li>
                         <li>
-                            <Link to="/Project" className="cover text-gnb">〈 Project 〉</Link>
+                            <a href='#project' className="cover text-gnb">〈 Project 〉</a>
                         </li>
                     </ul>
                 </div>

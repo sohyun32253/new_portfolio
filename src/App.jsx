@@ -7,24 +7,33 @@ import Cover from './components/Cover';
 import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project'
+import ProjectPopUp from './components/ProjectPopUp';
 import ProjectDetail from './components/ProjectDetail'
 import Contact from './components/Contact';
 
 function App() {
-  return(
+  return (
     <div className='App'>
       <Router>
-        <Header />
-          <Routes>
-            <Route path="/" element={<Cover />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/project" element={<Project />} />
-            <Route path="/projectDetail/:id" element={<ProjectDetail />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+        <Header/>
+        <Routes>
+        <Route
+            path="/"
+            element={
+              <>
+                <Cover />
+                <About />
+                <Skills />
+                <Project />
+                <Contact />
+              </>
+            }
+          />
+           <Route path="/projectDetail/:id" element={<ProjectDetail />} />
+        </Routes>
       </Router>
     </div>
-  )
+  );
 }
+
 export default App;
