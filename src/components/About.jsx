@@ -11,9 +11,9 @@ function About() {
       );
       
     return(
-        <section id='about' className='content w-full'>
+        <section id='about' className='content w-full mb-20'>
             <div className='border-none'>
-            <div className='max-w-[1280px] mx-auto px-4 p-10 
+            <div className='max-w-[1280px] mx-auto px-4 p-10 mb-5
             flex flex-col justify-center items-center gap-5 text-center 
             md:flex-row md:justify-normal md:gap-28 md:text-left '>
                 <img src={null} alt="프로필이미지" className='w-[260px] h-[260px] bg-gray-400 shadow'/>
@@ -30,7 +30,7 @@ function About() {
                 </div>
             </div>
 
-            <section className='intro text-center p-11 text-white bg-subBackground w-full'>
+            <div className='intro text-center p-11 text-white bg-subBackground w-full'>
                 <div>
                     <h2 className='mb-5 font-bold text-2xl'><span><img src={Lightning} alt=""  className='inline'/></span> 포텐이 많은 사람</h2>
                     <p>저는 어릴 때부터 호기심이 많아 다양한 경험을 즐겼고, 새로운 것을 배우는 것에 큰 흥미를 느껴왔습니다.</p>
@@ -38,7 +38,7 @@ function About() {
                     <p>비전공자였지만 스스로의 가능성을 믿고 도전했고, 지금은 더 나은 코드를 연구하는 일에 즐거움을 느낍니다.</p>
                     <p>짧은 시간 안에 많은 것을 흡수하고 빠르게 성장해온 만큼, 앞으로 더 크게 터질 ‘포텐’을 기대해 주세요.</p>
                 </div>
-            </section>
+            </div>
             </div>
         </section>
     )

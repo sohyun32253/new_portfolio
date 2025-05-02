@@ -30,8 +30,8 @@ function Project() {
          );
 
          return (
-            <section id='project' className='content w-full pt-20 md:pt-0'>
-              <div className='md:flex md:justify-between max-w-[1280px] mx-auto p-10 flex-wrap gap-10'>
+            <section id='project' className='content w-full py-20'>
+              <div className='md:flex md:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10'>
                 {projects.map((project, index) => (
                   <div
                     key={index}

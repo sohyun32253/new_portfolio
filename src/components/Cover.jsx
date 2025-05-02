@@ -1,12 +1,12 @@
 import React from 'react';
 function Cover() {
     return(
-        <section id='cover' className='h-[700px]'>
-        <div className='content relative'>
-            <p className='text-5xl absolute left-[40px] top-[200px]'>끊임없이 탐구하고, 끊임없이 고민하는<br/> 
-            주니어 개발자 박소현입니다.</p>
+        <div id='cover' className="wrapper">
+            <div className="typing-container p-10">
+                <div className="typing-demo first-line">끊임없이 탐구하고, 끊임없이 고민하는</div>
+                <div className="typing-demo second-line"> 주니어 개발자 박소현입니다.</div>
+            </div>
         </div>
-        </section>
     )
 }
 export default Cover;
