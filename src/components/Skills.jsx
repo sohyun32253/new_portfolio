@@ -48,8 +48,8 @@ function Skills() {
     ] 
 
     return(
-        <section id='skills' className='py-20 p-10 md:px-0'>
-        <div className='content py-5 px-7 bg-white rounded-xl shadow md:w-[1280px] mx-auto'>
+        <section id='skills' className='px-10 mb-20 md:px-0 md:pt-[96px] md:mb-[96px]'>
+        <div className='content px-10 py-10 bg-white rounded-xl shadow md:w-[1280px] mx-auto'>
             { Skills.map((skill, index) =>(
                 <div key={index} className='gap-10 mb-5 md:flex md:items-center last:mb-0'>
                     <h3 className='text-2xl font-bold text-subText w-[200px]'><img src={skill.icon} className='inline' /> {skill.title}</h3>

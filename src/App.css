@@ -32,65 +32,63 @@ p{
     display: none !important;
 }
 
-/* cover typing effect 효과 */
-.wrapper{
+.wrapper {
     width: 100%;
     height: 100vh;
     display: grid;
     place-items: center;
-}
+  }
 
-.typing-demo {
-    width: 400px;
+  .typing_effect{
+    font-size: 40px;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 3px solid;
-    font-size: 48px;
-    font-weight: 400;
-    animation: blink 0.5s step-end infinite alternate;
-}
-
-.first-line {
+    border-right: 4px solid #000;
+  }
+  
+  /* 타이핑 애니메이션 */
+  .first-line {
     width: 28ch;
     animation: typing 2s steps(28) forwards, blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-}
-
-.second-line {
-    width: 0;
+  }
+  
+  .second-line {
     visibility: hidden;
     animation: appear 2s steps(20) 2.2s forwards, blink 0.5s step-end infinite alternate;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid;
-}
+  }
+  
+  /* 애니메이션 정의 */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes appear {
+    0% {
+      width: 0;
+      visibility: visible;
+    }
+    100% {
+      width: 18ch;
+      visibility: visible;
+    }
+  }
+  
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
 
-@keyframes appear {
-0% {
-    width: 0;
-    visibility: visible;
-    text-align: center;
-    
-}
-100% {
-    width: 18ch;
-    visibility: visible;
-    text-align: left;
-}
-}
 
-@keyframes typing {
-from { width: 0 ;
-}
-to { width: 100% ;
-}
-}
-
-@keyframes blink {
-50% { border-color: transparent }
-}
+  
+  
+  
+  
   
   
   

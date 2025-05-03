@@ -1,4 +1,4 @@
-import { React, useEffect } from 'react'
+import { React, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Container from './Container';
 import { ScrollToTop } from './ScrollToTop';
@@ -10,14 +10,31 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project'
 import ProjectDetail from './components/ProjectDetail'
+import ProjectPopUp from './components/ProjectPopUp';
 import Contact from './components/Contact';
 
 function App() {
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const closeModal = () => setSelectedProject(null);
   return (
     <div className='App'>
       <Router>
       <ScrollToTop /> 
         <Header/>
+        {selectedProject && (
+          <div className="fixed inset-0 bg-black bg-opacity-60 z-[9999] flex justify-center items-center">
+            <div className="relative w-[80%] max-w-[800px] bg-white p-6 rounded-lg">
+              <button
+                className="absolute top-4 right-4 text-xl font-bold"
+                onClick={closeModal}
+              >
+                ✕
+              </button>
+              <ProjectPopUp project={selectedProject} onClose={closeModal} />
+            </div>
+          </div>
+        )}
         <Routes>
         <Route
             path="/"
@@ -26,7 +43,7 @@ function App() {
               <Container><Cover /></Container>
               <Container><About /></Container>
               <Container><Skills /></Container>
-              <Container><Project /></Container>
+              <Container> <Project onSelectProject={setSelectedProject} /> </Container>
               <Container><Contact /></Container>
               </div>
             }

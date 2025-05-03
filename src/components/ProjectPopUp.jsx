@@ -1,16 +1,23 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-function ProjectPopUp({ project }) {
-    // const [isClosePopUp, setIsClosePopUp] = useRef();
+function ProjectPopUp({ project, onClose }) {
+  const popupRef = useRef();
 
-    // // const popupClose = () => {
-    // //     setIsClosePopUp((e)=>{
-    // //         isClosePopUp
-    // //     })
-    // }
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        onClose();  // 바깥 클릭 시 팝업 닫기
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClose]);
 
       const PrevArrow = ({ onClick }) => {
         return (
@@ -48,26 +55,29 @@ function ProjectPopUp({ project }) {
   };
 
   return (
-    <Slider {...settings}>
-    <div className='w-full h-[300px] bg-white'>
+    <div ref={popupRef} className="relative w-full">
+      <Slider {...settings}>
+        <div className='w-full h-[300px] bg-white flex items-center justify-center'>
+          <h3>{project.name}</h3> {/* 예시로 프로젝트 이름 */}
+        </div>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+      </Slider>
     </div>
-    <div>
-      <h3>2</h3>
-    </div>
-    <div>
-      <h3>3</h3>
-    </div>
-    <div>
-      <h3>4</h3>
-    </div>
-    <div>
-      <h3>5</h3>
-    </div>
-    <div>
-      <h3>6</h3>
-    </div>
-  </Slider>
   );
-}
+}  
 
 export default ProjectPopUp;
