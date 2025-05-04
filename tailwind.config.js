@@ -38,6 +38,7 @@ export default {
         skill13: '#E0C3FC',
         skill14: '#B8DCF2',
         skill15: '#FFD1A9',
+        detailSection: '#F5F8FF'
       },
     }
   },
