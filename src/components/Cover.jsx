@@ -1,8 +1,6 @@
 import React from 'react';
 
 function Cover() {
-
-
   return (
     <div id="cover" className="wrapper mb-20">
       <div className="typing-container p-10 md:text-[40px]">

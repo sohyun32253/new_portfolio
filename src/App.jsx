@@ -28,7 +28,7 @@ function App() {
           <div className="fixed inset-0 bg-black bg-opacity-60 z-[9999] flex justify-center items-center">
             <div className="relative w-[80%] max-w-[800px] bg-white p-6 rounded-lg">
               <button
-                className="absolute top-4 right-4 text-xl font-bold"
+                className="absolute top-4 right-4 text-xl font-bold z-[9999]"
                 onClick={closeModal}
               >
                 ✕

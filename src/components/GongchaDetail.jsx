@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
+import clsx from 'clsx';
+import gongchaMain from '../images/gongcha.png'
 import gongchaGnb from '../images/gongcha_gnb.png'
 
+
 function GongchaDetail() {
+     const buttonClass = clsx(
+            'px-4 py-2 rounded-full border border-primary transition-all text-[18px]',
+            'text-primary bg-white',
+            'hover:bg-primary hover:text-white'
+          );
+
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggle = (index) => {
@@ -37,31 +46,42 @@ function GongchaDetail() {
 
     return (
         <section className='text-[20px]'>
-            <div className='bg-slate-400 w-full h-[500px] mb-10'>
-                <img src='' alt='' />
+            <div className='mb-10'>
+                <img src={gongchaMain} alt='공차 메인 이미지' />
             </div>
 
             <h1 className='mb-3'>✔️ 주요 정보 및 기간</h1>
             <div className='bg-detailSection mb-10'>
                 <div className='px-6 py-8'>
-                    <p className='mb-5 text-[20px]'><strong>프로젝트 기간</strong> : 2024.09 ~ 2024.12</p>
+                    <p className='mb-5 text-[22px]'>📆 <strong>프로젝트 기간</strong> : 2024.09 ~ 2024.12</p>
                     <div className='mb-5'>
-                        <h2 className='mb-2'>개발 목표</h2>
-                        <ul>
+                        <h2>🎯 개발 목표</h2>
+                        <ul className='text-[18px]'>
                             <li>1. 브랜드 컨셉 보완과 사용자 UI를 개선한 웹 사이트 리뉴얼</li>
                             <li>2. react.js를 활용한 웹 사이트 개발</li>
                         </ul>
                     </div>
-                    <div>
-                        <h2 className='mb-2'>개발 환경</h2>
-                        <img src='' alt='' />
+                    <div className='mb-5'>
+                        <h2 className='mb-2'>⚙️ 개발 환경</h2>
+                        <ul className='flex text-lg gap-3'>
+                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>HTML5</li>
+                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>CSS3</li>
+                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>JAVASCRIPT</li>
+                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>REACT</li>
+                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>FIREBASE</li>
+                        </ul>
                     </div>
-                    <div>
-                        <ul>
+                    <div className='mb-5'>
+                        <h2>⭐ 프로젝트 소개</h2>
+                        <ul className='text-[18px]'>
                             <li>- 브랜드가 인상에 잘 남도록 디자인 컨셉 보완</li>
                             <li>- 메인 페이지 구조 및 컨텐츠 요소 추가를 통한 레이아웃 강화</li>
                             <li>- 메뉴 영양성분표 단순화를 통한 가독성 강화</li>
                         </ul>
+                    </div>
+                    <div className='mb-3'>
+                        <h2 className='mb-5'>배포 주소</h2>
+                        <a href="https://sohyun32253.github.io/Gongcha/" className={buttonClass}>웹사이트 방문하기 →</a>
                     </div>
                 </div>
             </div>
@@ -92,7 +112,7 @@ function GongchaDetail() {
 
             <h1 className='mb-3'>✔️ 리뉴얼 전 vs 리뉴얼 후</h1>
             <div className='bg-detailSection mb-10 px-6 py-8'>
-                {/* 여기에 비교 스크린샷 또는 설명 추가 */}
+               
             </div>
 
             <h1 className='mb-3'>✔️ 트러블 슈팅</h1>
@@ -111,7 +131,7 @@ function GongchaDetail() {
                     <h2 className='mb-2'>💡 해결 방법</h2>
                     <p className='mb-5'>GNB(Global Navigation Bar)의 메뉴 구조에 맞춰 다음과 같이 총 8가지 카테고리로 나누어 컴포넌트를 분리했습니다:</p>
                     <img src={gongchaGnb} alt="공차 gnb 메뉴" className='mb-5' />
-                    <ul className='text-[16px]'>
+                    <ul className='text-[18px]'>
                         <li className='mb-2'>- 신메뉴 (NewMenu)</li>
                         <li className='mb-2'>- 베스트셀러 (BestSellerMenu)</li>
                         <li className='mb-2'>- 밀크티 (MilkTeaMenu)</li>
@@ -124,16 +144,16 @@ function GongchaDetail() {
                     <p>또한, 각 메뉴별 데이터를 별도 .js 파일로 분리해 menuData 디렉토리에서 관리하도록 했습니다.</p>
                 </div>
 
-                <div>
+                <div className='mb-5'>
                     <h2>파일 구조</h2>
-                    <ul>
+                    <ul className='italic text-[18px]'>
                         <li>src</li>
                         <ul className='px-3'>
-                            <li>├── components</li>
+                            <li className='text-green-700 font-bold'>├── components</li>
                                 <ul className='px-10 mb-2'>
                                     <li>── MenuDrink.jsx</li>
                                 </ul>
-                            <li>└── catergory</li>
+                            <li className='text-green-700 font-bold'>└── catergory</li>
                             <ul className='px-10 mb-2'>
                                 <li>── BestSellerMenu.jsx</li>
                                 <li>── NewMenu.jsx</li>
@@ -144,7 +164,7 @@ function GongchaDetail() {
                                 <li>── RtdMenu.jsx</li>
                                 <li>── CoffeeMenu.jsx</li>
                             </ul>
-                            <li>└── menuData</li>
+                            <li className='text-green-700 font-bold'>└── menuData</li>
                             <ul className='px-10 mb-2'>
                                 <li>── bestSellerData.js</li>
                                 <li>── newMenuData.js</li>
@@ -153,14 +173,19 @@ function GongchaDetail() {
                         </ul>
                     </ul>
                 </div>
-                <div className='mb-5'>
+                <div className='mb-10'>
                     <h2 className='mb-2'>✅ 개선 효과</h2>
-                    <ul>
+                    <ul className='text-[18px]'>
                         <li>1. 메뉴 카테고리 기준으로 명확하게 나뉘어 코드 구조와 UI 일치</li>
                         <li>2.  가독성, 유지보수성 대폭 향상</li>
                         <li>3.  신규 메뉴 추가 및 수정 시 해당 컴포넌트와 데이터만 다루면 되어 확장성 확보</li>
                     </ul>
                 </div>
+                <div className='mb-5'>
+                    <h2 className='mb-5'>📜 기타 문서</h2>
+                    <a href='https://github.com/sohyun32253/Gongcha' className={buttonClass}>git hub 바로가기 →</a>
+                </div>
+                
             </div>
         </section>
     );

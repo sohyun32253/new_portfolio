@@ -12,6 +12,7 @@ function Skills() {
           items : [
             { name : "HTML5", color : "bg-skill01" },
             { name : "CSS3", color : "bg-skill02" },
+            { name : "Vue", color : "bg-skill05" },
             { name : "React", color : "bg-skill03" },
             { name : "TypeScript", color : "bg-skill04" },
             { name : "JavaScript", color : "bg-skill05" },

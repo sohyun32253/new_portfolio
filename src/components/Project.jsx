@@ -2,6 +2,11 @@ import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router';
 import circle from '../images/circle.png';
 import gongcha from '../images/gongcha.png';
+import gongchaPreview01 from '../images/gongcha_preview.png';
+import gongchaPreview02 from '../images/gongcha_preview01.png';
+import gongchaPreview03 from '../images/gongcha_preview02.png';
+import gongchaPreview04 from '../images/gongcha_preview03.png';
+import gongchaPreview05 from '../images/gongcha_preview04.png';
 
 function Project({ onSelectProject }) {
   const navigate = useNavigate();
@@ -22,6 +27,11 @@ function Project({ onSelectProject }) {
       intro: 'React 기반의 웹사이트 리뉴얼',
       route: '/ProjectDetail',
       src: gongcha,
+      img01: gongchaPreview01,
+      img02: gongchaPreview02,
+      img03: gongchaPreview03,
+      img04: gongchaPreview04,
+      img05: gongchaPreview05,
     },
     {
       id: 'circle',

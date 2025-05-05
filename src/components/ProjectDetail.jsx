@@ -12,7 +12,6 @@ function ProjectDetail() {
         Navigate('/#project');
     }
 
-    // 프로젝트 제목 조건부 처리
     let title = '';
     if (id === 'gongcha') title = 'Gong cha';
     else if (id === 'circle') title = 'Circle';
@@ -30,7 +29,6 @@ function ProjectDetail() {
                     <h1 className='text-3xl font-bold'>{title}</h1>
                 </div>
 
-                {/* 프로젝트 상세 내용 조건부 렌더링 */}
                 {id === 'gongcha' && <GongchaDetail />}
                 {id === 'circle' && <CircleDetail />}
             </div>
