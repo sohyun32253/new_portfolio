@@ -5,6 +5,7 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
+  base: '/new_portfolio/',
   plugins: [react()],
   css: {
     postcss: {
