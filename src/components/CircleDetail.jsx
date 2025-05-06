@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import clsx from 'clsx';
 import circleMain from '../images/circle.png'
-import gongchaGnb from '../images/gongcha_gnb.png'
 
 function CircleDetail() {
      const buttonClass = clsx(
@@ -64,15 +63,17 @@ function CircleDetail() {
                     </div>
                     <div className='mb-5'>
                         <h2 className='mb-2'>⚙️ 개발 환경</h2>
-                        <ul className='flex text-lg gap-3'>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>HTML5</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>CSS3</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>JAVASCRIPT</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>REACT</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>TYPESCRIPT</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>REST API</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>AXIOS</li>
+                        <ul className='flex flex-wrap gap-3 text-lg w-full'>
+                        {['HTML5', 'CSS3', 'JAVASCRIPT', 'REACT', 'TYPESCRIPT', 'REST API', 'AXIOS'].map((item) => (
+                            <li
+                            key={item}
+                            className='px-4 py-1 border bg-slate-400 text-white rounded-full 
+                            break-words whitespace-normal min-w-0'>
+                            {item}
+                            </li>
+                        ))}
                         </ul>
+
                     </div>
                     <div className='mb-5'>
                         <h2 className='mb-2'>⭐ 프로젝트 소개</h2>
@@ -80,6 +81,11 @@ function CircleDetail() {
                             <li>1. 외국인 친화적인 커뮤니티 웹/앱 개발</li>
                             <li>2. 프론트엔드 / 백엔드 업무 분담 협업 개발</li>
                         </ul>
+                    </div>
+
+                    <div className='mb-3'>
+                        <h2 className='mb-5'>배포 주소</h2>
+                        <a href="https://circle-kr.github.io/circle_front/" className={buttonClass}>웹사이트 방문하기 →</a>
                     </div>
                 </div>
             </div>
@@ -115,33 +121,33 @@ function CircleDetail() {
                 </div>
             </div>
 
-            <h1 className='mb-3'>✔️ 리뉴얼 전 vs 리뉴얼 후</h1>
-            <div className='bg-detailSection mb-10 px-6 py-8'>
-                {/* 여기에 비교 스크린샷 또는 설명 추가 */}
-            </div>
-
             <h1 className='mb-3'>✔️ 트러블 슈팅</h1>
             <div className='bg-detailSection px-6 py-8'>
                 <div className='mb-5'>
                     <h2 className='mb-2'>💥 문제</h2>
-                    <p>로그인 / 회원가입 페이지를 만들고 백엔드 데이터를 요청하는 과정을 어떤 방법으로 구현해야할지에 대한 문제가 발생했습니다.</p>
+                    <p>로그인 및 회원가입 페이지를 구현하며, 백엔드와의 데이터 통신 방식을 어떤 방식으로 설계할지 고민이 생겼습니다.</p>
                 </div>
                 <div className='mb-5'>
                     <h2 className='mb-2'>🤔 원인 및 고민</h2>
-                    <p>백엔드에게 데이터를 요청하는 방식이 여러 가지가 있는데 어떤 방식을 선택해야 가독성과 유지보수 측면에서 좋고 <br/>
-                        초보자인 제가 이해하기 쉬운 구조가 뭐일지 고심하였습니다.
-                    </p>
+                    <p>데이터 요청 방식에는 다양한 선택지가 있었고,</p>
+                    <ul className='text-[18px]'>
+                        <li>- 구조가 복잡하지 않고</li>
+                        <li>- 가독성과 유지보수에 유리하며</li>
+                        <li>- 초보자도 쉽게 이해할 수 있는
+                        방식을 찾는 것이 핵심이었습니다.</li>
+                    </ul>
                 </div>
                 <div className='mb-5'>
                     <h2 className='mb-2'>💡 해결 방법</h2>
-                    <p className='mb-5'>Axios 방식을 선택하여 백엔드 서버에 데이터를 요청하는 코드를 만들었습니다.</p>
+                    <p className='mb-5'>Axios 라이브러리를 활용하여 백엔드와 통신하는 구조를 설계하였습니다.</p>
                 </div>
 
                 <div className='mb-10'>
-                    <h2 className='mb-2'>✅ 선택한 방식의 이점</h2>
+                    <h2 className='mb-2'>✅ Axios 선택 이유 및 장점</h2>
                     <ul className='text-[18px]'>
-                        <li>1. 프론트엔드 입장에서 이해하기 쉬운 코드 구조로 가독성 및 유지보수성 향상</li>
-                        <li>2. 에러 처리와 같은 코드를 작성하여 여러 가지 상황 대응 가능</li>
+                        <li>1. 간결한 문법으로 API 요청/응답 로직을 직관적으로 작성할 수 있습니다.</li>
+                        <li>2. 에러 처리 및 요청 설정이 유연하여 예외 상황에 쉽게 대응할 수 있습니다.</li>
+                        <li>3. 구조 분리가 쉬워, API 관리 파일을 통해 요청 코드를 모듈화하여 유지보수성을 높일 수 있습니다.</li>
                     </ul>
                 </div>
                 <div className='mb-5'>

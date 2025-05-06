@@ -1,7 +1,8 @@
 import React from 'react';
 import clsx from 'clsx';
 import { Link } from 'react-router-dom';
-import Lightning from '../images/about_icon.png'
+import Lightning from '../images/about_icon.png';
+import profile from '../images/profile_img.jpg';
 
 function About() {
     const buttonClass = clsx(
@@ -16,7 +17,7 @@ function About() {
                 <div className='max-w-[1280px] mx-auto px-4 p-10 mb-5
                 flex flex-col justify-center items-center gap-5 text-center 
                 md:flex-row md:justify-normal md:gap-28 md:text-left '>
-                    <img src={null} alt="프로필이미지" className='w-[260px] h-[260px] bg-gray-400 shadow'/>
+                    <img src={profile} alt="프로필이미지" className='w-[200px] h-[260px]'/>
                     <div className='pt-4'>
                         <p className='text-xl md:text-2xl mb-2'>박소현</p>
                         <p className='text-xl md:text-2xl mb-2'>2001.03.22</p>
@@ -24,8 +25,8 @@ function About() {
                         <p className='text-xl md:text-2xl mb-10'>계원예술대학교 화훼디자인과</p>
 
                         <div className='text-xl md:flex'>
-                            <Link to="" className={`${buttonClass} mb-10 md:mb-0 md:mr-5 block`} target="_blank">Git hub</Link>
-                            <Link to="" className={`${buttonClass} block`} target="_blank">이력서 바로가기</Link>
+                            <Link to="https://github.com/sohyun32253" className={`${buttonClass} mb-10 md:mb-0 md:mr-5 block`} target="_blank">Git hub</Link>
+                            <Link to="https://velog.io/@sohyun32253/posts" className={`${buttonClass} block`} target="_blank">velog</Link>
                         </div>
                     </div>
                 </div>

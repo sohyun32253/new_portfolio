@@ -7,6 +7,11 @@ import gongchaPreview02 from '../images/gongcha_preview01.png';
 import gongchaPreview03 from '../images/gongcha_preview02.png';
 import gongchaPreview04 from '../images/gongcha_preview03.png';
 import gongchaPreview05 from '../images/gongcha_preview04.png';
+import circlePreview01 from '../images/circle_preview.png';
+import circlePreview02 from '../images/circle_preview01.png';
+import circlePreview03 from '../images/circle_preview02.png';
+import circlePreview04 from '../images/circle_preview03.png';
+import circlePreview05 from '../images/circle_preview04.png';
 
 function Project({ onSelectProject }) {
   const navigate = useNavigate();
@@ -39,6 +44,11 @@ function Project({ onSelectProject }) {
       intro: '백엔드 서버와 Axios 통신을 사용한 협업 프로젝트',
       route: '/ProjectDetail',
       src: circle,
+      img01: circlePreview01,
+      img02: circlePreview02,
+      img03: circlePreview03,
+      img04: circlePreview04,
+      img05: circlePreview05,
     },
   ];
 

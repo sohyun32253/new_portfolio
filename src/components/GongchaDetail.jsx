@@ -63,12 +63,15 @@ function GongchaDetail() {
                     </div>
                     <div className='mb-5'>
                         <h2 className='mb-2'>⚙️ 개발 환경</h2>
-                        <ul className='flex text-lg gap-3'>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>HTML5</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>CSS3</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>JAVASCRIPT</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>REACT</li>
-                            <li className='px-4 py-1 border bg-slate-400 text-white rounded-full'>FIREBASE</li>
+                        <ul className='flex flex-wrap gap-3 text-lg w-full'>
+                        {['HTML5', 'CSS3', 'JAVASCRIPT', 'REACT', 'FIREBASE'].map((item) => (
+                            <li
+                            key={item}
+                            className='px-4 py-1 border bg-slate-400 text-white rounded-full 
+                            break-words whitespace-normal min-w-0'>
+                            {item}
+                            </li>
+                        ))}
                         </ul>
                     </div>
                     <div className='mb-5'>
@@ -108,11 +111,6 @@ function GongchaDetail() {
                         </li>
                     ))}
                 </ul>
-            </div>
-
-            <h1 className='mb-3'>✔️ 리뉴얼 전 vs 리뉴얼 후</h1>
-            <div className='bg-detailSection mb-10 px-6 py-8'>
-               
             </div>
 
             <h1 className='mb-3'>✔️ 트러블 슈팅</h1>

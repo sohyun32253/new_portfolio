@@ -9,7 +9,7 @@ function ProjectPopUp({ project, onClose }) {
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (popupRef.current && !popupRef.current.contains(event.target)) {
-        onClose();  // 바깥 클릭 시 팝업 닫기
+        onClose(); 
       }
     };
 
@@ -22,7 +22,7 @@ function ProjectPopUp({ project, onClose }) {
       const PrevArrow = ({ onClick }) => {
         return (
           <div
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 text-3xl text-black cursor-pointer"
+            className="absolute -left-[40px] top-1/2 transform -translate-y-1/2 z-10 text-3xl text-black cursor-pointer"
             onClick={onClick}
           >
           〈 
@@ -33,7 +33,7 @@ function ProjectPopUp({ project, onClose }) {
       const NextArrow = ({ onClick }) => {
         return (
           <div
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 text-3xl text-black cursor-pointer"
+            className="absolute -right-[40px] top-1/2 transform -translate-y-1/2 z-10 text-3xl text-black cursor-pointer"
             onClick={onClick}
           >
              〉
