@@ -84,7 +84,7 @@ function CircleDetail() {
                     </div>
 
                     <div className='mb-3'>
-                        <h2 className='mb-5'>배포 주소</h2>
+                        <h2 className='mb-5'>배포 주소 (PC 권장)</h2>
                         <a href="https://circle-kr.github.io/circle_front/" className={buttonClass}>웹사이트 방문하기 →</a>
                     </div>
                 </div>
