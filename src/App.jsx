@@ -10,8 +10,6 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project';
 import ProjectDetail from './components/ProjectDetail';
-import GongchaDetail from './components/GongchaDetail';
-import CircleDetail from './components/CircleDetail';
 import ProjectPopUp from './components/ProjectPopUp';
 import Contact from './components/Contact';
 

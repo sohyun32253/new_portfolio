@@ -1,10 +1,9 @@
-import ''
-
+import '../Cover.css'
 function Cover() {
   return (
     <div id="cover" className="wrapper mb-20">
-      <div className="typing-container p-10 md:text-[40px]">
-        <p className="typing_effect first-line">
+      <div className="typing-container p-10">
+        <p className="typing_default typing_effect first-line">
           끊임없이 탐구하고, 끊임없이 고민하는
         </p>
         <p className="typing_effect second-line">

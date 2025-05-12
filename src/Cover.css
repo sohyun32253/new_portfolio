@@ -14,7 +14,7 @@
 
 /* 타이핑 애니메이션 */
 .first-line {
-  width: 28ch;
+  /* width: 28ch; */
   animation:
     typing 2s steps(28) forwards,
     blink 0.5s step-end infinite alternate;
@@ -52,4 +52,21 @@
   50% {
     border-color: transparent;
   }
+}
+
+@media screen and (max-width:767px){
+  .wrapper {
+  text-align: center;
+}
+
+ .typing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+ .typing_effect {
+  font-size: 24px;
+}
 }
