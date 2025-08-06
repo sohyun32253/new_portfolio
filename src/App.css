@@ -3,7 +3,7 @@ html {
   font-family: "Prompt", "Noto Sans KR";
   margin: 0;
   padding: 0;
-  background: #ebf2ff;
+  background: #FAF5EF;
   color: #2e2c39;
 }
 
@@ -42,4 +42,14 @@ p {
   opacity: 0;
   display: none !important;
 }
+
+@keyframes fade-glow {
+  0%, 100% { opacity: 0.1; }
+  50% { opacity: 1; }
+}
+
+.fade-glow {
+  animation: fade-glow 1.5s ease-in-out infinite;
+}
+
 

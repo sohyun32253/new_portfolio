@@ -41,7 +41,7 @@ function CircleDetail() {
             </div>
 
             <h1 className='mb-3'>✔️ 주요 정보 및 기간</h1>
-            <div className='bg-detailSection mb-10'>
+            <div className='mb-10'>
                 <div className='px-6 py-8'>
                     <div className='mb-5'>
                         <h2 className='mb-2'>✏️ 기획 의도</h2>
@@ -91,7 +91,7 @@ function CircleDetail() {
             </div>
 
             <h1 className='mb-3'>✔️ 주요 기능 소개</h1>
-            <div className='bg-detailSection mb-10'>
+            <div className='mb-10'>
                 <ul className='px-6 py-8 space-y-2'>
                     {features.map((feature, index) => (
                         <li key={index} className='border rounded-xl p-4 shadow-sm transition-all duration-300'>
@@ -115,14 +115,14 @@ function CircleDetail() {
             </div>
 
             <h1 className='mb-3'>✔️ 협업 도구 및 방식</h1>
-            <div className='bg-detailSection mb-10'>
+            <div className='mb-10'>
                 <div className='px-6 py-8'>
                     사용 도구 : github, notion
                 </div>
             </div>
 
             <h1 className='mb-3'>✔️ 트러블 슈팅</h1>
-            <div className='bg-detailSection px-6 py-8'>
+            <div className='px-6 py-8'>
                 <div className='mb-5'>
                     <h2 className='mb-2'>💥 문제</h2>
                     <p>로그인 및 회원가입 페이지를 구현하며, 백엔드와의 데이터 통신 방식을 어떤 방식으로 설계할지 고민이 생겼습니다.</p>

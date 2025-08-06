@@ -6,9 +6,9 @@ import gongchaGnb from '../images/gongcha_gnb.png'
 
 function GongchaDetail() {
      const buttonClass = clsx(
-            'px-4 py-2 rounded-full border border-primary transition-all text-[18px]',
-            'text-primary bg-white',
-            'hover:bg-primary hover:text-white'
+            'px-4 py-2 rounded-full bg-pointColor border border-pointColor transition-all text-[18px]',
+            'text-white',
+            'hover:text-pointColor hover:bg-background'
           );
 
     const [openIndex, setOpenIndex] = useState(null);
@@ -51,7 +51,7 @@ function GongchaDetail() {
             </div>
 
             <h1 className='mb-3'>✔️ 주요 정보 및 기간</h1>
-            <div className='bg-detailSection mb-10'>
+            <div className='border border-skillBorder rounded-2xl shadow-lg mb-10'>
                 <div className='px-6 py-8'>
                     <p className='mb-5 text-[22px]'>📆 <strong>프로젝트 기간</strong> : 2024.09 ~ 2024.12</p>
                     <div className='mb-5'>
@@ -82,7 +82,7 @@ function GongchaDetail() {
                             <li>- 메뉴 영양성분표 단순화를 통한 가독성 강화</li>
                         </ul>
                     </div>
-                    <div className='mb-3'>
+                    <div>
                         <h2 className='mb-5'>배포 주소</h2>
                         <a href="https://sohyun32253.github.io/Gongcha/" className={buttonClass}>웹사이트 방문하기 →</a>
                     </div>
@@ -90,7 +90,7 @@ function GongchaDetail() {
             </div>
 
             <h1 className='mb-3'>✔️ 주요 기능 소개</h1>
-            <div className='bg-detailSection mb-10'>
+            <div className=' mb-10 border border-skillBorder rounded-2xl shadow-lg'>
                 <ul className='px-6 py-8 space-y-2'>
                     {features.map((feature, index) => (
                         <li key={index} className='border rounded-xl p-4 shadow-sm transition-all duration-300'>
@@ -114,7 +114,7 @@ function GongchaDetail() {
             </div>
 
             <h1 className='mb-3'>✔️ 트러블 슈팅</h1>
-            <div className='bg-detailSection px-6 py-8'>
+            <div className='px-6 py-8 border border-skillBorder rounded-2xl shadow-lg'>
                 <div className='mb-5'>
                     <h2 className='mb-2'>💥 문제</h2>
                     <p>하나의 컴포넌트(MenuDrink.jsx)에 사이트 내 전체 메뉴를 구현하여 2,000줄이 넘는 코드가 만들어지면서,<br/>

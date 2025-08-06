@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import Contact from './Contact';
 import GongchaDetail from './GongchaDetail';
 import CircleDetail from './CircleDetail';
+import ZipgoaiDetail from './ZipgoaiDetail';
 
 function ProjectDetail() {
     const { id } = useParams();
@@ -15,6 +16,7 @@ function ProjectDetail() {
     let title = '';
     if (id === 'gongcha') title = 'Gong cha';
     else if (id === 'circle') title = 'Circle';
+    else if (id === 'zipgoai') title = '땅집고 옥션';
 
     return (
         <section className='content w-full relative z-[101] bg-background text-center md:text-left pt-20 md:p-0'>
@@ -31,6 +33,7 @@ function ProjectDetail() {
 
                 {id === 'gongcha' && <GongchaDetail />}
                 {id === 'circle' && <CircleDetail />}
+                {id === 'zipgoai' && <ZipgoaiDetail />}
             </div>
             <Contact />
         </section>

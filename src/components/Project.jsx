@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
+import zipgoai from '../images/zipgoai.png';
 import circle from '../images/circle.png';
 import gongcha from '../images/gongcha.png';
 import gongchaPreview01 from '../images/gongcha_preview.png';
@@ -14,6 +15,7 @@ import circlePreview04 from '../images/circle_preview03.png';
 import circlePreview05 from '../images/circle_preview04.png';
 
 function Project({ onSelectProject }) {
+  const [activeTab, setActiveTab] = useState('전체 프로젝트');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,11 +27,25 @@ function Project({ onSelectProject }) {
     }
   }, []);
 
+  const tabs = ['전체 프로젝트', '실무 프로젝트', '개인 프로젝트', '협업 프로젝트'];
+
   const projects = [
+    {
+      id: 'zipgoai',
+      name: '땅집고 옥션',
+      intro: '1:1 문의하기 및 쿠폰함 신규 구축 / 기존 UI 기능 개선 참여',
+      route: '/ProjectDetail',
+      src: zipgoai,
+      img01: gongchaPreview01,
+      img02: gongchaPreview02,
+      img03: gongchaPreview03,
+      img04: gongchaPreview04,
+      img05: gongchaPreview05,
+    },
     {
       id: 'gongcha',
       name: 'Gong cha',
-      intro: 'React 기반의 웹사이트 리뉴얼',
+      intro: 'React 기반 웹사이트 리뉴얼 / 개인 프로젝트',
       route: '/ProjectDetail',
       src: gongcha,
       img01: gongchaPreview01,
@@ -48,15 +64,37 @@ function Project({ onSelectProject }) {
       img02: circlePreview02,
       img03: circlePreview03,
       img04: circlePreview04,
-      img05: circlePreview05,
+      img05: circlePreview05
     },
   ];
 
+  const filteredProjects = projects.filter(project => {
+  if (activeTab === '전체 프로젝트') return true;
+  return project.intro.includes(activeTab); // 예: intro에 '협업' 포함되어 있으면 보여짐
+});
+
   return (
     <section id='project' className='content w-full md:pt-[96px] md:mb-[192px]'>
-      <div className='md:flex md:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10'>
-        {projects.map((project, index) => (
-          <div key={index} className='mb-20 relative bg-primary text-white md:mb-0 md:w-[500px] transition-all duration-300 shadow-lg hover:bg-cardUiHover hover:text-primary hover:scale-[1.02]'>
+         <ul className='tapbar_wrapper flex mb-10 gap-10 max-w-[1280px] mx-auto px-10 text-projectTab font-medium'>
+      {tabs.map((tab) => (
+        <li
+          key={tab}
+          id={tab}
+          onClick={() => setActiveTab(tab)}
+          className={`cursor-pointer transition-all ${
+            activeTab === tab
+              ? 'font-bold text-pointColor border-b-2 border-pointColor'
+              : ''
+          }`}
+        >
+          {tab}
+        </li>
+      ))}
+    </ul>
+
+        <div className='md:flex md:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10'>
+        {filteredProjects.map((project, index) => (
+          <div key={index} className='mb-20 relative bg-subBackground text-white md:mb-0 md:w-[500px] transition-all duration-300 shadow-lg hover:bg-cardUiHover hover:text-primary hover:scale-[1.02]'>
             <img
               src={project.src}
               alt={project.name}
@@ -71,7 +109,7 @@ function Project({ onSelectProject }) {
               <dd className='text-lg'>{project.intro}</dd>
             </dl>
             <button
-              className='absolute left-5 bottom-5 px-3 py-1 rounded-xl border border-primary text-primary bg-buttonBg hover:bg-orange-500 hover:text-white hover:border-none text-lg'
+              className='absolute left-5 bottom-5 px-3 py-1 rounded-xl border border-primary text-primary bg-buttonBg hover:bg-pointColor hover:text-white hover:border-none text-lg'
               onClick={() => {
                 sessionStorage.setItem('scrollY', window.scrollY);
                 onSelectProject(project);
@@ -81,7 +119,8 @@ function Project({ onSelectProject }) {
             </button>
           </div>
         ))}
-      </div>
+        </div>
+       
     </section>
   );
 }
