@@ -58,19 +58,19 @@ function ProjectPopUp({ project, onClose }) {
     <div ref={popupRef} className="relative w-full">
       <Slider {...settings}>
         <div>
-          <img src={project.img01} alt="미리보기 사진" />
+          <img src={project.img01} className='w-[720px] h-[326px]' alt="미리보기 사진"  />
         </div>
         <div>
-          <img src={project.img02} alt="미리보기 사진" />
+          <img src={project.img02} className='w-[720px] h-[326px]'  alt="미리보기 사진" />
         </div>
         <div>
-          <img src={project.img03} alt="미리보기 사진" />
+          <img src={project.img03}  className='w-[720px] h-[326px]' alt="미리보기 사진" />
         </div>
         <div>
-          <img src={project.img04} alt="미리보기 사진" />
+          <img src={project.img04}  className='w-[720px] h-[326px]' alt="미리보기 사진" />
         </div>
         <div>
-          <img src={project.img05} alt="미리보기 사진" />
+          <img src={project.img05}  className='w-[720px] h-[326px]' alt="미리보기 사진" />
         </div>
       </Slider>
     </div>

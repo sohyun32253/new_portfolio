@@ -13,6 +13,12 @@ import circlePreview02 from '../images/circle_preview01.png';
 import circlePreview03 from '../images/circle_preview02.png';
 import circlePreview04 from '../images/circle_preview03.png';
 import circlePreview05 from '../images/circle_preview04.png';
+import zipgoPreview01 from '../images/zipgoai.png';
+import zipgoPreview02 from '../images/inquiry_02.png';
+import zipgoPreview03 from '../images/history_03.png';
+import zipgoPreview04 from '../images/coupon_box01.png';
+import zipgoPreview05 from '../images/coupon_box05.png';
+
 
 function Project({ onSelectProject }) {
   const [activeTab, setActiveTab] = useState('전체 프로젝트');
@@ -33,14 +39,14 @@ function Project({ onSelectProject }) {
     {
       id: 'zipgoai',
       name: '땅집고 옥션',
-      intro: '1:1 문의하기 및 쿠폰함 신규 구축 / 기존 UI 기능 개선 참여',
+      intro: '부동산 경공매 사이트의 인턴으로 참여한 실무 프로젝트',
       route: '/ProjectDetail',
       src: zipgoai,
-      img01: gongchaPreview01,
-      img02: gongchaPreview02,
-      img03: gongchaPreview03,
-      img04: gongchaPreview04,
-      img05: gongchaPreview05,
+      img01: zipgoPreview01,
+      img02: zipgoPreview02,
+      img03: zipgoPreview03,
+      img04: zipgoPreview04,
+      img05: zipgoPreview05,
     },
     {
       id: 'gongcha',
@@ -98,7 +104,7 @@ function Project({ onSelectProject }) {
             <img
               src={project.src}
               alt={project.name}
-              className='h-[250px] w-full object-cover cursor-pointer'
+              className='h-[250px] w-full object-cover cursor-pointer inline-block'
               onClick={() => {
                 sessionStorage.setItem('scrollY', window.scrollY);
                 navigate(`/projectDetail/${project.id}`);

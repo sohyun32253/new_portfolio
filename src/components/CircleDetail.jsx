@@ -40,122 +40,156 @@ function CircleDetail() {
                 <img src={circleMain} alt='써클 메인 이미지' />
             </div>
 
-            <h1 className='mb-3'>✔️ 주요 정보 및 기간</h1>
-            <div className='mb-10'>
-                <div className='px-6 py-8'>
-                    <div className='mb-5'>
-                        <h2 className='mb-2'>✏️ 기획 의도</h2>
-                        <p>대부분의 대학 커뮤니티 앱은 한국어 기반이며, 한국인 중심의 문화와 정서가 짙게 반영되어 있어<br/>
-                        외국인 유학생들이 소외감을 느끼거나 소통에 어려움을 겪는 경우가 많습니다. </p>
-                        <p>실제로 외국어대학교에 재학 중인 친구의 이야기를 통해, <br/>
-                        외국인 학생들이 기존 커뮤니티에서 편하게 어울리기 어렵다는 현실을 접하게 되었습니다.</p>
-                        <p>이러한 문제를 해결하고자, 외국인 유학생들이 국적과 언어에 상관없이 자유롭게 소통하고 <br/> 친목을 도모할 수 있는 커뮤니티 플랫폼 'Circle'을 기획·개발하게 되었습니다.</p>
-                        <p> 사용자는 관심사에 따라 모임(서클)을 생성하고, 가입 및 참여할 수 있으며, 커뮤니티 내에서 다양한 의견을 나눌 수 있습니다.</p>
-                    </div>
+ <h1 className="mb-3 text-xl font-semibold">✔️ 주요 정보 및 기간</h1>
+<div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
+  <div className="px-6 py-8 space-y-6 text-[16px] leading-relaxed text-textColor">
+    
+    {/* 기획 의도 */}
+    <div>
+      <h2 className="text-lg font-semibold mb-2">✏️ 기획 의도</h2>
+      <p className='text-base'>
+        대부분의 대학 커뮤니티 앱은 한국어 기반이며, 외국인 유학생들이 소외감을 느끼거나 소통에 어려움을 겪는 경우가 많습니다. <br />
+        실제 외국어대학교 재학생의 이야기를 통해 외국인 학생들이 기존 커뮤니티에 편하게 어울리기 어렵다는 현실을 접하게 되었고,  
+        이에 따라 국적과 언어에 관계없이 자유롭게 소통하고 친목을 도모할 수 있는 커뮤니티 플랫폼 <strong>'Circle'</strong>을 기획·개발하게 되었습니다.
+      </p>
+    </div>
 
-                    <p className='mb-5 text-[22px]'>📆 <strong>프로젝트 기간</strong> : 2024.11 ~ 현재(ing)</p>
-                    <div className='mb-5'>
-                        <h2 className='mb-2'>🎯 개발 목표</h2>
-                        <ul className='text-[18px]'>
-                            <li>1. 외국인 친화적인 커뮤니티 웹/앱 개발</li>
-                            <li>2. 프론트엔드 / 백엔드 업무 분담 협업 개발</li>
-                        </ul>
-                    </div>
-                    <div className='mb-5'>
-                        <h2 className='mb-2'>⚙️ 개발 환경</h2>
-                        <ul className='flex flex-wrap gap-3 text-lg w-full'>
-                        {['HTML5', 'CSS3', 'JAVASCRIPT', 'REACT', 'TYPESCRIPT', 'REST API', 'AXIOS'].map((item) => (
-                            <li
-                            key={item}
-                            className='px-4 py-1 border bg-slate-400 text-white rounded-full 
-                            break-words whitespace-normal min-w-0'>
-                            {item}
-                            </li>
-                        ))}
-                        </ul>
+    {/* 기간 */}
+    <p className="text-lg">
+      📆 <strong className="text-gray-800">프로젝트 기간</strong> : 2024.11 ~ 2025.05
+    </p>
 
-                    </div>
-                    <div className='mb-5'>
-                        <h2 className='mb-2'>⭐ 프로젝트 소개</h2>
-                        <ul className='text-[18px]'>
-                            <li>1. 외국인 친화적인 커뮤니티 웹/앱 개발</li>
-                            <li>2. 프론트엔드 / 백엔드 업무 분담 협업 개발</li>
-                        </ul>
-                    </div>
+    {/* 개발 목표 */}
+    <div>
+      <h2 className="font-semibold text-lg mb-2">🎯 개발 목표</h2>
+      <ul className="list-disc list-inside text-gray-700">
+        <li>외국인 친화적인 커뮤니티 웹/앱 개발</li>
+        <li>프론트엔드 / 백엔드 분업 협업 개발</li>
+      </ul>
+    </div>
 
-                    <div className='mb-3'>
-                        <h2 className='mb-5'>배포 주소 (PC 권장)</h2>
-                        <a href="https://circle-kr.github.io/circle_front/" className={buttonClass}>웹사이트 방문하기 →</a>
-                    </div>
-                </div>
-            </div>
+    {/* 개발 환경 */}
+    <div>
+      <h2 className="font-semibold text-lg mb-2">⚙️ 개발 환경</h2>
+      <ul className="flex flex-wrap gap-3 text-base">
+        {['HTML5', 'CSS3', 'JAVASCRIPT', 'REACT', 'TYPESCRIPT', 'REST API', 'AXIOS'].map((item) => (
+          <li
+            key={item}
+            className="px-4 py-1 bg-[#6f728b] text-white  rounded-full"
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
 
-            <h1 className='mb-3'>✔️ 주요 기능 소개</h1>
-            <div className='mb-10'>
-                <ul className='px-6 py-8 space-y-2'>
-                    {features.map((feature, index) => (
-                        <li key={index} className='border rounded-xl p-4 shadow-sm transition-all duration-300'>
-                            <button
-                                className='w-full text-left font-semibold flex justify-between items-center'
-                                onClick={() => toggle(index)}
-                            >
-                                <span>{feature.title}</span>
-                                <span className='text-sm'>{openIndex === index ? '▲' : '▼'}</span>
-                            </button>
-                            <div
-                                className={`overflow-hidden transition-all duration-300 ${
-                                    openIndex === index ? 'max-h-[200px] mt-2 opacity-100' : 'max-h-0 opacity-0'
-                                }`}
-                            >
-                                <p className='text-[18px] text-gray-700'>{feature.detail}</p>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
-            </div>
+    {/* 프로젝트 소개 */}
+    <div>
+      <h2 className="font-semibold text-lg mb-2">⭐ 프로젝트 소개</h2>
+      <ul className="list-disc list-inside text-gray-700">
+        <li>외국인 유학생 중심의 커뮤니티 플랫폼 웹/앱 개발</li>
+        <li>프론트엔드-백엔드 협업 기반 구조 설계</li>
+      </ul>
+    </div>
 
-            <h1 className='mb-3'>✔️ 협업 도구 및 방식</h1>
-            <div className='mb-10'>
-                <div className='px-6 py-8'>
-                    사용 도구 : github, notion
-                </div>
-            </div>
+    {/* 배포 주소 */}
+    <div>
+      <h2 className="font-semibold text-lg mb-2">🌐 배포 주소</h2>
+      <a
+        href="https://circle-kr.github.io/circle_front/"
+        className="inline-block px-5 py-2 rounded-full bg-pointColor text-white hover:bg-[#825ff7] transition"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        웹사이트 방문하기 →
+      </a>
+    </div>
+  </div>
+</div>
 
-            <h1 className='mb-3'>✔️ 트러블 슈팅</h1>
-            <div className='px-6 py-8'>
-                <div className='mb-5'>
-                    <h2 className='mb-2'>💥 문제</h2>
-                    <p>로그인 및 회원가입 페이지를 구현하며, 백엔드와의 데이터 통신 방식을 어떤 방식으로 설계할지 고민이 생겼습니다.</p>
-                </div>
-                <div className='mb-5'>
-                    <h2 className='mb-2'>🤔 원인 및 고민</h2>
-                    <p>데이터 요청 방식에는 다양한 선택지가 있었고,</p>
-                    <ul className='text-[18px]'>
-                        <li>- 구조가 복잡하지 않고</li>
-                        <li>- 가독성과 유지보수에 유리하며</li>
-                        <li>- 초보자도 쉽게 이해할 수 있는
-                        방식을 찾는 것이 핵심이었습니다.</li>
-                    </ul>
-                </div>
-                <div className='mb-5'>
-                    <h2 className='mb-2'>💡 해결 방법</h2>
-                    <p className='mb-5'>Axios 라이브러리를 활용하여 백엔드와 통신하는 구조를 설계하였습니다.</p>
-                </div>
+{/* 주요 기능 소개 */}
+<h1 className="mb-3 text-xl font-semibold">✔️ 주요 기능 소개</h1>
+<div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
+  <ul className="px-6 py-8 space-y-3 text-gray-800 text-[16px]">
+    {features.map((feature, index) => (
+      <li key={index} className="border rounded-xl p-4 bg-white hover:shadow-md transition-all duration-300">
+        <button
+          className="w-full text-left font-semibold flex justify-between items-center"
+          onClick={() => toggle(index)}
+        >
+          <span className="flex items-center gap-2 ">
+            💡 {feature.title}
+          </span>
+          <span className="text-sm">{openIndex === index ? '▲' : '▼'}</span>
+        </button>
 
-                <div className='mb-10'>
-                    <h2 className='mb-2'>✅ Axios 선택 이유 및 장점</h2>
-                    <ul className='text-[18px]'>
-                        <li>1. 간결한 문법으로 API 요청/응답 로직을 직관적으로 작성할 수 있습니다.</li>
-                        <li>2. 에러 처리 및 요청 설정이 유연하여 예외 상황에 쉽게 대응할 수 있습니다.</li>
-                        <li>3. 구조 분리가 쉬워, API 관리 파일을 통해 요청 코드를 모듈화하여 유지보수성을 높일 수 있습니다.</li>
-                    </ul>
-                </div>
-                <div className='mb-5'>
-                    <h2 className='mb-5'>📜 기타 문서</h2>
-                    <a href='https://github.com/circle-kr/circle_front' className={buttonClass}>git hub 바로가기 →</a>
-                </div>
-                
-            </div>
+        <div
+          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+            openIndex === index ? 'max-h-[400px] mt-3 opacity-100 scale-100' : 'max-h-0 opacity-0 scale-[0.98]'
+          }`}
+        >
+          <p className="bg-[#f3f4f6] p-4 rounded-md text-gray-700 text-base">
+            {feature.detail}
+          </p>
+        </div>
+      </li>
+    ))}
+  </ul>
+</div>
+
+{/* 협업 도구 */}
+<h1 className="mb-3 text-xl font-semibold">✔️ 협업 도구 및 방식</h1>
+<div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff] px-6 py-8">
+  <p className="text-gray-800">
+    🛠 사용 도구 : <span className="font-medium">GitHub, Notion</span>
+  </p>
+</div>
+
+{/* 트러블 슈팅 */}
+<h1 className="mb-3 text-xl font-semibold">✔️ 트러블 슈팅</h1>
+<div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff] px-6 py-8 space-y-6">
+
+  <section>
+    <h2 className="mb-2 font-semibold text-lg">💥 문제</h2>
+    <p className='text-base'>로그인 및 회원가입 페이지 구현 시, 백엔드 통신 구조 설계에 대한 고민이 있었습니다.</p>
+  </section>
+
+  <section>
+    <h2 className="mb-2 font-semibold text-lg">🤔 원인 및 고민</h2>
+    <ul className="list-disc list-inside text-gray-800 text-base">
+      <li>요청 방식 선택지가 다양했음</li>
+      <li>구조가 복잡하지 않고 유지보수에 유리한 구조 필요</li>
+      <li>초보자도 쉽게 이해할 수 있는 구조 고려</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 className="mb-2font-semibold text-lg">💡 해결 방법</h2>
+    <p className='text-base'>Axios 라이브러리를 활용하여 백엔드와 통신하는 구조로 설계하였습니다.</p>
+  </section>
+
+  <section>
+    <h2 className="mb-2 font-semibold text-base">✅ Axios 선택 이유 및 장점</h2>
+    <ul className="list-decimal list-inside text-gray-800 text-base">
+      <li>간결한 문법으로 직관적인 API 코드 작성 가능</li>
+      <li>유연한 요청 설정 및 에러 처리 구조</li>
+      <li>요청 코드 모듈화로 유지보수성 향상</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 className="mb-2 font-semibold text-base">📜 기타 문서</h2>
+    <a
+      href="https://github.com/circle-kr/circle_front"
+      className="inline-block px-5 py-2 rounded-full bg-pink-300 text-white hover:bg-[#825ff7] transition text-base"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      💻 개발의 흔적, 여기 있습니다 →
+    </a>
+  </section>
+</div>
+
         </section>
     );
 }
