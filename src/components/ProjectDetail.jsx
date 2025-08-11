@@ -5,6 +5,8 @@ import Contact from './Contact';
 import GongchaDetail from './GongchaDetail';
 import CircleDetail from './CircleDetail';
 import ZipgoaiDetail from './ZipgoaiDetail';
+import SaltrainDetail from './SaltrainDetail';
+import MaeilDetail from './MaeilDetail';
 
 function ProjectDetail() {
     const { id } = useParams();
@@ -14,9 +16,11 @@ function ProjectDetail() {
     }
 
     let title = '';
-    if (id === 'gongcha') title = 'Gong cha';
+    if (id === 'gongcha') title = '공차 (Gong cha)';
     else if (id === 'circle') title = 'Circle';
     else if (id === 'zipgoai') title = '땅집고 옥션';
+    else if (id === 'saltrain') title = '솔트레인 (SALTRAIN)';
+    else if (id === 'maeil') title = '매일유업 (Maeil)';
 
     return (
         <section className='content w-full relative z-[101] bg-background text-center md:text-left pt-20 md:p-0'>
@@ -34,6 +38,8 @@ function ProjectDetail() {
                 {id === 'gongcha' && <GongchaDetail />}
                 {id === 'circle' && <CircleDetail />}
                 {id === 'zipgoai' && <ZipgoaiDetail />}
+                {id === 'saltrain' && <SaltrainDetail />}
+                {id === 'maeil' && <MaeilDetail />}
             </div>
             <Contact />
         </section>

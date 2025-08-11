@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router';
 import zipgoai from '../images/zipgoai.png';
 import circle from '../images/circle.png';
 import gongcha from '../images/gongcha.png';
+import saltrain from '../images/saltrain_preview.png';
+import maeil from '../images/maeil_preview.png';
 import gongchaPreview01 from '../images/gongcha_preview.png';
 import gongchaPreview02 from '../images/gongcha_preview01.png';
 import gongchaPreview03 from '../images/gongcha_preview02.png';
@@ -18,6 +20,16 @@ import zipgoPreview02 from '../images/inquiry_02.png';
 import zipgoPreview03 from '../images/history_03.png';
 import zipgoPreview04 from '../images/coupon_box01.png';
 import zipgoPreview05 from '../images/coupon_box05.png';
+import saltrainPreview01 from '../images/saltrain_preview.png';
+import saltrainPreview02 from '../images/saltrain_preview_01.png';
+import saltrainPreview03 from '../images/saltrain_preview_02.png';
+import saltrainPreview04 from '../images/saltrain_preview_03.png';
+import saltrainPreview05 from '../images/saltrain_preview_04.png';
+import maeilPreview01 from '../images/maeil_preview.png';
+import maeilPreview02 from '../images/maeil_preview_01.png';
+import maeilPreview03 from '../images/maeil_preview_02.png';
+import maeilPreview04 from '../images/maeil_preview_03.png';
+import maeilPreview05 from '../images/maeil_preview_04.png';
 
 
 function Project({ onSelectProject }) {
@@ -39,7 +51,7 @@ function Project({ onSelectProject }) {
     {
       id: 'zipgoai',
       name: '땅집고 옥션',
-      intro: '부동산 경공매 사이트의 인턴으로 참여한 실무 프로젝트',
+      intro: '부동산 경공매 플랫폼의 인턴으로 참여해, 실제 서비스 환경에서 개발을 경험한 실무 프로젝트',
       route: '/ProjectDetail',
       src: zipgoai,
       img01: zipgoPreview01,
@@ -49,9 +61,21 @@ function Project({ onSelectProject }) {
       img05: zipgoPreview05,
     },
     {
+      id: 'circle',
+      name: 'Circle',
+      intro: '백엔드 서버와의 Axios 통신을 통해 데이터 흐름과 협업의 묘미를 살린 협업 프로젝트',
+      route: '/ProjectDetail',
+      src: circle,
+      img01: circlePreview01,
+      img02: circlePreview02,
+      img03: circlePreview03,
+      img04: circlePreview04,
+      img05: circlePreview05
+    },
+    {
       id: 'gongcha',
-      name: 'Gong cha',
-      intro: 'React 기반 웹사이트 리뉴얼 / 개인 프로젝트',
+      name: '공차 (Gong cha)',
+      intro: 'React로 구현한 브랜드 웹사이트 리뉴얼, UI/UX 개선에 집중한 개인 프로젝트',
       route: '/ProjectDetail',
       src: gongcha,
       img01: gongchaPreview01,
@@ -61,16 +85,28 @@ function Project({ onSelectProject }) {
       img05: gongchaPreview05,
     },
     {
-      id: 'circle',
-      name: 'Circle',
-      intro: '백엔드 서버와 Axios 통신을 사용한 협업 프로젝트',
+      id: 'saltrain',
+      name: '솔트레인 (SALTRAIN)',
+      intro: 'Vue 기반 웹사이트 리뉴얼로, 디자이너 팀원과 함께 작업한 협업 프로젝트',
       route: '/ProjectDetail',
-      src: circle,
-      img01: circlePreview01,
-      img02: circlePreview02,
-      img03: circlePreview03,
-      img04: circlePreview04,
-      img05: circlePreview05
+      src: saltrain,
+      img01: saltrainPreview01,
+      img02: saltrainPreview02,
+      img03: saltrainPreview03,
+      img04: saltrainPreview04,
+      img05: saltrainPreview05,
+    },
+    {
+      id: 'maeil',
+      name: '매일유업 (maeil)',
+      intro: '브랜드 리뉴얼과 간단한 인터랙션 구현을 함께 경험한, HTML/CSS/JS 기반의 첫 협업 프로젝트',
+      route: '/ProjectDetail',
+      src: maeil,
+      img01: maeilPreview01,
+      img02: maeilPreview02,
+      img03: maeilPreview03,
+      img04: maeilPreview04,
+      img05: maeilPreview05
     },
   ];
 

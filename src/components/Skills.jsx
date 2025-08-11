@@ -16,8 +16,11 @@ function Skills() {
             { name : "React", color : "bg-skill03" },
             { name : "TypeScript", color : "bg-skill04" },
             { name : "JavaScript", color : "bg-skill05" },
-            { name : "Axios", color : "bg-skill06" },
-            { name : "REST API", color : "bg-skill07" },
+            { name : "Jquery", color : "bg-skill07" },
+            { name : "Axios", color : "bg-skill12" },
+            { name : "REST API", color : "bg-skill09" },
+            { name : "Tailwind CSS", color : "bg-skill13" },
+            { name : "styled-components", color : "bg-skill11" },
           ]
         },
         { 
@@ -54,7 +57,7 @@ function Skills() {
             { Skills.map((skill, index) =>(
                 <div key={index} className='gap-10 mb-5 md:flex md:items-center last:mb-0'>
                     <h3 className='text-2xl font-bold text-subBackground w-[200px]'><img src={skill.icon} className='inline' /> {skill.title}</h3>
-                    <ul className='flex py-5 gap-5 flex-wrap'>
+                    <ul className='flex py-5 gap-5 flex-wrap md:w-[1000px]'>
                         {skill.items.map((i, index)=> (
                              <li key={index} className={`px-4 py-1 border rounded-full text-xl text-white ${i.color}`}>{i.name}</li>
                         ))}

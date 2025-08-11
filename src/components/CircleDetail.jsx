@@ -49,7 +49,7 @@ function CircleDetail() {
       <h2 className="text-lg font-semibold mb-2">✏️ 기획 의도</h2>
       <p className='text-base'>
         대부분의 대학 커뮤니티 앱은 한국어 기반이며, 외국인 유학생들이 소외감을 느끼거나 소통에 어려움을 겪는 경우가 많습니다. <br />
-        실제 외국어대학교 재학생의 이야기를 통해 외국인 학생들이 기존 커뮤니티에 편하게 어울리기 어렵다는 현실을 접하게 되었고,  
+        실제 외국어대학교 재학생의 이야기를 통해 외국인 학생들이 기존 커뮤니티에 편하게 어울리기 어렵다는 현실을 접하게 되었고,  <br />
         이에 따라 국적과 언어에 관계없이 자유롭게 소통하고 친목을 도모할 수 있는 커뮤니티 플랫폼 <strong>'Circle'</strong>을 기획·개발하게 되었습니다.
       </p>
     </div>
@@ -62,9 +62,9 @@ function CircleDetail() {
     {/* 개발 목표 */}
     <div>
       <h2 className="font-semibold text-lg mb-2">🎯 개발 목표</h2>
-      <ul className="list-disc list-inside text-gray-700">
-        <li>외국인 친화적인 커뮤니티 웹/앱 개발</li>
-        <li>프론트엔드 / 백엔드 분업 협업 개발</li>
+      <ul className="list-disc list-inside text-gray-700 px-9">
+        <li className="before:content-['•'] before:mr-2 before:text-slate-400">외국인 유학생 친화적인 커뮤니티 웹·앱 개발</li>
+        <li className="before:content-['•'] before:mr-2 before:text-slate-400">프론트엔드·백엔드 분업을 통한 효율적인 협업 구조 구축</li>
       </ul>
     </div>
 
@@ -86,9 +86,9 @@ function CircleDetail() {
     {/* 프로젝트 소개 */}
     <div>
       <h2 className="font-semibold text-lg mb-2">⭐ 프로젝트 소개</h2>
-      <ul className="list-disc list-inside text-gray-700">
-        <li>외국인 유학생 중심의 커뮤니티 플랫폼 웹/앱 개발</li>
-        <li>프론트엔드-백엔드 협업 기반 구조 설계</li>
+      <ul className="list-disc list-inside text-gray-700 px-9">
+        <li className="before:content-['•'] before:mr-2 before:text-slate-400">외대 재학 중인 친구의 제안으로 시작한 외국인 유학생 중심 커뮤니티 플랫폼 개발 프로젝트입니다.</li>
+        <li className="before:content-['•'] before:mr-2 before:text-slate-400">UI 설계부터 퍼블리싱, 로그인·회원가입 기능을 중심으로 백엔드 서버와 API 연동을 구현하여 실서비스 구조를 경험했습니다.</li>
       </ul>
     </div>
 
@@ -156,24 +156,24 @@ function CircleDetail() {
 
   <section>
     <h2 className="mb-2 font-semibold text-lg">🤔 원인 및 고민</h2>
-    <ul className="list-disc list-inside text-gray-800 text-base">
-      <li>요청 방식 선택지가 다양했음</li>
-      <li>구조가 복잡하지 않고 유지보수에 유리한 구조 필요</li>
-      <li>초보자도 쉽게 이해할 수 있는 구조 고려</li>
+    <ul className="list-disc list-inside text-gray-800 text-base px-9">
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">요청 방식 선택지가 다양했음</li>
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">구조가 복잡하지 않고 유지보수에 유리한 구조 필요</li>
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">초보자도 쉽게 이해할 수 있는 구조 고려</li>
     </ul>
   </section>
 
   <section>
-    <h2 className="mb-2font-semibold text-lg">💡 해결 방법</h2>
+    <h2 className="mb-2 font-semibold text-lg">💡 해결 방법</h2>
     <p className='text-base'>Axios 라이브러리를 활용하여 백엔드와 통신하는 구조로 설계하였습니다.</p>
   </section>
 
   <section>
     <h2 className="mb-2 font-semibold text-base">✅ Axios 선택 이유 및 장점</h2>
-    <ul className="list-decimal list-inside text-gray-800 text-base">
-      <li>간결한 문법으로 직관적인 API 코드 작성 가능</li>
-      <li>유연한 요청 설정 및 에러 처리 구조</li>
-      <li>요청 코드 모듈화로 유지보수성 향상</li>
+    <ul className="list-decimal list-inside text-gray-800 text-base px-9">
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">간결한 문법으로 직관적인 API 코드 작성 가능</li>
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">유연한 요청 설정 및 에러 처리 구조</li>
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">요청 코드 모듈화로 유지보수성 향상</li>
     </ul>
   </section>
 

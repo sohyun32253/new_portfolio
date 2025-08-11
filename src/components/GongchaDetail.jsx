@@ -61,9 +61,9 @@ function GongchaDetail() {
 
                 <div>
                 <h2 className="font-semibold text-lg mb-2 ">🎯 개발 목표</h2>
-                <ul className="list-disc list-inside text-[16px] text-gray-700">
-                    <li>브랜드 컨셉 보완과 사용자 UI를 개선한 웹 사이트 리뉴얼</li>
-                    <li>React.js를 활용한 웹 사이트 개발</li>
+                <ul className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                    <li className="before:content-['•'] before:mr-2 before:text-slate-400">브랜드 컨셉과 톤앤매너를 분석·보완하여 사용자 경험(UX)과 UI를 개선한 웹사이트 리뉴얼</li>
+                    <li className="before:content-['•'] before:mr-2 before:text-slate-400">React.js 기반의 반응형 웹사이트 개발</li>
                 </ul>
                 </div>
 
@@ -73,7 +73,7 @@ function GongchaDetail() {
                     {['HTML5', 'CSS3', 'JAVASCRIPT', 'REACT', 'FIREBASE'].map((item) => (
                     <li
                         key={item}
-                        className="px-4 py-1 bg-[#a1a5d4] text-white rounded-full text-base"
+                        className="px-4 py-1 bg-[#c35050] text-white rounded-full text-base"
                     >
                         {item}
                     </li>
@@ -83,10 +83,10 @@ function GongchaDetail() {
 
                 <div>
                 <h2 className="font-semibold text-lg mb-2">⭐ 프로젝트 소개</h2>
-                <ul className="list-disc list-inside text-[16px] text-gray-700">
-                    <li>브랜드가 인상에 잘 남도록 디자인 컨셉 보완</li>
-                    <li>메인 페이지 구조 및 콘텐츠 요소 추가로 레이아웃 강화</li>
-                    <li>메뉴 영양성분표 단순화를 통한 가독성 향상</li>
+                <ul className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                    <li className="before:content-['•'] before:mr-2 before:text-slate-400">공차의 브랜드 이미지, 톤앤매너, 디자인 가이드를 구체적으로 조사·분석하여 리뉴얼 방향성 수립</li>
+                    <li className="before:content-['•'] before:mr-2 before:text-slate-400">메인 페이지 구조 재설계와 콘텐츠 요소 추가로 레이아웃 완성도 강화</li>
+                    <li className="before:content-['•'] before:mr-2 before:text-slate-400">메뉴 영양성분표 UI 단순화를 통해 정보 가독성과 접근성 향상</li>
                 </ul>
                 </div>
 
@@ -216,10 +216,10 @@ function GongchaDetail() {
   {/* 개선 효과 */}
   <section>
     <h2 className="mb-2 font-semibold text-lg">✅ 개선 효과</h2>
-    <ul className="list-decimal list-inside space-y-1 text-gray-800 text-base">
-      <li>메뉴 카테고리 기준으로 명확하게 나뉘어 코드 구조와 UI 일치</li>
-      <li>가독성과 유지보수성 대폭 향상</li>
-      <li>신규 메뉴 추가 및 수정 시 해당 컴포넌트와 데이터만 다루면 되어 확장성 확보</li>
+    <ul className="list-decimal list-inside space-y-1 text-gray-800 text-base px-9">
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">메뉴 카테고리 기준으로 명확하게 나뉘어 코드 구조와 UI 일치</li>
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">가독성과 유지보수성 대폭 향상</li>
+      <li className="before:content-['•'] before:mr-2 before:text-slate-400">신규 메뉴 추가 및 수정 시 해당 컴포넌트와 데이터만 다루면 되어 확장성 확보</li>
     </ul>
   </section>
 
