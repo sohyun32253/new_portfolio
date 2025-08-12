@@ -70,3 +70,71 @@
   font-size: 24px;
 }
 }
+
+/* 기본 위치는 가운데 하단 */
+.btn-to-project {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 13px;
+  letter-spacing: .02em;
+  color: #fff;             /* slate-700 느낌 */
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 9999px;      /* pill */
+  box-shadow: 0 6px 18px rgba(17,24,39,.06);
+  text-decoration: none;
+  backdrop-filter: saturate(160%) blur(6px);
+  transition: transform .25s ease, background .25s ease, box-shadow .25s ease;
+  animation: float 2s ease-in-out infinite;
+}
+
+/* 호버/포커스 상태 - 살짝 커지고 더 선명 */
+.btn-to-project:hover,
+.btn-to-project:focus-visible {
+  background: rgba(255,255,255,.9);
+  transform: translateX(-50%) translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 24px rgba(17,24,39,.10);
+  color: #ff93ba;  
+}
+
+/* 포커스 링 (접근성) */
+.btn-to-project:focus-visible {
+  outline: 3px solid rgba(99,102,241,.35); /* indigo 느낌 */
+  outline-offset: 2px;
+}
+
+/* 아이콘 살짝 바운스 */
+.btn-to-project svg {
+  transition: transform .25s ease;
+}
+.btn-to-project:hover svg,
+.btn-to-project:focus-visible svg {
+  transform: translateY(2px);
+}
+
+/* 둥실둥실 떠오르는 미세한 모션 */
+@keyframes float {
+  0%, 100% { transform: translate(-50%, 0); }
+  50%      { transform: translate(-50%, -6px); }
+}
+
+/* 모션 민감 사용자 배려 */
+@media (prefers-reduced-motion: reduce) {
+  .btn-to-project,
+  .btn-to-project:hover,
+  .btn-to-project:focus-visible {
+    animation: none;
+    transition: none;
+    transform: translateX(-50%);
+  }
+}
+
+/* 모바일 여백 보정 */
+@media (max-width: 640px) {
+  .btn-to-project { bottom: 16px; padding: 9px 14px; font-size: 12px; }
+}

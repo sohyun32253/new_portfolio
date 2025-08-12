@@ -49,7 +49,7 @@ p {
 }
 
 .fade-glow {
-  animation: fade-glow 1.5s ease-in-out infinite;
+  animation: fade-glow 1s ease-in-out infinite;
 }
 
 

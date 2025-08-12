@@ -20,9 +20,7 @@ import login01 from '../images/login_01.png'
 import login02 from '../images/login_02.png'
 import popup from '../images/popup.png'
 
-
 function ZipgoaiDetail() {
-
     const tabs = [
         { id: 'inquiry', label: '1:1 문의하기' },
         { id: 'history', label: '내 문의내역' },
@@ -59,78 +57,73 @@ function ZipgoaiDetail() {
                         <div className="mb-10">
                         <h2 className="text-xl font-semibold mb-4">🧩 신규 페이지 구축</h2>
 
-                        <div className="mb-6">
-                            <h3 className="font-medium text-lg text-green-700 mb-1">🟢 ‘1:1 문의하기’ 및 ‘문의내역’ UI/기능 전체 구현</h3>
-                            <ul className="list-disc list-inside text-base text-gray-800 ml-2">
-                            <li>이메일 입력, 문의 유형 선택, 유효성 검사 포함</li>
-                            <li>리스트 구성 + 페이지네이션 구현</li>
-                            </ul>
-                        </div>
+                            <div className="mb-6">
+                                <h3 className="font-medium text-lg text-green-700 mb-1">🟢 ‘1:1 문의하기’ 및 ‘문의내역’ UI/기능 전체 구현</h3>
+                                <ul className="list-disc list-inside text-base text-gray-800 ml-2">
+                                    <li>이메일 입력, 문의 유형 선택, 유효성 검사 포함</li>
+                                    <li>리스트 구성 + 페이지네이션 구현</li>
+                                </ul>
+                            </div>
 
-                        <div>
-                            <h3 className="font-medium text-lg text-green-700 mb-1">🟢 ‘쿠폰함’ 팝업 및 사용 처리 로직 구현</h3>
-                            <ul className="list-disc list-inside text-base text-gray-800 ml-2">
-                            <li>프리미엄 여부에 따른 버튼 상태 분기</li>
-                            <li>유효기간 표시 및 사용자 피드백 메시지 처리</li>
-                            </ul>
-                        </div>
-                        </div>
+                            <div>
+                                <h3 className="font-medium text-lg text-green-700 mb-1">🟢 ‘쿠폰함’ 팝업 및 사용 처리 로직 구현</h3>
+                                <ul className="list-disc list-inside text-base text-gray-800 ml-2">
+                                    <li>프리미엄 여부에 따른 버튼 상태 분기</li>
+                                    <li>유효기간 표시 및 사용자 피드백 메시지 처리</li>
+                                </ul>
+                            </div>
+                            </div>
 
-                        <div>
-                        <h2 className="text-xl font-semibold mb-4">🛠 기존 기능 개선 및 추가</h2>
+                            <div>
+                            <h2 className="text-xl font-semibold mb-4">🛠 기존 기능 개선 및 추가</h2>
+                            <div className="mb-6">
+                                <h3 className="font-medium text-lg text-gray-700 mb-1">🔧 로그인 페이지 UI 개선</h3>
+                                <ul className="list-disc list-inside text-base text-gray-800 ml-2">
+                                    <li>소셜 로그인 버튼 정렬 및 에러 메시지 위치 조정</li>
+                                </ul>
+                            </div>
 
-                        <div className="mb-6">
-                            <h3 className="font-medium text-lg text-gray-700 mb-1">🔧 로그인 페이지 UI 개선</h3>
-                            <ul className="list-disc list-inside text-base text-gray-800 ml-2">
-                            <li>소셜 로그인 버튼 정렬 및 에러 메시지 위치 조정</li>
-                            </ul>
-                        </div>
-
-                        <div>
-                            <h3 className="font-medium text-lg text-gray-700 mb-1">📎 첨부파일 박스 내 문서 연결 기능 추가</h3>
-                            <ul className="list-disc list-inside text-base text-gray-800 ml-2">
-                            <li>각 항목 상단에 미리보기 링크 삽입</li>
-                            <li>데이터 없을 시 <code className="bg-gray-100 px-1 rounded text-[13px]">display: none</code> 처리 로직 적용</li>
-                            </ul>
-                        </div>
+                            <div>
+                                <h3 className="font-medium text-lg text-gray-700 mb-1">📎 첨부파일 박스 내 문서 연결 기능 추가</h3>
+                                <ul className="list-disc list-inside text-base text-gray-800 ml-2">
+                                    <li>각 항목 상단에 미리보기 링크 삽입</li>
+                                    <li>데이터 없을 시 <code className="bg-gray-100 px-1 rounded text-[13px]">display: none</code> 처리 로직 적용</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
            <h1 className="mb-3 font-semibold">🛠 사용 기술 및 협업 환경</h1>
-
             <div className="border border-skillBorder rounded-2xl shadow-lg mb-12 bg-[#f9f9f9]">
-            <div className="px-6 py-8 text-sm text-gray-800 space-y-4">
-                
-                <div className="flex items-center">
-                <span className="text-lg mr-2">💻</span>
-                <p><strong>Frontend :</strong> HTML5, CSS3, React, TypeScript</p>
-                </div>
+                <div className="px-6 py-8 text-sm text-gray-800 space-y-4">
+                    <div className="flex items-center">
+                        <span className="text-lg mr-2">💻</span>
+                        <p><strong>Frontend :</strong> HTML5, CSS3, React, TypeScript</p>
+                    </div>
 
-                <div className="flex items-center">
-                <span className="text-lg mr-2">🎨</span>
-                <p><strong>Styling :</strong> styled-components</p>
-                </div>
+                    <div className="flex items-center">
+                        <span className="text-lg mr-2">🎨</span>
+                        <p><strong>Styling :</strong> styled-components</p>
+                    </div>
 
-                <div className="flex items-center">
-                <span className="text-lg mr-2">🔀</span>
-                <p><strong>Version Control :</strong> Git</p>
-                </div>
+                    <div className="flex items-center">
+                        <span className="text-lg mr-2">🔀</span>
+                        <p><strong>Version Control :</strong> Git</p>
+                    </div>
 
-                <div className="flex items-center">
-                <span className="text-lg mr-2">💬</span>
-                <p><strong>Communication :</strong> Google Chat</p>
-                </div>
+                    <div className="flex items-center">
+                        <span className="text-lg mr-2">💬</span>
+                        <p><strong>Communication :</strong> Google Chat</p>
+                    </div>
 
-                <div className="flex items-center">
-                <span className="text-lg mr-2">🧑‍🎨</span>
-                <p><strong>디자인 협업 :</strong> Figma 기반 전달 및 작업</p>
+                    <div className="flex items-center">
+                        <span className="text-lg mr-2">🧑‍🎨</span>
+                        <p><strong>디자인 협업 :</strong> Figma 기반 전달 및 작업</p>
+                    </div>
                 </div>
-
             </div>
-            </div>
-
 
             <h1 className='mb-3'>🖥️ 결과물</h1>
             <div className='border border-skillBorder rounded-2xl shadow-lg mb-12 bg-[#f9f9f9]'>
@@ -359,7 +352,6 @@ function ZipgoaiDetail() {
                 </div>
                 <div className="mb-10">
                     <h2 className="text-xl font-semibold mb-4">💡 어려웠던 점</h2>
-
                     <div className="mb-6">
                         <h3 className="font-medium text-lg text-gray-800 mb-1">✅ 개발 서버 배포 과정</h3>
                         <p className="text-base text-gray-700 leading-loose ml-4 border-l-4 border-gray-200 pl-4">
@@ -381,20 +373,18 @@ function ZipgoaiDetail() {
                         </p>
                     </div>
 
-                <div className="bg-gray-100 border-l-4 border-blue-400 px-5 py-4 rounded-md text-sm text-gray-800 leading-relaxed shadow-sm">
-                <p className="mb-2 font-semibold text-blue-500">💬 협업 구조에 대한 제안 경험</p>
-                <p className='text-base leading-loose'>
-                운영 서버 배포 과정에서 개발자 각자가 병합 여부를 직접 결정해 PR을 보내는 구조를 경험하며, 
-                보다 체계적인 코드 리뷰 및 병합 관리 체계의 필요성을 느꼈습니다. <br />
-                프로젝트의 일관성과 안정성을 높이기 위해, PM 또는 리드 개발자가 전체 코드를 총괄하며 리뷰와 병합을 전담하는 방식을 
-                제안해 본 경험도 있습니다. <br />
-                당시에는 인력 구성상 도입되진 않았지만, 이 경험을 통해 역할 분담이 명확한 협업 구조가 
-                프로젝트의 효율성과 커뮤니케이션에 얼마나 긍정적인 영향을 미치는지를 체감할 수 있었습니다.
-                </p>
+                    <div className="bg-gray-100 border-l-4 border-blue-400 px-5 py-4 rounded-md text-sm text-gray-800 leading-relaxed shadow-sm">
+                    <p className="mb-2 font-semibold text-blue-500">💬 협업 구조에 대한 제안 경험</p>
+                    <p className='text-base leading-loose'>
+                    운영 서버 배포 과정에서 개발자 각자가 병합 여부를 직접 결정해 PR을 보내는 구조를 경험하며, 
+                    보다 체계적인 코드 리뷰 및 병합 관리 체계의 필요성을 느꼈습니다. <br />
+                    프로젝트의 일관성과 안정성을 높이기 위해, PM 또는 리드 개발자가 전체 코드를 총괄하며 리뷰와 병합을 전담하는 방식을 
+                    제안해 본 경험도 있습니다. <br />
+                    당시에는 인력 구성상 도입되진 않았지만, 이 경험을 통해 역할 분담이 명확한 협업 구조가 
+                    프로젝트의 효율성과 커뮤니케이션에 얼마나 긍정적인 영향을 미치는지를 체감할 수 있었습니다.
+                    </p>
+                    </div>
                 </div>
-
-                </div>
-                
             </div>
         </section>
     );

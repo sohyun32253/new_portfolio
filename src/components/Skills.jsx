@@ -11,42 +11,42 @@ function Skills() {
           icon : FrontendIcon,
           items : [
             { name : "HTML5", color : "bg-skill01" },
-            { name : "CSS3", color : "bg-skill02" },
-            { name : "Vue", color : "bg-skill05" },
-            { name : "React", color : "bg-skill03" },
-            { name : "TypeScript", color : "bg-skill04" },
-            { name : "JavaScript", color : "bg-skill05" },
-            { name : "Jquery", color : "bg-skill07" },
-            { name : "Axios", color : "bg-skill12" },
-            { name : "REST API", color : "bg-skill09" },
-            { name : "Tailwind CSS", color : "bg-skill13" },
-            { name : "styled-components", color : "bg-skill11" },
+            { name : "CSS3", color : "bg-skill01" },
+            { name : "Vue", color : "bg-skill01" },
+            { name : "React", color : "bg-skill01" },
+            { name : "TypeScript", color : "bg-skill01" },
+            { name : "JavaScript", color : "bg-skill01" },
+            { name : "Jquery", color : "bg-skill01" },
+            { name : "Axios", color : "bg-skill01" },
+            { name : "REST API", color : "bg-skill01" },
+            { name : "Tailwind CSS", color : "bg-skill01" },
+            { name : "styled-components", color : "bg-skill01" },
           ]
         },
         { 
             title : "Language",
             icon : LanguageIcon,
             items : [
-              { name : "JavaScript", color : "bg-skill08" },
-              { name : "TypeScript", color : "bg-skill09" },
+              { name : "JavaScript", color : "bg-skill02" },
+              { name : "TypeScript", color : "bg-skill02" },
             ]
         },
         { 
             title : "Collaboration",
             icon : CollaborationIcon,
             items : [
-              { name : "GitHub", color : "bg-skill10" },
-              { name : "Firebase", color : "bg-skill11" },
-              { name : "Notion", color : "bg-skill12" },
+              { name : "GitHub", color : "bg-skill03" },
+              { name : "Firebase", color : "bg-skill03" },
+              { name : "Notion", color : "bg-skill03" },
             ]
         },
         { 
             title : "Design",
             icon : DesignIcon,
             items : [
-                { name : "Figma", color : "bg-skill13" },
-                { name : "Photoshop", color : "bg-skill14" },
-                { name : "Illustrator", color : "bg-skill15" },
+                { name : "Figma", color : "bg-skill04" },
+                { name : "Photoshop", color : "bg-skill04" },
+                { name : "Illustrator", color : "bg-skill04" },
             ]
         }
     ] 

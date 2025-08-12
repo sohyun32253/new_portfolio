@@ -17,7 +17,7 @@ function About() {
                 <div className='max-w-[1280px] mx-auto px-4 p-10 mb-5
                 flex flex-col justify-center items-center gap-5 text-center 
                 md:flex-row  md:gap-[140px] md:text-left '>
-                    <img src={profile} alt="프로필이미지" className='w-[240px] h-[auto]'/>
+                    <img src={profile} alt="프로필이미지" className='w-[220px] h-[auto]'/>
                     <div className='pt-4'>
                         <p className='text-xl md:text-2xl mb-2'>박소현</p>
                         <p className='text-xl md:text-2xl mb-2'>2001.03.22</p>
@@ -31,13 +31,12 @@ function About() {
                     </div>
                 </div>
 
-                <div className='intro text-center p-11 text-white bg-subBackground w-full'>
+                <div className='intro text-center p-10 text-white bg-[#abaac8] w-full leading-loose'>
                     <div>
                         <h2 className='mb-5 font-bold text-2xl '><span><img src={Lightning} alt=""  className='inline fade-glow'/></span> 포텐이 많은 사람</h2>
-                        <p>저는 어릴 때부터 호기심이 많아 다양한 경험을 즐겼고, 새로운 것을 배우는 것에 큰 흥미를 느껴왔습니다.</p>
-                        <p> 그러던 중, 코드를 통해 화면을 구현하는 프론트엔드 개발에 매력을 느껴 본격적으로 공부를 시작했습니다.</p>
-                        <p>비전공자였지만 스스로의 가능성을 믿고 도전했고, 지금은 더 나은 코드를 연구하는 일에 즐거움을 느낍니다.</p>
-                        <p>짧은 시간 안에 많은 것을 흡수하고 빠르게 성장해온 만큼, 앞으로 더 크게 터질 ‘포텐’을 기대해 주세요.</p>
+                        <p>호기심과 배움의 즐거움으로 새로운 도전에 주저하지 않았습니다.</p>
+                        <p>비전공자로 시작했지만 프론트엔드 개발에 매료되어 짧은 시간 안에 빠르게 성장했고, </p>
+                        <p>지금은 더 나은 코드를 탐구하는 일에 열정을 쏟고 있습니다. 앞으로 폭발할 제 ‘포텐’을 기대해 주세요.</p>
                     </div>
                 </div>
             </div>

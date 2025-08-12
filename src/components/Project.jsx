@@ -16,9 +16,9 @@ import circlePreview03 from '../images/circle_preview02.png';
 import circlePreview04 from '../images/circle_preview03.png';
 import circlePreview05 from '../images/circle_preview04.png';
 import zipgoPreview01 from '../images/zipgoai.png';
-import zipgoPreview02 from '../images/inquiry_02.png';
-import zipgoPreview03 from '../images/history_03.png';
-import zipgoPreview04 from '../images/coupon_box01.png';
+import zipgoPreview02 from '../images/inquiry_01.png';
+import zipgoPreview04 from '../images/login_ui.png';
+import zipgoPreview03 from '../images/history_04.png';
 import zipgoPreview05 from '../images/coupon_box05.png';
 import saltrainPreview01 from '../images/saltrain_preview.png';
 import saltrainPreview02 from '../images/saltrain_preview_01.png';
@@ -136,7 +136,7 @@ function Project({ onSelectProject }) {
 
         <div className='md:flex md:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10'>
         {filteredProjects.map((project, index) => (
-          <div key={index} className='mb-20 relative bg-subBackground text-white md:mb-0 md:w-[500px] transition-all duration-300 shadow-lg hover:bg-cardUiHover hover:text-primary hover:scale-[1.02]'>
+          <div key={index} className='mb-20 relative bg-[#9e9cc1] text-white md:mb-0 md:w-[500px] transition-all duration-300 shadow-lg hover:bg-cardUiHover hover:text-[#735b94] hover:scale-[1.02]'>
             <img
               src={project.src}
               alt={project.name}
@@ -146,12 +146,12 @@ function Project({ onSelectProject }) {
                 navigate(`/projectDetail/${project.id}`);
               }}
             />
-            <dl className='px-5 pt-5 pb-20'>
+            <dl className='px-5 pt-5 pb-20 leading-loose'>
               <dt className='text-xl font-bold mb-2'>{project.name}</dt>
               <dd className='text-lg'>{project.intro}</dd>
             </dl>
             <button
-              className='absolute left-5 bottom-5 px-3 py-1 rounded-xl border border-primary text-primary bg-buttonBg hover:bg-pointColor hover:text-white hover:border-none text-lg'
+              className='absolute left-5 bottom-5 px-3 py-1 rounded-xl border  text-[#735b94] bg-buttonBg hover:bg-pointColor hover:text-white hover:border-none text-lg font-semibold'
               onClick={() => {
                 sessionStorage.setItem('scrollY', window.scrollY);
                 onSelectProject(project);
