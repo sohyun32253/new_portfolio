@@ -7,6 +7,10 @@ import autoprefixer from 'autoprefixer';
 export default defineConfig({
   base: '/new_portfolio/',
   plugins: [react()],
+  build: {
+  outDir: 'docs',
+  emptyOutDir: true
+  },
   css: {
     postcss: {
       plugins: [
