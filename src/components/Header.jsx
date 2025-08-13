@@ -20,7 +20,7 @@ function Header() {
                     <div className='bg-background h-[128px] md:h-[88px]'>
                         <button onClick={menuOpenToggle} className='z-20 absolute top-10 left-10'><img src={menuVisible ? closeIcon : menuIcon} 
                        alt="메뉴" /></button>
-                       <div className='bg-[#abaac8]'>
+                       <div className='bg-gnb'>
                         <ul className={clsx(
                             'text-center transition-all  py-20 h-full', 
                             menuVisible ? 'block' : 'hidden'
@@ -46,16 +46,16 @@ function Header() {
                 <div className='w-full'>
                     <ul className='flex justify-center items-center gap-10 p-8 text-2xl'>
                         <li>
-                            <a href='#cover' className="cover text-gnb transition-all hover:text-[#6E58AF]">〈 Home 〉</a>
+                            <a href='#cover' className="cover nav-link text-gnb transition-all hover:text-[#8CA9FF]">〈 Home 〉</a>
                         </li>
                         <li>
-                            <a href='#about' className="about text-gnb transition-all hover:text-[#6E58AF]">〈 About 〉</a>
+                            <a href='#about' className="about nav-link text-gnb transition-all hover:text-[#6E58AF]">〈 About 〉</a>
                         </li>
                         <li>
-                            <a href='#skills' className="skills text-gnb transition-all hover:text-[#6E58AF]">〈 Skills 〉</a>
+                            <a href='#skills' className="skills nav-link text-gnb transition-all hover:text-[#6E58AF]">〈 Skills 〉</a>
                         </li>
                         <li>
-                            <a href='#project' className="cover text-gnb transition-all hover:text-[#6E58AF]">〈 Project 〉</a>
+                            <a href='#project' className="cover nav-link text-gnb transition-all hover:text-[#6E58AF]">〈 Project 〉</a>
                         </li>
                     </ul>
                 </div>

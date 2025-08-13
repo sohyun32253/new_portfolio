@@ -137,7 +137,7 @@ function ZipgoaiDetail() {
                                 'px-4 py-2 rounded-t-lg font-semibold transition-all mb-4 md:mb-0 md: mx-2',
                                 activeTab === tab.id
                                 ? 'bg-subBackground text-white'
-                                : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
+                                : 'bg-gray-200 text-gray-500 hover:bg-gray-300'
                             )}
                             onClick={() => setActiveTab(tab.id)}
                             >

@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
-import clsx from 'clsx';
 import circleMain from '../images/circle.png'
 
 function CircleDetail() {
-     const buttonClass = clsx(
-            'px-4 py-2 rounded-full border border-primary transition-all text-[18px]',
-            'text-primary bg-white',
-            'hover:bg-primary hover:text-white'
-          );
-
     const [openIndex, setOpenIndex] = useState(null);
-
     const toggle = (index) => {
         setOpenIndex(openIndex === index ? null : index);
     };

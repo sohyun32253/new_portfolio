@@ -27,7 +27,7 @@ function ProjectDetail() {
             <div className='px-10 pt-[50px] md:w-[1280px] mx-auto md:pt-[96px] pb-24'>
                 <div className='flex items-center mb-8 gap-5'>
                     <button
-                        className='border px-3 py-2 text-3xl font-bold transition-all border-primary hover:bg-primary hover:text-white'
+                        className='border px-3 py-2 text-3xl font-bold transition-all border-[#5a4c99] hover:bg-gradient-to-br from-[#5B8EFF] via-[#8A93CC] to-[#A78BFA] hover:text-white'
                         onClick={goBackBtn}
                     >
                         ←

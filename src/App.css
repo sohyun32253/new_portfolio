@@ -53,3 +53,8 @@ p {
 }
 
 
+.nav-link:hover {
+  background: linear-gradient(180deg, #A78BFA, #5B8EFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

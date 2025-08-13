@@ -31,7 +31,7 @@ function About() {
                     </div>
                 </div>
 
-                <div className='intro text-center p-10 text-white bg-[#abaac8] w-full leading-loose'>
+                <div className='intro text-center p-10 text-white bg-[#8A93CC] w-full leading-loose'>
                     <div>
                         <h2 className='mb-5 font-bold text-2xl '><span><img src={Lightning} alt=""  className='inline fade-glow'/></span> 포텐이 많은 사람</h2>
                         <p>호기심과 배움의 즐거움으로 새로운 도전에 주저하지 않았습니다.</p>

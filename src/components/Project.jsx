@@ -117,15 +117,15 @@ function Project({ onSelectProject }) {
 
   return (
     <section id='project' className='content w-full md:pt-[96px] md:mb-[192px]'>
-         <ul className='tapbar_wrapper flex mb-10 gap-10 max-w-[1280px] mx-auto px-10 text-projectTab font-medium'>
+         <ul className='tapbar_wrapper flex mb-10 gap-10 max-w-[1280px] mx-auto px-10 text-[#b6aee4] font-medium'>
       {tabs.map((tab) => (
         <li
           key={tab}
           id={tab}
           onClick={() => setActiveTab(tab)}
-          className={`cursor-pointer transition-all ${
+          className={`cursor-pointer  nav-link ${
             activeTab === tab
-              ? 'font-bold text-pointColor border-b-2 border-pointColor'
+              ? 'font-bold text-[#806fff] border-pointColor'
               : ''
           }`}
         >
@@ -136,7 +136,12 @@ function Project({ onSelectProject }) {
 
         <div className='md:flex md:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10'>
         {filteredProjects.map((project, index) => (
-          <div key={index} className='mb-20 relative bg-[#9e9cc1] text-white md:mb-0 md:w-[500px] transition-all duration-300 shadow-lg hover:bg-cardUiHover hover:text-[#735b94] hover:scale-[1.02]'>
+          <div key={index} 
+               className='mb-20 relative
+               bg-gradient-to-br from-[#5B8EFF] via-[#8A93CC] to-[#A78BFA]
+                text-white md:mb-0 md:w-[500px] transition-all duration-300 shadow-lg
+                 hover:bg-cardUiHover hover:scale-[1.02] group overflow-hidden rounded-2xl bg-white/70 hover:shadow-xl
+                 '>
             <img
               src={project.src}
               alt={project.name}
@@ -151,7 +156,10 @@ function Project({ onSelectProject }) {
               <dd className='text-lg'>{project.intro}</dd>
             </dl>
             <button
-              className='absolute left-5 bottom-5 px-3 py-1 rounded-xl border  text-[#735b94] bg-buttonBg hover:bg-pointColor hover:text-white hover:border-none text-lg font-semibold'
+              className='absolute left-5 bottom-5 px-3 py-1 rounded-xl border
+              text-[#ffffff] bg-gradient-to-br from-[#5B8EFF] to-[#A78BFA] text-lg font-semibold
+                hover:bg-[#654dff] hover:bg-none hover:border-none
+              '
               onClick={() => {
                 sessionStorage.setItem('scrollY', window.scrollY);
                 onSelectProject(project);

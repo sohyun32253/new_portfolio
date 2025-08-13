@@ -22,12 +22,12 @@ export default {
     },
       colors: {
         primary: "#3F547C",
-        gnb: "#C4BAE3",
+        gnb: "#b6aee4",
         mainText: "#6D6775",
         subText: "#919FBA",
         background: "#FAF5EF",
         subBackground: "#6C819E",
-        pointColor: '#FDAAC4',
+        pointColor: '#A78BFA',
         gnbHover: "#7C79A3", 
         CardButton: "#344A73",
         buttonBg: "#fff5ec",
@@ -38,8 +38,8 @@ export default {
         skill03: '#C4B5FD',
         skill04: '#F6B8CD',
         detailSection: '#F5F8FF',
-        skillBorder: '#B5CFEA',
-        projectTab: '#B4C0D7',
+        skillBorder: '#f9f9f9',
+        projectTab: '#9F8CFF',
         textColor: '#333333'
       },
     }
