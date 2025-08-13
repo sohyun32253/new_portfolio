@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "vite build && shx rm -rf docs && shx cp -r dist/* docs && git add . && git commit -m 'deploy' && git push"
   },
   "dependencies": {
     "@fullpage/react-fullpage": "^0.1.48",
