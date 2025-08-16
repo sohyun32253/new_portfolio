@@ -52,12 +52,12 @@ function Skills() {
     ] 
 
     return(
-        <section id='skills' className='px-10 mb-20 md:px-0 md:pt-[96px] md:mb-[96px] '>
-        <div className='content px-10 py-10  rounded-xl shadow md:w-[1280px] mx-auto border-[#d0cfff] border'>
+        <section id='skills' className='px-10 mb-20 xl:px-0 xl:pt-[96px] xl:mb-[96px] '>
+        <div className='content px-10 py-10 rounded-xl shadow w-[100%] xl:w-[1280px] mx-auto border-[#d0cfff] border'>
             { Skills.map((skill, index) =>(
-                <div key={index} className='gap-10 mb-5 md:flex md:items-center last:mb-0'>
+                <div key={index} className='gap-10 mb-5  md:block xl:flex md:items-center last:mb-0'>
                     <h3 className='text-2xl font-bold text-[#7C88B3] w-[200px]'><img src={skill.icon} className='inline' /> {skill.title}</h3>
-                    <ul className='flex py-5 gap-5 flex-wrap md:w-[1000px]'>
+                    <ul className='flex py-5 gap-5 flex-wrap xl:w-[1000px]'>
                         {skill.items.map((i, index)=> (
                              <li key={index} className={`px-4 py-1 border rounded-full text-xl text-white ${i.color}`}>{i.name}</li>
                         ))}

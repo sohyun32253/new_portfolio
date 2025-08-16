@@ -134,26 +134,28 @@ function Project({ onSelectProject }) {
       ))}
     </ul>
 
-        <div className='md:flex md:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10'>
+<div className="sm:flex sm:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10 items-stretch">
         {filteredProjects.map((project, index) => (
-          <div key={index} 
-               className='mb-20 relative
-               bg-gradient-to-br from-[#5B8EFF] via-[#8A93CC] to-[#A78BFA]
-                text-white md:mb-0 md:w-[500px] transition-all duration-300 shadow-lg
-                 hover:bg-cardUiHover hover:scale-[1.02] group overflow-hidden rounded-2xl bg-white/70 hover:shadow-xl
-                 '>
+<div
+  key={index}
+  className="mb-20 relative
+  bg-gradient-to-br from-[#5B8EFF] via-[#8A93CC] to-[#A78BFA]
+  text-white md:mb-0 w-full sm:w-[40%] md:w-[45%] lg:w-[45%] xl:w-[500px] transition-all duration-300 shadow-lg
+  hover:bg-cardUiHover hover:scale-[1.02] group overflow-hidden rounded-2xl bg-white/70 hover:shadow-xl"
+>
+
             <img
               src={project.src}
               alt={project.name}
-              className='h-[250px] w-full object-cover cursor-pointer inline-block'
+              className="w-full object-cover aspect-[16/9] md:aspect-[16/10] cursor-pointer"
               onClick={() => {
                 sessionStorage.setItem('scrollY', window.scrollY);
                 navigate(`/projectDetail/${project.id}`);
               }}
             />
-            <dl className='px-5 pt-5 pb-20 leading-loose'>
+            <dl className='px-5 pt-5 pb-20 leading-relaxed text-sm'>
               <dt className='text-xl font-bold mb-2'>{project.name}</dt>
-              <dd className='text-lg'>{project.intro}</dd>
+              <dd className='text-[16px]'>{project.intro}</dd>
             </dl>
             <button
               className='absolute left-5 bottom-5 px-3 py-1 rounded-xl border
