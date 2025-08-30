@@ -1,12 +1,29 @@
-# React + Vite
+# React + Vite Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 설치 및 실행 방법
 
-Currently, two official plugins are available:
+### 1. 프로젝트 생성
+- **현재 경로에 프로젝트 구성**
+  ```bash
+  npm create vite@latest .
+  
+- #### 새 폴더 생성 후 구성
+ ```bash
+  npm create vite@latest <project-name>
+ ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. 프로젝트 이동
+ ```
+bash
+cd <project-name>
+ ```
+### 3. 의존성 패키지 설치
+ ```
+bash
+npm install
+ ```
+### 4. 개발 서버 실행
+```
+bash
+npm run dev
+```
