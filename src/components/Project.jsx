@@ -5,6 +5,7 @@ import circle from '../images/circle.png';
 import gongcha from '../images/gongcha.png';
 import saltrain from '../images/saltrain_preview.png';
 import maeil from '../images/maeil_preview.png';
+import codingTest from '../images/coding_test.png';
 import gongchaPreview01 from '../images/gongcha_preview.png';
 import gongchaPreview02 from '../images/gongcha_preview01.png';
 import gongchaPreview03 from '../images/gongcha_preview02.png';
@@ -30,6 +31,10 @@ import maeilPreview02 from '../images/maeil_preview_01.png';
 import maeilPreview03 from '../images/maeil_preview_02.png';
 import maeilPreview04 from '../images/maeil_preview_03.png';
 import maeilPreview05 from '../images/maeil_preview_04.png';
+import codingTestPreview01 from '../images/coding_test01.png';
+import codingTestPreview02 from '../images/coding_test02.png';
+import codingTestPreview03 from '../images/coding_test.png';
+import codingTestPreview04 from '../images/coding_test03.png';
 
 
 function Project({ onSelectProject }) {
@@ -45,7 +50,7 @@ function Project({ onSelectProject }) {
     }
   }, []);
 
-  const tabs = ['전체 프로젝트', '실무 프로젝트', '개인 프로젝트', '협업 프로젝트'];
+  const tabs = ['전체 프로젝트', '실무 프로젝트', '개인 프로젝트', '협업 프로젝트', '기타 프로젝트'];
 
   const projects = [
     {
@@ -108,12 +113,23 @@ function Project({ onSelectProject }) {
       img04: maeilPreview04,
       img05: maeilPreview05
     },
+    {
+      id: 'codingTest',
+      name: '코딩테스트',
+      intro: 'Next.js 기반으로 반응형 UI와 데이터 기반 컴포넌트를 구현하고, Vercel에 배포한 기타 프로젝트',
+      route: '/ProjectDetail',
+      src: codingTest,
+      img01: codingTestPreview01,
+      img02: codingTestPreview02,
+      img03: codingTestPreview03,
+      img04: codingTestPreview04,
+    },
   ];
 
   const filteredProjects = projects.filter(project => {
   if (activeTab === '전체 프로젝트') return true;
-  return project.intro.includes(activeTab); // 예: intro에 '협업' 포함되어 있으면 보여짐
-});
+  return project.intro.includes(activeTab); 
+  });
 
   return (
     <section id='project' className='content w-full md:pt-[96px] md:mb-[192px]'>
@@ -134,16 +150,15 @@ function Project({ onSelectProject }) {
       ))}
     </ul>
 
-<div className="sm:flex sm:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10 items-stretch">
-        {filteredProjects.map((project, index) => (
-<div
-  key={index}
-  className="mb-20 relative
-  bg-gradient-to-br from-[#5B8EFF] via-[#8A93CC] to-[#A78BFA]
-  text-white md:mb-0 w-full sm:w-[40%] md:w-[45%] lg:w-[45%] xl:w-[500px] transition-all duration-300 shadow-lg
-  hover:bg-cardUiHover hover:scale-[1.02] group overflow-hidden rounded-2xl bg-white/70 hover:shadow-xl"
->
-
+        <div className="sm:flex sm:justify-between max-w-[1280px] mx-auto px-10 flex-wrap gap-10 items-stretch">
+          {filteredProjects.map((project, index) => (
+          <div
+          key={index}
+          className="mb-20 relative
+          bg-gradient-to-br from-[#5B8EFF] via-[#8A93CC] to-[#A78BFA]
+          text-white md:mb-0 w-full sm:w-[40%] md:w-[45%] lg:w-[45%] xl:w-[500px] transition-all duration-300 shadow-lg
+          hover:bg-cardUiHover hover:scale-[1.02] group overflow-hidden rounded-2xl bg-white/70 hover:shadow-xl"
+          >
             <img
               src={project.src}
               alt={project.name}
@@ -157,18 +172,19 @@ function Project({ onSelectProject }) {
               <dt className='text-xl font-bold mb-2'>{project.name}</dt>
               <dd className='text-[16px]'>{project.intro}</dd>
             </dl>
+          {project.id !== "codingTest" && (
             <button
-              className='absolute left-5 bottom-5 px-3 py-1 rounded-xl border
-              text-[#ffffff] bg-gradient-to-br from-[#5B8EFF] to-[#A78BFA] text-lg font-semibold
-                hover:bg-[#654dff] hover:bg-none hover:border-none
-              '
+              className="absolute left-5 bottom-5 px-3 py-1 rounded-xl border
+                text-[#ffffff] bg-gradient-to-br from-[#5B8EFF] to-[#A78BFA] text-lg font-semibold
+                hover:bg-[#654dff] hover:bg-none hover:border-none"
               onClick={() => {
-                sessionStorage.setItem('scrollY', window.scrollY);
+                sessionStorage.setItem("scrollY", window.scrollY);
                 onSelectProject(project);
               }}
             >
               Preview
             </button>
+          )}
           </div>
         ))}
         </div>

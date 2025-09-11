@@ -14,6 +14,7 @@ function Skills() {
             { name : "CSS3", color : "bg-skill01" },
             { name : "Vue", color : "bg-skill01" },
             { name : "React", color : "bg-skill01" },
+            { name : "Next.js", color : "bg-skill01" },
             { name : "TypeScript", color : "bg-skill01" },
             { name : "JavaScript", color : "bg-skill01" },
             { name : "Jquery", color : "bg-skill01" },
