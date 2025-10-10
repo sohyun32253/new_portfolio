@@ -6,6 +6,7 @@ import gongcha from '../images/gongcha.png';
 import saltrain from '../images/saltrain_preview.png';
 import maeil from '../images/maeil_preview.png';
 import codingTest from '../images/coding_test.png';
+import community from '../images/community.png'
 import gongchaPreview01 from '../images/gongcha_preview.png';
 import gongchaPreview02 from '../images/gongcha_preview01.png';
 import gongchaPreview03 from '../images/gongcha_preview02.png';
@@ -35,6 +36,12 @@ import codingTestPreview01 from '../images/coding_test01.png';
 import codingTestPreview02 from '../images/coding_test02.png';
 import codingTestPreview03 from '../images/coding_test.png';
 import codingTestPreview04 from '../images/coding_test03.png';
+import communityPreview01 from '../images/community_preview01.png'
+import communityPreview02 from '../images/community_preview02.png'
+import communityPreview03 from '../images/community_preview03.png'
+import communityPreview04 from '../images/community_preview04.png'
+import communityPreview05 from '../images/community_preview05.png'
+
 
 
 function Project({ onSelectProject }) {
@@ -123,6 +130,18 @@ function Project({ onSelectProject }) {
       img02: codingTestPreview02,
       img03: codingTestPreview03,
       img04: codingTestPreview04,
+    },
+    {
+      id: 'community',
+      name: '커뮤니티',
+      intro: 'React Native로 커뮤니티 MVP를 간단하게 구현, expo로 배포한 기타 프로젝트',
+      route: '/CommunityDetail',
+      src: community,
+      img01: community,
+      img02: communityPreview02,
+      img03: communityPreview03,
+      img04: communityPreview04,
+      img05: communityPreview05,
     },
   ];
 

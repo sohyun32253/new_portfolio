@@ -8,6 +8,7 @@ import ZipgoaiDetail from './ZipgoaiDetail';
 import SaltrainDetail from './SaltrainDetail';
 import MaeilDetail from './MaeilDetail';
 import CodingTestDetail from './CodingTestDetail';
+import CommunityDetail from './CommunityDetail';
 
 function ProjectDetail() {
     const { id } = useParams();
@@ -23,6 +24,8 @@ function ProjectDetail() {
     else if (id === 'saltrain') title = '솔트레인 (SALTRAIN)';
     else if (id === 'maeil') title = '매일유업 (Maeil)';
     else if (id === 'codingTest') title = '코딩테스트';
+    else if (id === 'community') title = '커뮤니티';
+
 
     return (
         <section className='content w-full relative z-[101] bg-background text-center md:text-left pt-20 md:p-0'>
@@ -43,6 +46,7 @@ function ProjectDetail() {
                 {id === 'saltrain' && <SaltrainDetail />}
                 {id === 'maeil' && <MaeilDetail />}
                 {id === 'codingTest' && <CodingTestDetail />}
+                {id === 'community' && <CommunityDetail />}
             </div>
             <Contact />
         </section>
