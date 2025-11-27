@@ -9,6 +9,7 @@ import SaltrainDetail from './SaltrainDetail';
 import MaeilDetail from './MaeilDetail';
 import CodingTestDetail from './CodingTestDetail';
 import CommunityDetail from './CommunityDetail';
+import BrunchPayDetail from './BrunchPayDetail';
 
 function ProjectDetail() {
     const { id } = useParams();
@@ -25,7 +26,7 @@ function ProjectDetail() {
     else if (id === 'maeil') title = '매일유업 (Maeil)';
     else if (id === 'codingTest') title = '코딩테스트';
     else if (id === 'community') title = '커뮤니티';
-
+    else if (id === 'brunchpay') title = 'BrunchPay Dashboard';
 
     return (
         <section className='content w-full relative z-[101] bg-background text-center md:text-left pt-20 md:p-0'>
@@ -47,6 +48,7 @@ function ProjectDetail() {
                 {id === 'maeil' && <MaeilDetail />}
                 {id === 'codingTest' && <CodingTestDetail />}
                 {id === 'community' && <CommunityDetail />}
+                {id === 'brunchpay' && <BrunchPayDetail />}
             </div>
             <Contact />
         </section>

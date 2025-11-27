@@ -36,16 +36,19 @@ import codingTestPreview01 from '../images/coding_test01.png';
 import codingTestPreview02 from '../images/coding_test02.png';
 import codingTestPreview03 from '../images/coding_test.png';
 import codingTestPreview04 from '../images/coding_test03.png';
-import communityPreview01 from '../images/community_preview01.png'
-import communityPreview02 from '../images/community_preview02.png'
-import communityPreview03 from '../images/community_preview03.png'
-import communityPreview04 from '../images/community_preview04.png'
-import communityPreview05 from '../images/community_preview05.png'
-
-
+import communityPreview02 from '../images/community_preview02.png';
+import communityPreview03 from '../images/community_preview03.png';
+import communityPreview04 from '../images/community_preview04.png';
+import communityPreview05 from '../images/community_preview05.png';
+import brunchPay from '../images/brunchpay.png';
+import brunchPayPreview from '../images/brunchpay_preview.png';
+import brunchPayPreview01 from '../images/brunchpay_preview_0.png';
+import brunchPayPreview02 from '../images/brunchpay_preview_01.png';
+import brunchPayPreview03 from '../images/brunchpay_preview_02.png';
+import brunchPayPreview04 from '../images/brunchpay_preview_03.png';
 
 function Project({ onSelectProject }) {
-  const [activeTab, setActiveTab] = useState('전체 프로젝트');
+  const [activeTab, setActiveTab] = useState('All');
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -57,13 +60,27 @@ function Project({ onSelectProject }) {
     }
   }, []);
 
-  const tabs = ['전체 프로젝트', '실무 프로젝트', '개인 프로젝트', '협업 프로젝트', '기타 프로젝트'];
+  const tabs = ['All', 'Professional', 'Personal', 'Team', 'Side'];
 
   const projects = [
     {
+      id: 'brunchpay',
+      name: 'BrunchPay Dashboard',
+      category: 'Professional',
+      intro: 'React + TS 기반 PG 관리자 대시보드 구현 프로젝트',
+      route: '/BrunchPayDetail',
+      src: brunchPay,
+      img01: brunchPayPreview,
+      img02: brunchPayPreview01,
+      img03: brunchPayPreview02,
+      img04: brunchPayPreview03,
+      img05: brunchPayPreview04
+    },
+    {
       id: 'zipgoai',
       name: '땅집고 옥션',
-      intro: '부동산 경공매 플랫폼의 인턴으로 참여해, 실제 서비스 환경에서 개발을 경험한 실무 프로젝트',
+      category: 'Professional',
+      intro: '부동산 경공매 플랫폼 기능을 개발한 실무형 프로젝트',
       route: '/ProjectDetail',
       src: zipgoai,
       img01: zipgoPreview01,
@@ -75,7 +92,8 @@ function Project({ onSelectProject }) {
     {
       id: 'circle',
       name: 'Circle',
-      intro: '백엔드 서버와의 Axios 통신을 통해 데이터 흐름과 협업의 묘미를 살린 협업 프로젝트',
+      category: 'Team',
+      intro: 'Axios 기반 API 연동으로 데이터 흐름을 구현한 팀 프로젝트',
       route: '/ProjectDetail',
       src: circle,
       img01: circlePreview01,
@@ -87,7 +105,8 @@ function Project({ onSelectProject }) {
     {
       id: 'gongcha',
       name: '공차 (Gong cha)',
-      intro: 'React로 구현한 브랜드 웹사이트 리뉴얼, UI/UX 개선에 집중한 개인 프로젝트',
+      category: 'Personal',
+      intro: 'React로 브랜드 웹사이트를 리뉴얼한 개인 프로젝트',
       route: '/ProjectDetail',
       src: gongcha,
       img01: gongchaPreview01,
@@ -99,7 +118,8 @@ function Project({ onSelectProject }) {
     {
       id: 'saltrain',
       name: '솔트레인 (SALTRAIN)',
-      intro: 'Vue 기반 웹사이트 리뉴얼로, 디자이너 팀원과 함께 작업한 협업 프로젝트',
+      category: 'Team',
+      intro: 'Vue 기반 브랜드 웹사이트 리뉴얼 협업 프로젝트',
       route: '/ProjectDetail',
       src: saltrain,
       img01: saltrainPreview01,
@@ -111,7 +131,8 @@ function Project({ onSelectProject }) {
     {
       id: 'maeil',
       name: '매일유업 (maeil)',
-      intro: '브랜드 리뉴얼과 간단한 인터랙션 구현을 함께 경험한, HTML/CSS/JS 기반의 첫 협업 프로젝트',
+      category: 'Team',
+      intro: 'HTML/CSS/JS로 브랜드 웹사이트를 재구성한 기본기 프로젝트',
       route: '/ProjectDetail',
       src: maeil,
       img01: maeilPreview01,
@@ -122,8 +143,9 @@ function Project({ onSelectProject }) {
     },
     {
       id: 'codingTest',
-      name: '코딩테스트',
-      intro: 'Next.js 기반으로 반응형 UI와 데이터 기반 컴포넌트를 구현하고, Vercel에 배포한 기타 프로젝트',
+      name: 'Responsive UI Components (Next.js)',
+      category: 'Side',
+      intro: 'Next.js로 반응형 UI와 컴포넌트를 구현한 개인 프로젝트',
       route: '/ProjectDetail',
       src: codingTest,
       img01: codingTestPreview01,
@@ -133,8 +155,9 @@ function Project({ onSelectProject }) {
     },
     {
       id: 'community',
-      name: '커뮤니티',
-      intro: 'React Native로 커뮤니티 MVP를 간단하게 구현, expo로 배포한 기타 프로젝트',
+      name: 'Community MVP App (React Native)',
+      category: 'Side',
+      intro: 'React Native로 커뮤니티 MVP를 구현한 모바일 프로젝트',
       route: '/CommunityDetail',
       src: community,
       img01: community,
@@ -146,13 +169,13 @@ function Project({ onSelectProject }) {
   ];
 
   const filteredProjects = projects.filter(project => {
-  if (activeTab === '전체 프로젝트') return true;
-  return project.intro.includes(activeTab); 
+    if (activeTab === 'All') return true;
+    return project.category === activeTab;
   });
 
   return (
     <section id='project' className='content w-full md:pt-[96px] md:mb-[192px]'>
-         <ul className='tapbar_wrapper flex mb-10 gap-10 max-w-[1280px] mx-auto px-10 text-[#b6aee4] font-medium'>
+         <ul className='tapbar_wrapper flex mb-10 gap-10 max-w-[1280px] mx-auto px-10 text-[#b6aee4] text-xl '>
       {tabs.map((tab) => (
         <li
           key={tab}
@@ -188,7 +211,7 @@ function Project({ onSelectProject }) {
               }}
             />
             <dl className='px-5 pt-5 pb-20 leading-relaxed text-sm'>
-              <dt className='text-xl font-bold mb-2'>{project.name}</dt>
+              <dt className='text-xl font-semibold mb-2'>{project.name}</dt>
               <dd className='text-[16px]'>{project.intro}</dd>
             </dl>
           {project.id !== "codingTest" && (
