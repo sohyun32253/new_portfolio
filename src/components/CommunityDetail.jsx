@@ -5,6 +5,9 @@ function CommunityDetail() {
       <h1 className="mb-3 text-xl font-semibold">✔️ 주요 정보 및 기간</h1>
       <div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
         <div className="px-6 py-8 space-y-6 text-[16px] leading-relaxed text-textColor">
+          <p className="text-lg">
+            📆 <strong className="text-gray-800">프로젝트 기간</strong> : 2025.09.22 ~ 2025.09.29
+          </p>
           {/* 프로젝트 소개 */}
           <div>
             <h2 className="font-semibold text-lg mb-2">⭐ 프로젝트 소개</h2>
@@ -126,8 +129,8 @@ function CommunityDetail() {
         </div>
       </div>
 
-      {/* ====== 핵심 포인트 / 문제해결 ====== */}
-      <h1 className="mb-3 text-xl font-semibold">✔️ 핵심 포인트 & 문제해결</h1>
+      {/* ====== 핵심 포인트 ====== */}
+      <h1 className="mb-3 text-xl font-semibold">✔️ 핵심 구현 포인트</h1>
       <div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
         <ul className="px-6 py-8 space-y-3 text-gray-800 text-[16px]">
           <li className="before:content-['•'] before:mr-2 before:text-slate-400">

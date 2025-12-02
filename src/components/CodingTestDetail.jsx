@@ -4,6 +4,9 @@ function CodingTestDetail() {
             <h1 className="mb-3 text-xl font-semibold">✔️ 주요 정보 및 기간</h1>
             <div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
                 <div className="px-6 py-8 space-y-6 text-[16px] leading-relaxed text-textColor">
+                    <p className="text-lg">
+                        📆 <strong className="text-gray-800">프로젝트 기간</strong> : 2025.08.21 ~ 2025.08.29
+                    </p>
                     <div>
                         <h2 className="font-semibold text-lg mb-2">⭐ 프로젝트 소개</h2>
                         <ul className="list-disc list-inside text-gray-700 px-9">

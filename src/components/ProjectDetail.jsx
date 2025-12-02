@@ -24,8 +24,8 @@ function ProjectDetail() {
     else if (id === 'zipgoai') title = '땅집고 옥션';
     else if (id === 'saltrain') title = '솔트레인 (SALTRAIN)';
     else if (id === 'maeil') title = '매일유업 (Maeil)';
-    else if (id === 'codingTest') title = '코딩테스트';
-    else if (id === 'community') title = '커뮤니티';
+    else if (id === 'codingTest') title = 'Responsive UI Components (Next.js)';
+    else if (id === 'community') title = 'Community MVP App (React Native)';
     else if (id === 'brunchpay') title = 'BrunchPay Dashboard';
 
     return (

@@ -22,6 +22,9 @@ export default function BrunchPayDetail() {
       <h1 className="mb-3 text-xl font-semibold">✔️ 주요 정보 및 기간</h1>
       <div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
         <div className="px-6 py-8 space-y-6 text-[16px] leading-relaxed text-textColor">
+          <p className="text-lg">
+            📆 <strong className="text-gray-800">프로젝트 기간</strong> : 2025.11.17 ~ 2025.11.21
+          </p>
             <div className="p-5 bg-[#fbfaff] rounded-xl border-l-4 border-skill03">
             <h2 className="font-semibold text-lg mb-3">⭐ 프로젝트 소개</h2>
 
@@ -244,12 +247,12 @@ export default function BrunchPayDetail() {
         </div>
       </div>
 
-        <h1 className="mb-3 text-xl font-semibold">✔️ 핵심 포인트 & 문제 해결 과정</h1>
+        <h1 className="mb-3 text-xl font-semibold">✔️ 핵심 구현 포인트</h1>
 
         <div className="mb-10 border px-6 py-8 border-skillBorder rounded-2xl shadow-md bg-[#fdfcff] text-[15px] leading-relaxed">
             <p className="text-base mb-5 font-medium text-gray-700">
-                본 프로젝트에서는 단순한 UI 구현을 넘어, 
-                <span className="text-[#6f53ff] font-semibold">데이터 처리 구조와 PG 도메인 이해를 기반으로 한 관리자 경험 개선</span>에 중점을 두었습니다.
+                본 프로젝트에서는 단순한 UI 구현을 넘어,  
+                <span className="text-[#6f53ff] font-semibold"> 데이터 처리 구조와 PG 도메인 이해를 기반으로 한 관리자 경험 개선</span>에 중점을 두었습니다.
             </p>
 
             <ul className="space-y-4 text-gray-800">
