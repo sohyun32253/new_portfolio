@@ -1,5 +1,6 @@
 import { useState } from "react";
 import clsx from "clsx";
+import brunchPay from '../images/brunchpay.png';
 import brunchpayImg01 from "../images/brunchpay_main.png";
 import brunchpayImg02 from "../images/brunchpay_transaction.png";
 import brunchpayImg03 from "../images/brunchpay_merchants.png";
@@ -19,6 +20,9 @@ export default function BrunchPayDetail() {
 
   return (
     <section className="text-[20px]">
+      <div className='mb-12'>
+          <img src={brunchPay} alt='brunchPay 메인 이미지' />
+      </div>
       <h1 className="mb-3 text-xl font-semibold">✔️ 주요 정보 및 기간</h1>
       <div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
         <div className="px-6 py-8 space-y-6 text-[16px] leading-relaxed text-textColor">
