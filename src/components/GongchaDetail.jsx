@@ -53,6 +53,28 @@ function GongchaDetail() {
                   </p>
 
                   <div>
+                    <h2 className="font-semibold text-lg mb-2 ">🔎 문제</h2>
+                    <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                    기존 공차 웹사이트는 메뉴 탐색 과정이 복잡해 사용자가 원하는 정보를 찾기까지 여러 단계를 거쳐야 했습니다.<br />
+                    특히 메뉴 상세 페이지에서 가격과 칼로리 정보가 하단에 위치해 사용자가 자주 확인하는 정보 접근성이 낮았습니다.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h2 className="font-semibold text-lg mb-2 ">💡 해결</h2>
+                    <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                    메뉴 카테고리를 재구성하고 가격 및 칼로리 정보를 상단에 배치하여 사용자 정보 탐색 흐름을 개선했습니다.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h2 className="font-semibold text-lg mb-2 ">📈 결과</h2>
+                    <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                   사용자가 가장 먼저 확인하는 정보를 상단에 배치해 메뉴 탐색 시간이 줄어들도록 UI 구조를 개선했습니다.
+                    </p>
+                  </div>
+
+                  <div>
                     <h2 className="font-semibold text-lg mb-2 ">🎯 개발 목표</h2>
                     <ul className="list-disc list-inside text-[16px] text-gray-700 px-9">
                         <li className="before:content-['•'] before:mr-2 before:text-slate-400">브랜드 컨셉과 톤앤매너를 분석·보완하여 사용자 경험(UX)과 UI를 개선한 웹사이트 리뉴얼</li>
@@ -63,7 +85,7 @@ function GongchaDetail() {
                   <div>
                     <h2 className="font-semibold text-lg mb-2">⚙️ 개발 환경</h2>
                     <ul className="flex flex-wrap gap-3">
-                        {['HTML5', 'CSS3', 'JAVASCRIPT', 'REACT', 'FIREBASE'].map((item) => (
+                        {['REACT', 'HTML5', 'CSS3', 'JAVASCRIPT', 'FIREBASE'].map((item) => (
                         <li
                             key={item}
                             className="px-4 py-1 bg-[#c35050] text-white rounded-full text-base"

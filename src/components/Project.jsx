@@ -27,12 +27,12 @@ function Project() {
 
   const projects = [
     {
-      id: 'brunchpay',
-      name: 'BrunchPay Dashboard',
-      category: 'Professional',
-      intro: 'React + TS 기반 PG 관리자 대시보드 구현 프로젝트',
-      route: '/BrunchPayDetail',
-      src: brunchPay
+      id: 'gongcha',
+      name: '공차 (Gong cha)',
+      category: 'Personal',
+      intro: 'React로 브랜드 웹사이트를 리뉴얼한 개인 프로젝트',
+      route: '/ProjectDetail',
+      src: gongcha,
     },
     {
       id: 'zipgoai',
@@ -51,12 +51,12 @@ function Project() {
       src: circle,
     },
     {
-      id: 'gongcha',
-      name: '공차 (Gong cha)',
-      category: 'Personal',
-      intro: 'React로 브랜드 웹사이트를 리뉴얼한 개인 프로젝트',
-      route: '/ProjectDetail',
-      src: gongcha,
+      id: 'brunchpay',
+      name: 'BrunchPay Dashboard',
+      category: 'Professional',
+      intro: 'React + TS 기반 PG 관리자 대시보드 구현 프로젝트',
+      route: '/BrunchPayDetail',
+      src: brunchPay
     },
     {
       id: 'saltrain',
