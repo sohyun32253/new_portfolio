@@ -52,18 +52,41 @@ function GongchaDetail() {
                   📆 <span className="font-semibold text-gray-800 ">프로젝트 기간</span> : <span className="text-black">2024.09 ~ 2024.12</span>
                   </p>
 
+                  <h2 className="font-semibold text-lg mb-2 ">🔎 프로젝트 목표</h2>
+
                   <div>
-                    <h2 className="font-semibold text-lg mb-2 ">🔎 문제</h2>
+                    <h2 className="font-semibold text-lg mb-2 ">1️⃣ UX 개선</h2>
+                    <h2 className="font-semibold text-lg mb-2 ">⚠️ 문제</h2>
+                    
                     <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
-                    기존 공차 웹사이트는 메뉴 탐색 과정이 복잡해 사용자가 원하는 정보를 찾기까지 여러 단계를 거쳐야 했습니다.<br />
-                    특히 메뉴 상세 페이지에서 가격과 칼로리 정보가 하단에 위치해 사용자가 자주 확인하는 정보 접근성이 낮았습니다.
+                    기존 공차 웹사이트에서는 신규 시즌 메뉴를 강조하는 영역이 없어<br />
+                    사용자가 새롭게 출시된 메뉴를 직관적으로 확인하기 어려웠습니다.
                     </p>
                   </div>
 
                   <div>
                     <h2 className="font-semibold text-lg mb-2 ">💡 해결</h2>
                     <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
-                    메뉴 카테고리를 재구성하고 가격 및 칼로리 정보를 상단에 배치하여 사용자 정보 탐색 흐름을 개선했습니다.
+                    메인 페이지에 New menu 섹션을 신규 설계하고 <br />
+                    Swiper 기반 캐러셀 UI를 적용하여 메뉴 탐색 흐름을 개선했습니다.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h2 className="font-semibold text-lg mb-2 ">2️⃣ 음료 페이지</h2>
+                    <h2 className="font-semibold text-lg mb-2 ">⚠️ 문제</h2>
+                    
+                    <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                    기존 메뉴 상세 페이지에서는 가격과 칼로리 정보가 하단에 위치해<br />
+                    사용자가 자주 확인하는 정보 접근성이 낮았습니다.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h2 className="font-semibold text-lg mb-2 ">💡 해결</h2>
+                    <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                    사용자가 가장 궁금해하는 정보인 가격·칼로리를 상단에 배치하고<br />
+                    메뉴 클릭 시 영양 정보를 확인할 수 있는 모달 UI를 구현했습니다.
                     </p>
                   </div>
 
