@@ -52,7 +52,12 @@ function GongchaDetail() {
                   📆 <span className="font-semibold text-gray-800 ">프로젝트 기간</span> : <span className="text-black">2024.09 ~ 2024.12</span>
                   </p>
 
-                  <h2 className="font-semibold text-lg mb-2 ">🔎 프로젝트 목표</h2>
+                  <h2 className="font-semibold text-lg mb-2 ">💬 제목 : 공차 웹사이트 UX 리뉴얼</h2>
+                  <h2 className="font-semibold text-lg mb-2 ">✍🏻 설명</h2>
+                  <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                    React 기반 공차 브랜드 웹사이트 UX 리뉴얼 프로젝트로  
+                    사용자 메뉴 탐색 흐름을 개선하고 반응형 UI를 구현했습니다.
+                  </p>
 
                   <div>
                     <h2 className="font-semibold text-lg mb-2 ">1️⃣ UX 개선</h2>
@@ -71,6 +76,14 @@ function GongchaDetail() {
                     Swiper 기반 캐러셀 UI를 적용하여 메뉴 탐색 흐름을 개선했습니다.
                     </p>
                   </div>
+
+                  <div>
+                    <h2 className="font-semibold text-lg mb-2 ">📈 결과</h2>
+                    <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
+                    메인 페이지에서 신규 메뉴를 직관적으로 확인할 수 있도록 UI 구조를 개선하고<br />
+                    Swiper 기반 캐러셀을 통해 메뉴 탐색 흐름을 자연스럽게 유도했습니다.
+                    </p>
+                  </div>                  
 
                   <div>
                     <h2 className="font-semibold text-lg mb-2 ">2️⃣ 음료 페이지</h2>
@@ -93,7 +106,8 @@ function GongchaDetail() {
                   <div>
                     <h2 className="font-semibold text-lg mb-2 ">📈 결과</h2>
                     <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
-                   사용자가 가장 먼저 확인하는 정보를 상단에 배치해 메뉴 탐색 시간이 줄어들도록 UI 구조를 개선했습니다.
+                   사용자가 가장 먼저 확인하는 정보를 상단에 배치해  <br />
+                   메뉴 탐색 흐름을 단순화하고 정보 접근성을 개선했습니다.
                     </p>
                   </div>
 
@@ -122,9 +136,9 @@ function GongchaDetail() {
                   <div>
                   <h2 className="font-semibold text-lg mb-2">⭐ 프로젝트 소개</h2>
                     <ul className="list-disc list-inside text-[16px] text-gray-700 px-9">
-                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">공차의 브랜드 이미지, 톤앤매너, 디자인 가이드를 구체적으로 조사·분석하여 리뉴얼 방향성 수립</li>
-                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">메인 페이지 구조 재설계와 콘텐츠 요소 추가로 레이아웃 완성도 강화</li>
-                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">메뉴 영양성분표 UI 단순화를 통해 정보 가독성과 접근성 향상</li>
+                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">공차 브랜드 이미지와 톤앤매너를 분석하고 리뉴얼 방향성 수립</li>
+                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">메인 페이지 구조 재설계 및 신규 콘텐츠 섹션(New menu) 추가</li>
+                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">메뉴 상세 UI 개선을 통해 영양정보 가독성과 접근성 향상</li>
                     </ul>
                   </div>
 
