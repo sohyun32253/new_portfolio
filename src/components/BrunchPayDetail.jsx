@@ -13,7 +13,7 @@ export default function BrunchPayDetail() {
     { id: "transaction", label: "거래내역" },
     { id: "merchants", label: "가맹점 정보" },
     { id: "invoice", label: "인보이스 관리" },
-    { id: "video", label: "시연 영상" },
+    { id: "video", label: "구현 영상" },
   ];
 
   const [activeTab, setActiveTab] = useState("main");
@@ -25,59 +25,110 @@ export default function BrunchPayDetail() {
       </div>
       <h1 className="mb-3 text-xl font-semibold">✔️ 주요 정보 및 기간</h1>
       <div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
-        <div className="px-6 py-8 space-y-6 text-[16px] leading-relaxed text-textColor">
+        <div className="px-6 py-8 space-y-8 text-[16px] leading-relaxed text-textColor">
+
+          {/* 프로젝트 기간 */}
           <p className="text-lg">
-            📆 <strong className="text-gray-800">프로젝트 기간</strong> : 2025.11.17 ~ 2025.11.21
+            📆 <strong className="text-gray-800">프로젝트 기간</strong> : 
+            <span className="ml-2 font-medium">
+              2025.11.17 ~ 2025.11.21
+            </span>
           </p>
-            <div className="p-5 bg-[#fbfaff] rounded-xl border-l-4 border-skill03">
-            <h2 className="font-semibold text-lg mb-3">⭐ 프로젝트 소개</h2>
 
-            <p className="text-base mb-3 leading-relaxed">
-                이 프로젝트는 기업에서 제공한 <span className="font-semibold text-[#6f53ff]">채용 전용 API</span>를 활용해,<br />
-                <span className="font-semibold text-[#6f53ff]">결제대행사(PG) 도메인의 관리자(Admin) 대시보드</span>를
-                실제 서비스와 유사하게 구현한 실무형 과제 프로젝트입니다.
+          {/* 프로젝트 한줄 설명 */}
+          <p className="text-base leading-relaxed">
+            기업 결제 시스템 <span className="font-semibold text-[#6f53ff]">관리자(Admin)</span> 환경에서 
+            결제 현황을 직관적으로 확인할 수 있도록 
+            <span className="font-semibold text-[#6f53ff]"> 데이터 시각화 기반 대시보드</span>를 
+            구현한 프로젝트입니다. <br />
+            회사에서 제공한 <span className="font-semibold text-[#6f53ff]">결제 API</span> 데이터를 활용해 
+            관리자 화면에서 주요 결제 지표와 거래 흐름을 한눈에 파악할 수 있도록 설계했습니다.
+          </p>
+
+          {/* 프로젝트 소개 */}
+          <div className="p-6 bg-[#fbfaff] rounded-xl border-l-4 border-skill03">
+            <h2 className="font-semibold text-lg mb-4">⭐ 프로젝트 소개</h2>
+
+            <p className="text-base mb-4 leading-relaxed">
+              이 프로젝트는 기업에서 제공한 
+              <span className="font-semibold text-[#6f53ff]"> 결제 API</span>를 활용해 
+              <span className="font-semibold text-[#6f53ff]"> 관리자(Admin)</span> 환경에서 
+              결제 데이터를 효율적으로 관리하고 시각적으로 확인할 수 있도록 
+              <span className="font-semibold"> 대시보드 화면</span>을 구현한 프로젝트입니다.
             </p>
 
-            <p className="text-base mb-3 leading-relaxed">
-                PG 시스템은 다양한 결제 흐름·상태 관리가 핵심이기 때문에,<br />
-                관리자 화면에서는 <span className="font-semibold">대시보드 시각화 · 가맹점 관리 · 거래 내역 · 정산 관리</span> 등
-                핵심 정보들이 명확하게 구성되어야 합니다.
+            <p className="text-base mb-4 leading-relaxed">
+              PG 시스템은 다양한 결제 데이터를 빠르게 확인하고 관리해야 하기 때문에  
+              관리자가 빠르게 현황을 파악할 수 있는 대시보드 화면이 필요했습니다. <br />
+              이를 위해 주요 결제 지표를 한 화면에서 확인할 수 있는 관리자 대시보드를 구현했습니다.
             </p>
 
-            <p className="text-base mb-4 leading-relaxed font-medium text-gray-700">
-                본 프로젝트에서는 다음 목표를 중심으로 구현했습니다.
+            <p className="text-base mb-5 leading-relaxed font-medium text-gray-700">
+              이에 따라 결제 상태, 거래 내역, 결제 채널 통계를 
+              <span className="font-semibold text-[#6f53ff]"> 데이터 시각화 중심의 대시보드</span>로 설계했습니다.
             </p>
 
             <ul className="list-disc list-inside text-gray-700 px-6 space-y-2 text-[15px] leading-relaxed">
-                <li className="before:content-['•'] before:mr-2 before:text-slate-400">
-                실제 관리자 페이지가 갖춰야 할 <span className="font-semibold">정보 구조(UI/UX)</span> 재현
-                </li>
-                <li className="before:content-['•'] before:mr-2 before:text-slate-400">
-                <span className="font-semibold">실시간 API 연동</span>을 통한 데이터 중심 기능 구현
-                </li>
-                <li className="before:content-['•'] before:mr-2 before:text-slate-400">
-                테이블 · 차트 · 카드 UI를 활용한 <span className="font-semibold">대시보드 시각화</span>
-                </li>
-                <li className="before:content-['•'] before:mr-2 before:text-slate-400">
-                <span className="font-semibold">PG 도메인</span>에 기반한 거래 · 정산 흐름 구조화
-                </li>
-            </ul>
-            </div>
-          <div>
-            <h2 className="font-semibold text-lg mb-2">⚙️ 개발 환경</h2>
-            <ul className="flex flex-wrap gap-3 text-base">
-              {["REACT", "TYPESCRIPT", "VITE", "TAILWINDCSS", "AXIOS"].map(
-                (item) => (
-                  <li
-                    key={item}
-                    className="px-4 py-1 bg-[#787fcd] text-white rounded-full"
-                  >
-                    {item}
-                  </li>
-                )
-              )}
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                실제 관리자 페이지가 갖춰야 할 
+                <span className="font-semibold text-[#6f53ff]"> 정보 구조(UI/UX)</span> 재현
+              </li>
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                <span className="font-semibold text-[#6f53ff]">REST API 연동</span>을 통한 
+                데이터 중심 기능 구현
+              </li>
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                테이블 · 차트 · 카드 UI를 활용한 
+                <span className="font-semibold text-[#6f53ff]"> 대시보드 데이터 시각화</span>
+              </li>
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                <span className="font-semibold text-[#6f53ff]">PG 도메인</span> 기반 
+                거래 · 정산 흐름 구조화
+              </li>
             </ul>
           </div>
+
+          {/* 개발 환경 */}
+          <div>
+            <h2 className="font-semibold text-lg mb-3">⚙️ 개발 환경</h2>
+            <ul className="flex flex-wrap gap-3 text-sm">
+              {["REACT", "TYPESCRIPT", "VITE", "TAILWINDCSS", "AXIOS"].map((item) => (
+                <li
+                  key={item}
+                  className="px-4 py-1 bg-[#6f53ff] text-white rounded-full text-base tracking-wide"
+                >
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* 주요 구현 기능 */}
+          <div>
+            <h2 className="font-semibold text-lg mb-3">🧩 주요 구현 기능</h2>
+
+            <ul className="list-disc list-inside text-gray-700 px-6 space-y-2 text-[15px] leading-relaxed">
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                <span className="font-semibold text-[#6f53ff]">결제 상태 KPI 카드</span> 
+                (Total / Success / Failed / Cancelled) 구현
+              </li>
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                <span className="font-semibold text-[#6f53ff]">Chart.js 기반 </span>Doughnut / Bar Chart 구현
+              </li>
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                최근 거래 내역 <span className="font-semibold text-[#6f53ff]">데이터 테이블</span> 구현
+              </li>
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                관리자(Admin) 
+                <span className="font-semibold text-[#6f53ff]">사이드바 기반 대시보드 레이아웃</span> 구성
+              </li>
+              <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                <span className="font-semibold text-[#6f53ff]">REST API</span> 기반 
+                결제 데이터 조회 및 화면 렌더링
+              </li>
+            </ul>
+          </div>
+
         </div>
       </div>
 
@@ -238,8 +289,8 @@ export default function BrunchPayDetail() {
           {activeTab === "video" && (
             <div id="video" className="space-y-6">
                 <div className='mb-10'>
-                <p className='mb-2 font-bold'>🖥 시연 영상</p>
-                <p className="px-4 mb-4 text-base">로컬 서버에서 실제 동작을 캡처한 시연 화면입니다.</p>
+                <p className='mb-2 font-bold'>📹 구현 영상</p>
+                <p className="px-4 mb-4 text-base">관리자 대시보드에서 결제 데이터가 차트와 카드 형태로 시각화되는 흐름을 확인할 수 있습니다.</p>
                 <p className="text-sm text-gray-400 mb-2">📊 Video</p>
                 <video controls width="100%">
                     <source src={brunchPayDemo} type="video/mp4" />
@@ -273,7 +324,7 @@ export default function BrunchPayDetail() {
                 <li className="before:content-['•'] before:mr-3 before:text-slate-400">
                     <span className="font-semibold text-[#4b47d1]">대시보드 시각화를 통한 직관성 강화</span><br/>
                     Doughnut · Bar 차트를 사용하여  
-                    전체 결제 흐름과 상태 비율을 한눈에 파악할 수 있도록 <span className="font-medium">시각적 인사이트 제공</span>.
+                    전체 결제 흐름과 상태 비율을 한눈에 파악할 수 있도록 <span className="font-medium">시각적 인사이트</span>를 제공했습니다.
                 </li>
                 <li className="before:content-['•'] before:mr-3 before:text-slate-400">
                     <span className="font-semibold text-[#4b47d1]">Mock 기반 정산 페이지 구조 분석</span><br/>
