@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router';
 import zipgoai from '../images/zipgoai.png';
 import circle from '../images/circle.png';
 import gongcha from '../images/gongcha.png';
-import saltrain from '../images/saltrain_preview.png';
-import maeil from '../images/maeil_preview.png';
-import codingTest from '../images/coding_test.png';
+// import saltrain from '../images/saltrain_preview.png';
+// import maeil from '../images/maeil_preview.png';
+// import codingTest from '../images/coding_test.png';
 import community from '../images/community.png'
 import brunchPay from '../images/brunchpay.png';
+import fundflow from '../images/fundflow.png';
 import arrowOurward from '../images/arrow_outward_icon.svg'
 
 function Project() {
@@ -27,12 +28,28 @@ function Project() {
 
   const projects = [
     {
+      id: 'fundflow',
+      name: 'FundFlow',
+      category: 'Personal',
+      intro: 'React · TypeScript 기반 반응형 펀딩 플랫폼 프로젝트',
+      route: '/ProjectDetail',
+      src: fundflow,
+    },
+    {
       id: 'gongcha',
       name: '공차 (Gong cha)',
       category: 'Personal',
       intro: 'React로 브랜드 웹사이트를 리뉴얼한 개인 프로젝트',
       route: '/ProjectDetail',
       src: gongcha,
+    },
+    {
+      id: 'brunchpay',
+      name: 'BrunchPay Dashboard',
+      category: 'Professional',
+      intro: 'React + TS 기반 PG 관리자 대시보드 구현 프로젝트',
+      route: '/BrunchPayDetail',
+      src: brunchPay
     },
     {
       id: 'zipgoai',
@@ -49,38 +66,6 @@ function Project() {
       intro: 'Axios 기반 API 연동으로 데이터 흐름을 구현한 팀 프로젝트',
       route: '/ProjectDetail',
       src: circle,
-    },
-    {
-      id: 'brunchpay',
-      name: 'BrunchPay Dashboard',
-      category: 'Professional',
-      intro: 'React + TS 기반 PG 관리자 대시보드 구현 프로젝트',
-      route: '/BrunchPayDetail',
-      src: brunchPay
-    },
-    {
-      id: 'saltrain',
-      name: '솔트레인 (SALTRAIN)',
-      category: 'Team',
-      intro: 'Vue 기반 브랜드 웹사이트 리뉴얼 협업 프로젝트',
-      route: '/ProjectDetail',
-      src: saltrain,
-    },
-    {
-      id: 'maeil',
-      name: '매일유업 (maeil)',
-      category: 'Team',
-      intro: 'HTML/CSS/JS로 브랜드 웹사이트를 재구성한 기본기 프로젝트',
-      route: '/ProjectDetail',
-      src: maeil,
-    },
-    {
-      id: 'codingTest',
-      name: 'Responsive UI Components',
-      category: 'Side',
-      intro: 'Next.js로 반응형 UI와 컴포넌트를 구현한 개인 프로젝트',
-      route: '/ProjectDetail',
-      src: codingTest,
     },
     {
       id: 'community',

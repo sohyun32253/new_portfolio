@@ -10,6 +10,7 @@ import MaeilDetail from './MaeilDetail';
 import CodingTestDetail from './CodingTestDetail';
 import CommunityDetail from './CommunityDetail';
 import BrunchPayDetail from './BrunchPayDetail';
+import FundFlowDetail from './FundFlowDetail';
 
 function ProjectDetail() {
     const { id } = useParams();
@@ -21,10 +22,11 @@ function ProjectDetail() {
     let title = '';
     if (id === 'gongcha') title = '공차 (Gong cha)';
     else if (id === 'circle') title = 'Circle';
+    else if (id === 'fundflow') title = 'FundFlow';
     else if (id === 'zipgoai') title = '땅집고 옥션';
-    else if (id === 'saltrain') title = '솔트레인 (SALTRAIN)';
-    else if (id === 'maeil') title = '매일유업 (Maeil)';
-    else if (id === 'codingTest') title = 'Responsive UI Components (Next.js)';
+    // else if (id === 'saltrain') title = '솔트레인 (SALTRAIN)';
+    // else if (id === 'maeil') title = '매일유업 (Maeil)';
+    // else if (id === 'codingTest') title = 'Responsive UI Components (Next.js)';
     else if (id === 'community') title = 'Community MVP App (React Native)';
     else if (id === 'brunchpay') title = 'BrunchPay Dashboard';
 
@@ -42,6 +44,7 @@ function ProjectDetail() {
                 </div>
 
                 {id === 'gongcha' && <GongchaDetail />}
+                {id === 'fundflow' && <FundFlowDetail />}
                 {id === 'circle' && <CircleDetail />}
                 {id === 'zipgoai' && <ZipgoaiDetail />}
                 {id === 'saltrain' && <SaltrainDetail />}
