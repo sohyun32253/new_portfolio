@@ -128,7 +128,17 @@ export default function BrunchPayDetail() {
               </li>
             </ul>
           </div>
-
+            <div>
+                <h2 className="font-semibold text-lg mb-2">📎 배포 주소</h2>
+                <a
+                    href="https://sohyun32253.github.io/Pays_dashboard/"
+                    className="inline-block px-5 py-2 rounded-full bg-[#a897ff] text-white hover:bg-[#836aff] transition"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    웹사이트 방문하기 →
+                </a>
+            </div>
         </div>
       </div>
 
@@ -152,18 +162,16 @@ export default function BrunchPayDetail() {
               </button>
             ))}
           </div>
-
+            <p className="text-sm text-gray-500 mb-4">
+            ※ 영상에는 백엔드 API와 연동하여 실제 데이터 기반으로 구현하였으며, <br />
+            포트폴리오 배포 버전에서는 안정적인 시연을 위해 mock 데이터를 사용하였습니다.
+            </p>
           {/* 메인페이지(대시보드) */}
             {activeTab === "main" && (
             <div id="main" className="space-y-6">
-
                 <div className="inline-block bg-[#f1efff] text-[#4639ad] font-semibold px-4 py-2 rounded-lg border border-[#dcd7ff] shadow-sm">
                 1. 대시보드(Dashboard)
                 </div>
-
-                <p className="text-sm text-gray-500">
-                ※ 백엔드 API와 연동하여 실제 데이터 기반으로 동작하는 페이지입니다.
-                </p>
 
                 <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
                 관리자에게 필요한 결제 지표를 빠르게 파악할 수 있도록<br />
@@ -191,9 +199,6 @@ export default function BrunchPayDetail() {
               <div className="inline-block bg-[#f1efff] text-[#4639ad] font-semibold px-4 py-2 rounded-lg border border-[#dcd7ff] shadow-sm">
                 2. 거래 내역(Transaction List)
               </div>
-              <p className="text-sm text-gray-500 mt-2 mb-4">
-                ※ 해당 페이지는 백엔드 API와 연동하여 실제 데이터와 연결한 페이지입니다.
-              </p>
               <p className="text-base font-bold mt-2 mb-4">
                 실제 서비스 운영에서 가장 많이 조회되는 기능으로, <br />
                 거래 정보·상태값·수단별 분류를 즉시 확인할 수 있도록 구성했습니다.
@@ -225,9 +230,6 @@ export default function BrunchPayDetail() {
               <div className="inline-block bg-[#f1efff] text-[#4639ad] font-semibold px-4 py-2 rounded-lg border border-[#dcd7ff] shadow-sm">
                 3. 가맹점 정보(Merchants Information)
               </div>
-              <p className="text-sm text-gray-500 mt-2 mb-4">
-                ※ 해당 페이지는 백엔드 API와 연동하여 실제 데이터와 연결한 페이지입니다.
-              </p>
               <p className="text-base font-bold mt-2 mb-4">
                 PG 시스템에서 핵심 도메인인 가맹점 단위의 정보 관리가 가능한 구조로 설계했습니다.
               </p>
@@ -256,9 +258,6 @@ export default function BrunchPayDetail() {
             <div id="invoice" className="space-y-6">
               <div className="inline-block bg-[#f1efff] text-[#4639ad] font-semibold px-4 py-2 rounded-lg border border-[#dcd7ff] shadow-sm">
                 4. 인보이스 관리(Invoice Management)
-              </div>
-              <div className="text-sm text-gray-500 mt-2 mb-4">
-                ※ 해당 페이지는 MOCK 데이터 기반으로 구현되었습니다.
               </div>
               <p className="text-base font-bold mt-2 mb-4">
                 정산 페이지는 데이터를 통한 금액 검증·기간별 정산 등 실무요소가 많아 <br />
