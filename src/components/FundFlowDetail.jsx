@@ -7,16 +7,16 @@ import infiniteScroll from '../images/infinite_scroll.mp4'
 import clsx from "clsx";
 
 function FundFlowDetail() {
-const tabs = [
-  { id: "card", label: "카드 UI" },
-  { id: "badge", label: "뱃지 로직" },
-  { id: "progress", label: "펀딩 게이지" },
-  { id: "storage", label: "상태 유지" },
-  { id: "loading", label: "무한 스크롤" },
-];
+  const tabs = [
+    { id: "card", label: "카드 UI" },
+    { id: "badge", label: "뱃지 로직" },
+    { id: "progress", label: "펀딩 게이지" },
+    { id: "storage", label: "상태 유지" },
+    { id: "loading", label: "무한 스크롤" },
+  ];
 
   const [activeTab, setActiveTab] = useState("card");
-    return (
+  return (
     <section className="text-[20px]">
       <div className='mb-12'>
         <img src={fundflowMain} alt='펀딩 플랫폼 메인 이미지' />
@@ -148,17 +148,17 @@ const tabs = [
 
             </ul>
           </div>
-            <div>
-                <h2 className="font-semibold text-lg mb-2">📎 배포 주소</h2>
-                <a
-                    href="https://sohyun32253.github.io/FundFlow/"
-                    className="inline-block px-5 py-2 rounded-full bg-[#70bba9] text-white hover:bg-[#37db9a] transition"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    웹사이트 방문하기 →
-                </a>
-            </div>
+          <div>
+            <h2 className="font-semibold text-lg mb-2">📎 배포 주소</h2>
+            <a
+              href="https://sohyun32253.github.io/FundFlow/"
+              className="inline-block px-5 py-2 rounded-full bg-[#70bba9] text-white hover:bg-[#37db9a] transition"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              웹사이트 방문하기 →
+            </a>
+          </div>
 
         </div>
 
@@ -181,282 +181,293 @@ const tabs = [
                 </button>
               ))}
             </div>
-  
+
             {/* 메인카드 */}
-              {activeTab === "card" && (
+            {activeTab === "card" && (
               <div id="card" className="space-y-6">
 
-                  <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
+                <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
                   1. 프로젝트 카드 UI(Project Card UI)
-                  </div>
+                </div>
 
-                  <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500">
                   ※ 프로젝트 상태 데이터에 따라 UI가 동적으로 변경되도록 구현했습니다.
-                  </p>
+                </p>
 
-                  <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
+                <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
                   사용자가 프로젝트 핵심 정보를 빠르게 탐색할 수 있도록 <br />
                   상태 기반 정보 구조와 인터랙션 중심으로 구현한 프로젝트 카드 UI입니다.
-                  </p>
+                </p>
 
-                  <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
+                <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
 
                   <li className="before:content-['❶'] before:mr-2 before:text-slate-400">
-                      프로젝트 이미지 · 제목 · 크리에이터 정보 표시
+                    프로젝트 이미지 · 제목 · 크리에이터 정보 표시
                   </li>
 
                   <li className="before:content-['❷'] before:mr-2 before:text-slate-400">
-                      공개 예정 / 진행 중 상태에 따른
-                      <span className="text-[#0f886a] font-semibold"> UI 분기 처리</span>
+                    공개 예정 / 진행 중 상태에 따른
+                    <span className="text-[#0f886a] font-semibold"> UI 분기 처리</span>
                   </li>
 
                   <li className="before:content-['❸'] before:mr-2 before:text-slate-400">
-                      좋아요 · 알림 · 크리에이터 링크 클릭 시
-                      <span className="text-[#0f886a] font-semibold"> 이벤트 전파 제어</span>
+                    좋아요 · 알림 · 크리에이터 링크 클릭 시
+                    <span className="text-[#0f886a] font-semibold"> 이벤트 전파 제어</span>
                   </li>
 
                   <li className="before:content-['❹'] before:mr-2 before:text-slate-400">
-                      프로젝트 상태에 따른
-                      <span className="text-[#0f886a] font-semibold"> 뱃지 및 진행률 표시</span>
+                    프로젝트 상태에 따른
+                    <span className="text-[#0f886a] font-semibold"> 뱃지 및 진행률 표시</span>
                   </li>
 
                   <li className="before:content-['❺'] before:mr-2 before:text-slate-400">
-                      모바일 · 태블릿 · PC 환경을 고려한
-                      <span className="text-[#0f886a] font-semibold"> 반응형 Grid Layout</span>
+                    모바일 · 태블릿 · PC 환경을 고려한
+                    <span className="text-[#0f886a] font-semibold"> 반응형 Grid Layout</span>
                   </li>
 
-                  </ul>
+                </ul>
 
-                  <div className="mt-6">
+                <div className="mt-6">
                   <p className="text-sm text-gray-400 mb-2">📊 Preview</p>
 
                   <img
-                      src={cardUi}
-                      alt="FundFlow Project Card"
-                      className="rounded-xl shadow-md border"
+                    src={cardUi}
+                    alt="FundFlow Project Card"
+                    className="rounded-xl shadow-md border"
                   />
-                  </div>
+                </div>
 
               </div>
-              )}
-              {/* 뱃지 로직 */}
-              {activeTab === "badge" && (
+            )}
+            {/* 뱃지 로직 */}
+            {activeTab === "badge" && (
               <div id="badge" className="space-y-6">
-                  <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
+                <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
                   2. 뱃지 로직(Badge Logic)
-                  </div>
+                </div>
 
-                  <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500">
                   ※ 프로젝트 상태 및 조건에 따라 뱃지가 동적으로 생성되도록 구현했습니다.
-                  </p>
+                </p>
 
-                  <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
+                <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
                   프로젝트의 핵심 상태를 빠르게 파악할 수 있도록 <br />
                   우선순위 기반 뱃지 노출 로직을 구현했습니다.
-                  </p>
+                </p>
 
-                  <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
-                      <li className="before:content-['❶'] before:mr-2 before:text-slate-400">
-                          좋은 창작자 · 마감 임박 · 남은 기간 · 후원 금액 등
-                      <span className="text-[#0f886a] font-semibold"> 조건별 뱃지 생성</span>
-                      </li>
-                      <li className="before:content-['❷'] before:mr-2 before:text-slate-400">
-                          조건문 순서가 아닌
-                      <span className="text-[#0f886a] font-semibold"> priority 기반 정렬 구조</span> 적용
-                      </li>
-                      <li className="before:content-['❸'] before:mr-2 before:text-slate-400">
-                          중요도가 높은 뱃지만 노출될 수 있도록
-                          <span className="text-[#0f886a] font-semibold"> 최대 2개 제한</span>
-                      </li>
-                      <li className="before:content-['❹'] before:mr-2 before:text-slate-400">
-                          후원 금액 구간별
-                          <span className="text-[#0f886a] font-semibold"> 단위 및 반올림 포맷팅 처리</span>
-                      </li>
-                  </ul>
+                <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
+                  <li className="before:content-['❶'] before:mr-2 before:text-slate-400">
+                    좋은 창작자 · 마감 임박 · 남은 기간 · 후원 금액 등
+                    <span className="text-[#0f886a] font-semibold"> 조건별 뱃지 생성</span>
+                  </li>
+                  <li className="before:content-['❷'] before:mr-2 before:text-slate-400">
+                    조건문 순서가 아닌
+                    <span className="text-[#0f886a] font-semibold"> priority 기반 정렬 구조</span> 적용
+                  </li>
+                  <li className="before:content-['❸'] before:mr-2 before:text-slate-400">
+                    중요도가 높은 뱃지만 노출될 수 있도록
+                    <span className="text-[#0f886a] font-semibold"> 최대 2개 제한</span>
+                  </li>
+                  <li className="before:content-['❹'] before:mr-2 before:text-slate-400">
+                    후원 금액 구간별
+                    <span className="text-[#0f886a] font-semibold"> 단위 및 반올림 포맷팅 처리</span>
+                  </li>
+                </ul>
 
-                  <div className="mt-6">
+                <div className="mt-6">
                   <p className="text-sm text-gray-400 mb-2">📊 Preview</p>
 
                   <img
-                      src={cardBadge}
-                      alt="FundFlow Badge Logic"
-                      className="rounded-xl shadow-md border"
+                    src={cardBadge}
+                    alt="FundFlow Badge Logic"
+                    className="rounded-xl shadow-md border"
                   />
-                  </div>
+                </div>
 
               </div>
-              )}
+            )}
 
-              {/* 펀딩 게이지 */}
-              {activeTab === "progress" && (
+            {/* 펀딩 게이지 */}
+            {activeTab === "progress" && (
               <div id="progress" className="space-y-6">
 
-                  <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
+                <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
                   3. 펀딩 게이지(Funding Progress)
-                  </div>
+                </div>
 
-                  <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500">
                   ※ 프로젝트 후원 금액 데이터를 기반으로 진행률이 동적으로 계산됩니다.
-                  </p>
+                </p>
 
-                  <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
+                <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
                   목표 금액 대비 현재 후원 금액을 시각적으로 확인할 수 있도록 <br />
                   펀딩 진행률 기반 게이지 UI를 구현했습니다.
-                  </p>
+                </p>
 
-                  <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
+                <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
 
                   <li className="before:content-['❶'] before:mr-2 before:text-slate-400">
-                      현재 후원 금액 / 목표 금액 기반
-                      <span className="text-[#0f886a] font-semibold"> 진행률 계산</span>
+                    현재 후원 금액 / 목표 금액 기반
+                    <span className="text-[#0f886a] font-semibold"> 진행률 계산</span>
                   </li>
 
                   <li className="before:content-['❷'] before:mr-2 before:text-slate-400">
-                      진행률에 따라
-                      <span className="text-[#0f886a] font-semibold"> 게이지 바 width 동적 반영</span>
+                    진행률에 따라
+                    <span className="text-[#0f886a] font-semibold"> 게이지 바 width 동적 반영</span>
                   </li>
 
                   <li className="before:content-['❸'] before:mr-2 before:text-slate-400">
-                      UI 안정성을 위해
-                      <span className="text-[#0f886a] font-semibold"> 최대 100% 제한 처리</span>
+                    UI 안정성을 위해
+                    <span className="text-[#0f886a] font-semibold"> 최대 100% 제한 처리</span>
                   </li>
 
                   <li className="before:content-['❹'] before:mr-2 before:text-slate-400">
-                      프로젝트 상태에 따른
-                      <span className="text-[#0f886a] font-semibold"> 퍼센트 및 금액 정보 표시</span>
+                    프로젝트 상태에 따른
+                    <span className="text-[#0f886a] font-semibold"> 퍼센트 및 금액 정보 표시</span>
                   </li>
 
-                  </ul>
+                </ul>
 
-                  <div className="mt-6">
+                <div className="mt-6">
                   <p className="text-sm text-gray-400 mb-2">📊 Preview</p>
 
                   <img
-                      src={fundflowMain}
-                      alt="FundFlow Progress Bar"
-                      className="rounded-xl shadow-md border"
+                    src={fundflowMain}
+                    alt="FundFlow Progress Bar"
+                    className="rounded-xl shadow-md border"
                   />
-                  </div>
+                </div>
 
               </div>
-              )}
+            )}
 
-              {/* 상태 유지 */}
-              {activeTab === "storage" && (
+            {/* 상태 유지 */}
+            {activeTab === "storage" && (
               <div id="storage" className="space-y-6">
 
-                  <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
+                <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
                   4. 상태 유지(State Persistence)
-                  </div>
+                </div>
 
-                  <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500">
                   ※ 사용자 인터랙션 상태를 localStorage에 저장하도록 구현했습니다.
-                  </p>
+                </p>
 
-                  <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
+                <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
                   좋아요 및 알림 신청 상태가 새로고침 이후에도 유지될 수 있도록 <br />
                   localStorage 기반 상태 관리 기능을 구현했습니다.
-                  </p>
+                </p>
 
-                  <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
+                <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
 
                   <li className="before:content-['❶'] before:mr-2 before:text-slate-400">
-                      프로젝트별 고유 key 기반
-                      <span className="text-[#0f886a] font-semibold"> 상태 저장 구조</span> 구현
+                    프로젝트별 고유 key 기반
+                    <span className="text-[#0f886a] font-semibold"> 상태 저장 구조</span> 구현
                   </li>
 
                   <li className="before:content-['❷'] before:mr-2 before:text-slate-400">
-                      좋아요 및 알림 상태 변경 시
-                      <span className="text-[#0f886a] font-semibold"> localStorage 동기화</span>
+                    좋아요 및 알림 상태 변경 시
+                    <span className="text-[#0f886a] font-semibold"> localStorage 동기화</span>
                   </li>
 
                   <li className="before:content-['❸'] before:mr-2 before:text-slate-400">
-                      새로고침 이후에도
-                      <span className="text-[#0f886a] font-semibold"> 사용자 상태 유지</span>
+                    새로고침 이후에도
+                    <span className="text-[#0f886a] font-semibold"> 사용자 상태 유지</span>
                   </li>
 
                   <li className="before:content-['❹'] before:mr-2 before:text-slate-400">
-                      상태 기반 버튼 스타일 및 텍스트 변경 처리
+                    상태 기반 버튼 스타일 및 텍스트 변경 처리
                   </li>
 
-                  </ul>
+                </ul>
 
-                  <div className="mt-6">
+                <div className="mt-6">
                   <p className="text-sm text-gray-400 mb-2">📊 Preview</p>
 
                   <img
-                      src={cardAlarm}
-                      alt="FundFlow LocalStorage"
-                      className="rounded-xl shadow-md border"
+                    src={cardAlarm}
+                    alt="FundFlow LocalStorage"
+                    className="rounded-xl shadow-md border"
                   />
-                  </div>
+                </div>
 
               </div>
-              )}
+            )}
 
-              {/* 무한 스크롤 */}
-              {activeTab === "loading" && (
+            {/* 무한 스크롤 */}
+            {activeTab === "loading" && (
               <div id="loading" className="space-y-6">
 
-                  <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
+                <div className="inline-block bg-[#dbede9] text-[#0f886a] font-semibold px-4 py-2 rounded-lg shadow-sm">
                   5. 무한 스크롤(Infinite Scroll)
-                  </div>
+                </div>
 
-                  <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500">
                   ※ IntersectionObserver 기반으로 자동 로딩되도록 구현했습니다.
-                  </p>
+                </p>
 
-                  <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
+                <p className="text-base font-bold leading-relaxed text-[#3d3b50]">
                   사용자가 자연스럽게 프로젝트를 탐색할 수 있도록 <br />
                   무한 스크롤 및 Skeleton UI 기반 로딩 구조를 구현했습니다.
-                  </p>
+                </p>
 
-                  <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
+                <ul className="list-disc list-inside px-6 space-y-2 text-[15px] leading-relaxed text-gray-700">
 
                   <li className="before:content-['❶'] before:mr-2 before:text-slate-400">
-                      <span className="text-[#0f886a] font-semibold">IntersectionObserver</span>
-                      기반 자동 로딩 구현
+                    <span className="text-[#0f886a] font-semibold">IntersectionObserver</span>
+                    기반 자동 로딩 구현
                   </li>
 
                   <li className="before:content-['❷'] before:mr-2 before:text-slate-400">
-                      page 기반 API 구조를 활용한
-                      <span className="text-[#0f886a] font-semibold"> 확장 가능한 리스트 구조</span>
+                    page 기반 API 구조를 활용한
+                    <span className="text-[#0f886a] font-semibold"> 확장 가능한 리스트 구조</span>
                   </li>
 
                   <li className="before:content-['❸'] before:mr-2 before:text-slate-400">
-                      loading / loadingMore 상태 분리를 통한
-                      <span className="text-[#0f886a] font-semibold"> UX 개선</span>
+                    loading / loadingMore 상태 분리를 통한
+                    <span className="text-[#0f886a] font-semibold"> UX 개선</span>
                   </li>
 
                   <li className="before:content-['❹'] before:mr-2 before:text-slate-400">
-                      Skeleton UI를 활용해
-                      <span className="text-[#0f886a] font-semibold"> 레이아웃 흔들림 최소화</span>
+                    Skeleton UI를 활용해
+                    <span className="text-[#0f886a] font-semibold"> 레이아웃 흔들림 최소화</span>
                   </li>
 
                   <li className="before:content-['❺'] before:mr-2 before:text-slate-400">
-                      hasMore 조건을 활용한
-                      <span className="text-[#0f886a] font-semibold"> 중복 요청 방지 처리</span>
+                    hasMore 조건을 활용한
+                    <span className="text-[#0f886a] font-semibold"> 중복 요청 방지 처리</span>
                   </li>
 
-                  </ul>
+                </ul>
 
-                  <div className="mt-6">
+                <div className="mt-6">
                   <p className="text-sm text-gray-400 mb-2">📊 Preview</p>
 
                   <video controls width="100%">
-                      <source src={infiniteScroll} type="video/mp4" />
-                      브라우저가 video 태그를 지원하지 않습니다.
+                    <source src={infiniteScroll} type="video/mp4" />
+                    브라우저가 video 태그를 지원하지 않습니다.
                   </video>
-                  </div>
-
+                </div>
               </div>
-              )}
-      
+            )}
+      {/* 기타 문서 */}
+      <section className="mt-8">
+        <h2 className="mb-2 font-semibold text-base">📜 기타 문서</h2>
+        <a
+          href="https://github.com/sohyun32253/FundFlow"
+          className="inline-block px-5 py-2 rounded-full bg-[#70bba9] text-white hover:bg-[#32ab8f] transition text-base"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          💻 깃허브 바로가기 →
+        </a>
+      </section>
           </div>
         </div>
       </div>
+
     </section>
-    );
+  );
 }
 
 export default FundFlowDetail;
