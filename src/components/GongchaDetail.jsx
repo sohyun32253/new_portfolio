@@ -12,31 +12,31 @@ function GongchaDetail() {
     };
 
     const features = [
-        {
-            title: '사용자 친화적인 반응형 메인 페이지 구현 (PC, Tablet, Mobile 지원)',
-            detail: 'CSS 미디어쿼리를 사용하여 다양한 디바이스에 최적화된 레이아웃을 구현하였습니다.'
-        },
-        {
-            title: 'Swiper를 활용한 새로운 메뉴 소개 섹션',
-            detail: 'Swiper.js를 이용하여 자동 전환 슬라이드, 터치 인터랙션 기능을 적용하였습니다.'
-        },
-        {
-            title: 'React-CountUp을 사용해 글로벌 경쟁력 섹션 시각적 강조',
-            detail: '숫자 증가 애니메이션을 통해 사용자에게 기업의 성장성과 신뢰감을 전달하였습니다.'
-        },
-        {
-            title: '카테고리별 메뉴 탐색 및 음료 상세 정보 팝업창 구현',
-            detail: 'React 상태 관리와 상세 팝업 기능을 구현하였습니다.'
-        },
-        {
-            title: '카카오 API를 활용한 매장 위치 검색 페이지 구현',
-            detail: '카카오 지도 API를 활용하여 사용자 위치 기반 매장 탐색 기능을 제공하였습니다.'
-        },
-        {
-            title: 'Firebase를 활용한 로그인 / 마이페이지 구현',
-            detail: 'Firebase Authentication과 Firestore를 사용하여 로그인 및 사용자 데이터 관리를 처리하였습니다.'
-        },
-    ];
+    {
+      title: '메인 페이지 구조 리팩터링',
+      detail: 'Content.js에 집중되어 있던 메인 페이지 코드를 QuickMenu, MainCarousel, NewMenuSection, TeaRecipeSection 등 섹션 단위 컴포넌트로 분리하여 유지보수성을 개선했습니다.'
+    },
+    {
+      title: 'React.lazy와 Suspense 기반 지연 로딩 적용',
+      detail: '초기 화면에 필요한 요소는 즉시 로드하고, 하단 섹션은 lazy loading으로 분리했습니다. 로딩 중에는 실제 레이아웃과 유사한 Skeleton UI를 표시해 사용자 경험을 개선했습니다.'
+    },
+    {
+      title: '공통 LazyImage 컴포넌트 제작',
+      detail: '이미지에 loading="lazy"와 decoding="async"를 적용하고, 첫 화면 이미지에는 eager 옵션을 적용해 이미지 로딩 전략을 구분했습니다.'
+    },
+    {
+      title: '음료 메뉴 공통 MenuGrid 컴포넌트화',
+      detail: '8개 음료 카테고리에서 반복되던 카드 그리드 구조를 MenuGrid 컴포넌트로 통합하여 중복 코드를 줄이고 카테고리별 데이터만 교체할 수 있도록 개선했습니다.'
+    },
+    {
+      title: '모바일 메뉴 상세 팝업 UX 개선',
+      detail: '사이즈 선택 버튼을 가격 정보 위로 이동하고, 선택한 사이즈의 가격과 칼로리만 표시하도록 변경했습니다. 또한 max-height와 내부 스크롤을 적용해 모바일 화면에서도 안정적으로 정보를 확인할 수 있도록 개선했습니다.'
+    },
+    {
+      title: 'Toast UI 및 스크롤 인터랙션 개선',
+      detail: '기존 alert를 react-hot-toast로 대체하고, 메뉴 카드에는 스크롤 reveal 애니메이션을 적용해 사용자 피드백과 인터랙션 경험을 개선했습니다.'
+    },
+  ];
 
     return (
         <section className='text-[20px]'>
@@ -55,8 +55,8 @@ function GongchaDetail() {
                   <h2 className="font-semibold text-lg mb-2 ">💬 제목 : 공차 웹사이트 UX 리뉴얼</h2>
                   <h2 className="font-semibold text-lg mb-2 ">✍🏻 설명</h2>
                   <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
-                    React 기반 공차 브랜드 웹사이트 UX 리뉴얼 프로젝트로  
-                    사용자 메뉴 탐색 흐름을 개선하고 반응형 UI를 구현했습니다.
+                    React 기반 공차 브랜드 웹사이트를 리뉴얼하며 메뉴 탐색 흐름, 반응형 UI, 모바일 상세 팝업 UX를 개선했습니다.<br />
+                    이후 컴포넌트 구조 분리, Lazy Loading, Skeleton UI, Toast UI를 추가 적용하여 유지보수성과 사용자 경험을 함께 개선했습니다.
                   </p>
 
                   <div>
@@ -114,15 +114,34 @@ function GongchaDetail() {
                   <div>
                     <h2 className="font-semibold text-lg mb-2 ">🎯 개발 목표</h2>
                     <ul className="list-disc list-inside text-[16px] text-gray-700 px-9">
-                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">브랜드 컨셉과 톤앤매너를 분석·보완하여 사용자 경험(UX)과 UI를 개선한 웹사이트 리뉴얼</li>
-                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">React.js 기반의 반응형 웹사이트 개발</li>
+                      <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                        브랜드 톤앤매너를 유지하면서 메뉴 탐색 중심의 UX 리뉴얼
+                      </li>
+                      <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                        PC, Tablet, Mobile 환경을 고려한 반응형 UI 구현
+                      </li>
+                      <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                        컴포넌트 분리와 공통 컴포넌트화를 통한 유지보수성 개선
+                      </li>
+                      <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                        Lazy Loading, Skeleton UI, Toast UI를 적용한 성능 및 UX 개선
+                      </li>
                     </ul>
                   </div>
 
                   <div>
                     <h2 className="font-semibold text-lg mb-2">⚙️ 개발 환경</h2>
                     <ul className="flex flex-wrap gap-3">
-                        {['REACT', 'HTML5', 'CSS3', 'JAVASCRIPT', 'FIREBASE'].map((item) => (
+                        {[
+                        'REACT',
+                        'JAVASCRIPT',
+                        'CSS3',
+                        'FIREBASE',
+                        'SWIPER',
+                        'REACT HOT TOAST',
+                        'REACT LAZY',
+                        'SUSPENSE'
+                      ].map((item) => (
                         <li
                             key={item}
                             className="px-4 py-1 bg-[#c35050] text-white rounded-full text-base"
@@ -156,6 +175,39 @@ function GongchaDetail() {
               </div>
             </div>
 
+            <h1 className="mb-3 font-semibold">✨ 핵심 개선 요약</h1>
+
+            <div className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-5">
+              <div className="border border-skillBorder rounded-2xl shadow-md bg-[#f9f9f9] p-6">
+                <h2 className="font-semibold text-lg mb-3">🚀 Performance</h2>
+                <ul className="space-y-2 text-[16px] text-gray-700">
+                  <li>• React.lazy + Suspense 적용</li>
+                  <li>• Skeleton UI 적용</li>
+                  <li>• LazyImage 공통 컴포넌트 제작</li>
+                  <li>• 이미지 lazy loading 적용</li>
+                </ul>
+              </div>
+
+              <div className="border border-skillBorder rounded-2xl shadow-md bg-[#f9f9f9] p-6">
+                <h2 className="font-semibold text-lg mb-3">🧩 Architecture</h2>
+                <ul className="space-y-2 text-[16px] text-gray-700">
+                  <li>• Content.js 섹션 단위 분리</li>
+                  <li>• MenuGrid 공통 컴포넌트화</li>
+                  <li>• useIntersectionObserver 훅 제작</li>
+                  <li>• 메뉴 데이터 구조 분리</li>
+                </ul>
+              </div>
+
+              <div className="border border-skillBorder rounded-2xl shadow-md bg-[#f9f9f9] p-6">
+                <h2 className="font-semibold text-lg mb-3">📱 Mobile UX</h2>
+                <ul className="space-y-2 text-[16px] text-gray-700">
+                  <li>• 모바일 GNB 가로 스크롤 탭 적용</li>
+                  <li>• 메뉴 상세 팝업 UI 개선</li>
+                  <li>• 선택 사이즈 가격/칼로리만 표시</li>
+                  <li>• 영양성분 2열 그리드 정리</li>
+                </ul>
+              </div>
+            </div>
 
             <h1 className="mb-3 font-semibold">🛠 주요 기능 소개</h1>
 
@@ -193,7 +245,7 @@ function GongchaDetail() {
               </ul>
             </div>
 
-          <h1 className="mb-3 font-semibold">🛠 트러블 슈팅</h1>
+          <h1 className="mb-3 font-semibold">🛠 트러블 슈팅 & 리팩터링</h1>
           <div className="px-6 py-8 border border-skillBorder rounded-2xl shadow-lg bg-[#f9f9f9] space-y-8 text-[16px] leading-relaxed">
             <section>
               <h2 className="mb-2 font-semibold text-lg">💥 문제</h2>
@@ -261,6 +313,12 @@ function GongchaDetail() {
                 <li className="before:content-['•'] before:mr-2 before:text-slate-400">메뉴 카테고리 기준으로 명확하게 나뉘어 코드 구조와 UI 일치</li>
                 <li className="before:content-['•'] before:mr-2 before:text-slate-400">가독성과 유지보수성 대폭 향상</li>
                 <li className="before:content-['•'] before:mr-2 before:text-slate-400">신규 메뉴 추가 및 수정 시 해당 컴포넌트와 데이터만 다루면 되어 확장성 확보</li>
+                <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                  반복되던 메뉴 카드 UI를 공통 MenuGrid 컴포넌트로 통합하여 코드 중복을 줄임
+                </li>
+                <li className="before:content-['•'] before:mr-2 before:text-slate-400">
+                  모바일 상세 팝업의 정보 구조를 재정렬하여 가격, 칼로리, 영양정보의 가독성 향상
+                </li>
               </ul>
             </section>
 
