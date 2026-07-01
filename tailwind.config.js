@@ -33,7 +33,7 @@ export default {
         buttonBg: "#fff5ec",
         cardUi: "#676D77",
         cardUiHover: "#F6F9FF",
-        skill01: '#B5CFEA',
+        skill01: '#9FC3F5',
         skill02: '#FCD34D',
         skill03: '#C4B5FD',
         skill04: '#F6B8CD',

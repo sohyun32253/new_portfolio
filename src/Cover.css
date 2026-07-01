@@ -12,46 +12,49 @@
   border-right: 4px solid #4A4261;
 }
 
-/* 타이핑 애니메이션 */
+@keyframes blink {
+  0%, 100% {
+    border-color: #4A4261;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typingFirst {
+  from { width: 0; }
+  to { width: 23ch; }
+}
+
+@keyframes typingSecond {
+  from {
+    width: 0;
+    visibility: visible;
+  }
+  to {
+    width: 30.5ch;
+    visibility: visible;
+  }
+}
+
 .first-line {
-  /* width: 28ch; */
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
   animation:
-    typing 2s steps(28) forwards,
+    typingFirst 2s steps(28) forwards,
     blink 0.5s step-end infinite alternate;
 }
 
 .second-line {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
   visibility: hidden;
   animation:
-    appear 2s steps(20) 2.2s forwards,
+    typingSecond 2s steps(18) 2.2s forwards,
     blink 0.5s step-end infinite alternate;
-}
-
-/* 애니메이션 정의 */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes appear {
-  0% {
-    width: 0;
-    visibility: visible;
-  }
-  100% {
-    width: 18ch;
-    visibility: visible;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
 }
 
 @media screen and (max-width:767px){

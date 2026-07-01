@@ -10,33 +10,26 @@ function Skills() {
           title : "Frontend",
           icon : FrontendIcon,
           items : [
-            { name : "HTML5", color : "bg-skill01" },
-            { name : "CSS3", color : "bg-skill01" },
-            { name : "Vue", color : "bg-skill01" },
             { name : "React", color : "bg-skill01" },
-            { name : "React Native", color : "bg-skill01" },
-            { name : "Next.js", color : "bg-skill01" },
             { name : "TypeScript", color : "bg-skill01" },
             { name : "JavaScript", color : "bg-skill01" },
-            { name : "Jquery", color : "bg-skill01" },
-            { name : "Axios", color : "bg-skill01" },
+            { name : "HTML5", color : "bg-skill01" },
+            { name : "CSS3", color : "bg-skill01" },
             { name : "REST API", color : "bg-skill01" },
-            { name : "Tailwind CSS", color : "bg-skill01" },
+            { name : "Axios", color : "bg-skill01" },
             { name : "styled-components", color : "bg-skill01" },
+            { name : "Tailwind CSS", color : "bg-skill01" },
+            { name : "React Native", color : "bg-skill01" },
+            { name : "Next.js", color : "bg-skill01" },
+            { name : "Vue", color : "bg-skill01" },
+            { name : "jQuery", color : "bg-skill01" },
           ]
-        },
-        { 
-            title : "Language",
-            icon : LanguageIcon,
-            items : [
-              { name : "JavaScript", color : "bg-skill02" },
-              { name : "TypeScript", color : "bg-skill02" },
-            ]
         },
         { 
             title : "Collaboration",
             icon : CollaborationIcon,
             items : [
+              { name : "Git", color : "bg-skill03" },
               { name : "GitHub", color : "bg-skill03" },
               { name : "Firebase", color : "bg-skill03" },
               { name : "Notion", color : "bg-skill03" },

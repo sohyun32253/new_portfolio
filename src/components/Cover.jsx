@@ -5,10 +5,10 @@ function Cover() {
     <div id="cover" className="wrapper mb-20 text-[#4A4261]">
       <div className="typing-container p-10 mt-8">
         <p className="typing_default typing_effect first-line leading-snug">
-          끊임없이 탐구하고, 끊임없이 고민하는
+          디자인 감각과 개발 경험을 바탕으로
         </p>
         <p className="typing_effect second-line cursor-after">
-          주니어 개발자 박소현입니다.
+          사용자 중심의 UI를 만드는 개발자 박소현입니다.
         </p>
       </div>
 

@@ -24,7 +24,7 @@ function ProjectDetail() {
     else if (id === 'circle') title = 'Circle';
     else if (id === 'fundflow') title = 'FundFlow';
     else if (id === 'zipgoai') title = '땅집고 옥션';
-    // else if (id === 'saltrain') title = '솔트레인 (SALTRAIN)';
+    else if (id === 'saltrain') title = '솔트레인 (SALTRAIN)';
     // else if (id === 'maeil') title = '매일유업 (Maeil)';
     // else if (id === 'codingTest') title = 'Responsive UI Components (Next.js)';
     else if (id === 'community') title = 'Community MVP App (React Native)';
@@ -44,10 +44,10 @@ function ProjectDetail() {
                 </div>
 
                 {id === 'gongcha' && <GongchaDetail />}
+                {id === 'saltrain' && <SaltrainDetail />}
                 {id === 'fundflow' && <FundFlowDetail />}
                 {id === 'circle' && <CircleDetail />}
                 {id === 'zipgoai' && <ZipgoaiDetail />}
-                {id === 'saltrain' && <SaltrainDetail />}
                 {id === 'maeil' && <MaeilDetail />}
                 {id === 'codingTest' && <CodingTestDetail />}
                 {id === 'community' && <CommunityDetail />}

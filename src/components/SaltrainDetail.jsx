@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import saltrainMain from '../images/saltrain_preview.png'
-
+import saltrainAbout from '../images/saltrain_about.png'
+import saltrainVideo from '../images/Saltrain.mp4'
 function SaltrainDetail() {
 
     const [openIndex, setOpenIndex] = useState(null);
@@ -30,6 +31,18 @@ function SaltrainDetail() {
                 <img src={saltrainMain} alt='솔트레인 메인 이미지' />
             </div>
 
+            {/* <div className='w-[80%] mb-10'>
+                <img src={saltrainAbout} alt='솔트레인 About 이미지' />
+            </div> */}
+
+            <div className='mb-10'>
+                <h1 className="mb-3 text-xl font-semibold">🎥 담당 구현 화면 (About 페이지)</h1>
+                <video controls width="100%">
+                <source src={saltrainVideo} type="video/mp4" />
+                브라우저가 video 태그를 지원하지 않습니다.
+                </video>
+            </div>
+
             <h1 className="mb-3 text-xl font-semibold">✔️ 주요 정보 및 기간</h1>
             <div className="mb-10 border border-skillBorder rounded-2xl shadow-md bg-[#fdfcff]">
                 <div className="px-6 py-8 space-y-6 text-[16px] leading-relaxed text-textColor">
@@ -45,6 +58,7 @@ function SaltrainDetail() {
                     <ul className="list-disc list-inside text-gray-700 px-9">
                         <li className="before:content-['•'] before:mr-2 before:text-slate-400">스크립트를 활용한 사용자 상호작용 강화와 전반적인 웹사이트 리뉴얼</li>
                         <li className="before:content-['•'] before:mr-2 before:text-slate-400">Vue.js 기반으로 구현한 반응형 웹사이트 개발</li>
+                        <li className="before:content-['•'] before:mr-2 before:text-slate-400 font-semibold">담당 범위 : About 페이지 · 메인 헤더/푸터 반응형 · 검색 UI 구현</li>
                     </ul>
                     </div>
 
@@ -67,7 +81,7 @@ function SaltrainDetail() {
                     <div>
                     <h2 className="font-semibold text-lg mb-2">⭐ 프로젝트 소개</h2>
                     <ul className="list-disc list-inside text-gray-700 px-9">
-                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">라이프스타일 브랜드 ‘솔트레인’의 기존 웹사이트를 리뉴얼한 협업 프로젝트</li>
+                        <li className="before:content-['•'] before:mr-2 before:text-slate-400">라이프스타일 브랜드 '솔트레인' 웹사이트 리뉴얼 협업 프로젝트로, About 페이지와 검색 기능, 반응형 헤더·푸터 구현을 담당했습니다.</li>
                         <li className="before:content-['•'] before:mr-2 before:text-slate-400">기존 브랜드 컨셉을 유지하면서도, 개선된 UI와 퍼블리싱으로 완성도 향상</li>
                     </ul>
                     </div>

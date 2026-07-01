@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router';
 import zipgoai from '../images/zipgoai.png';
-import circle from '../images/circle.png';
+// import circle from '../images/circle.png';
 import gongcha from '../images/gongcha.png';
-// import saltrain from '../images/saltrain_preview.png';
+import saltrain from '../images/saltrain_preview.png';
 // import maeil from '../images/maeil_preview.png';
 // import codingTest from '../images/coding_test.png';
 import community from '../images/community.png'
@@ -31,7 +31,7 @@ function Project() {
       id: 'fundflow',
       name: 'FundFlow',
       category: 'Personal',
-      intro: 'React · TypeScript 기반 반응형 펀딩 플랫폼 프로젝트',
+      intro: 'React · TypeScript · 무한 스크롤 · Skeleton UI',
       route: '/ProjectDetail',
       src: fundflow,
     },
@@ -39,39 +39,47 @@ function Project() {
       id: 'gongcha',
       name: '공차 (Gong cha)',
       category: 'Personal',
-      intro: 'React로 브랜드 웹사이트를 리뉴얼한 개인 프로젝트',
+      intro: '반응형 · 컴포넌트 리팩토링 · Lazy Loading',
       route: '/ProjectDetail',
       src: gongcha,
-    },
-    {
-      id: 'brunchpay',
-      name: 'BrunchPay Dashboard',
-      category: 'Professional',
-      intro: 'React + TS 기반 PG 관리자 대시보드 구현 프로젝트',
-      route: '/BrunchPayDetail',
-      src: brunchPay
     },
     {
       id: 'zipgoai',
       name: '땅집고 옥션',
       category: 'Professional',
-      intro: 'React 기반 부동산 경공매 플랫폼 기능을 개발한 실무 프로젝트',
+      intro: '실무 인턴 · REST API · 관리자 기능 개발',
       route: '/ProjectDetail',
       src: zipgoai,
     },
     {
-      id: 'circle',
-      name: 'Circle - 커뮤니티 서비스',
+      id: 'brunchpay',
+      name: 'BrunchPay Dashboard',
+      category: 'Professional',
+      intro: 'React · TypeScript · Dashboard · Chart.js',
+      route: '/BrunchPayDetail',
+      src: brunchPay
+    },
+    // {
+    //   id: 'circle',
+    //   name: 'Circle - 커뮤니티 서비스',
+    //   category: 'Team',
+    //   intro: 'Axios 기반 API 연동으로 데이터 흐름을 구현한 팀 프로젝트',
+    //   route: '/ProjectDetail',
+    //   src: circle,
+    // },
+        {
+      id: 'saltrain',
+      name: '솔트레인 (SALTRAIN)',
       category: 'Team',
-      intro: 'Axios 기반 API 연동으로 데이터 흐름을 구현한 팀 프로젝트',
+      intro: 'Vue3 · Responsive · UI 구현 · 협업',
       route: '/ProjectDetail',
-      src: circle,
+      src: saltrain,
     },
     {
       id: 'community',
       name: 'Community MVP App',
       category: 'Side',
-      intro: 'React Native 기반 커뮤니티 MVP 모바일 앱 프로젝트',
+      intro: 'React Native · Firebase · 커뮤니티 앱',
       route: '/CommunityDetail',
       src: community,
     },
