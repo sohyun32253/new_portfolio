@@ -10,6 +10,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project';
 import ProjectDetail from './components/ProjectDetail';
+import DesignProcess from './components/DesignProcess';
 import Contact from './components/Contact';
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
                 <Container><About /></Container>
                 <Container><Skills /></Container>
                 <Container><Project onSelectProject={setSelectedProject} /></Container>
+                <Container><DesignProcess /></Container>
                 <Container><Contact /></Container>
               </div>
             }
