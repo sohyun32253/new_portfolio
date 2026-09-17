@@ -17,7 +17,7 @@ function GongchaDetail() {
           '121개 메뉴 데이터 MySQL DB 구축',
           'Express + mysql2 기반 REST API 구현',
           'Axios 기반 React ↔ API 데이터 연동',
-          'DB 데이터 기반 메뉴 및 상세 팝업 렌더링',
+          '로컬 환경에서 DB → API → UI 데이터 흐름 구현',
         ],
       },
       {
@@ -113,7 +113,7 @@ function GongchaDetail() {
                   <h2 className="font-semibold text-lg mb-2 ">✍🏻 설명</h2>
                   <p className="list-disc list-inside text-[16px] text-gray-700 px-9">
                     React 기반 공차 브랜드 웹사이트를 리뉴얼하며 메뉴 탐색 흐름, 반응형 UI, 모바일 상세 팝업 UX를 개선했습니다. <br/>
-                    이후 컴포넌트 구조 분리와 Lazy Loading, Skeleton UI를 적용해 프론트엔드 구조와 사용자 경험을 개선했으며, 추가 개선 과정에서는 Express와 MySQL 기반 REST API를 구축하고 기존 정적 메뉴 데이터를 DB와 연동했습니다.
+                    이후 컴포넌트 구조 분리와 Lazy Loading, Skeleton UI를 적용해 프론트엔드 구조와 사용자 경험을 개선했으며, 추가 개선에서는 로컬 개발 환경에서 Express와 MySQL 기반 REST API를 구축하고, 기존 정적 메뉴 데이터를 DB 기반으로 전환하여 React와의 데이터 연동 구조를 구현했습니다.
                     이를 통해 UI 리뉴얼에서 그치지 않고 데이터 저장 → API 요청 → 화면 렌더링까지 이어지는 전체 데이터 흐름을 직접 구현했습니다.
                   </p>
 
@@ -191,6 +191,7 @@ function GongchaDetail() {
 
                   <div>
                     <h2 className="font-semibold text-lg mb-2">📎 배포 주소</h2>
+                    <p className='text-sm text-gray-600 mb-4'>※ 배포 버전은 GitHub Pages 정적 환경으로 제공되며, MySQL·Express API 연동은 로컬 개발 환경에서 구현했습니다.</p>
                     <a
                         href="https://sohyun32253.github.io/Gongcha/"
                         className="inline-block px-5 py-2 rounded-full bg-[#d18787] text-white hover:bg-[#a84040] transition"
@@ -466,7 +467,7 @@ function GongchaDetail() {
                   <li className="before:content-['•'] before:mr-2 before:text-slate-400">정적 JavaScript 데이터 의존 구조를 DB 기반으로 확장</li>
                   <li className="before:content-['•'] before:mr-2 before:text-slate-400">Express REST API를 통한 클라이언트와 데이터 계층 분리</li>
                   <li className="before:content-['•'] before:mr-2 before:text-slate-400">Axios를 활용한 실제 API 요청 및 응답 처리 경험</li>
-                  <li className="before:content-['•'] before:mr-2 before:text-slate-400">DB부터 화면 렌더링까지 이어지는 전체 데이터 흐름 구현</li>
+                  <li className="before:content-['•'] before:mr-2 before:text-slate-400">로컬 환경에서 DB → API → 화면 렌더링까지 전체 데이터 흐름 구현</li>
                 </ul>
               </section>
           </div>
